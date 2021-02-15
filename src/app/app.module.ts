@@ -13,6 +13,10 @@ import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { PostTileComponent } from './shared/post-tile/post-tile.component';
+import { SideBarComponent } from './shared/side-bar/side-bar.component';
+import { SubredditSideBarComponent } from './shared/subreddit-side-bar/subreddit-side-bar.component';
+import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    PostTileComponent,
+    SideBarComponent,
+    SubredditSideBarComponent,
+    VoteButtonComponent
   ],
   imports: [
     BrowserModule,
