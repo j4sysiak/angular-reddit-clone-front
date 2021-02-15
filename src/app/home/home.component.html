@@ -3,21 +3,24 @@
       <div class="row">
         <hr />
         <div class="col-md-9">
+
           <!-- Display Posts-->
           <div class="row post" *ngFor="let post of posts">
             <!-- Section to Display Votes-->
             <div class="col-md-1">
               <div class="d-flex flex-column votebox">
-                <!-- <div class="p-2">
-                  <fa-icon (click)="upvotePost()" class="upvote" [icon]="faArrowUp" [style.color]="upvoteColor"></fa-icon>
-                </div> -->
+                <div class="p-2">
+                  <!-- <fa-icon (click)="upvotePost()" class="upvote" [icon]="faArrowUp" [style.color]="upvoteColor"></fa-icon> -->
+                  <fa-icon (click)="upvotePost()" class="upvote" [icon]="faArrowUp"></fa-icon>
+                </div>
                 <div class="p-2 votecount">{{post.voteCount}}</div>
-                <!-- <div class="p-2">
-                  <fa-icon (click)="downvotePost()" class="downvote" [icon]="faArrowDown" [style.color]="downvoteColor">
-                  </fa-icon>
-                </div> -->
+                <div class="p-2">
+                  <!-- <fa-icon (click)="downvotePost()" class="downvote" [icon]="faArrowDown" [style.color]="downvoteColor"></fa-icon> -->
+                  <fa-icon (click)="downvotePost()" class="downvote" [icon]="faArrowDown"></fa-icon>
+                </div>
               </div>
             </div>
+
             <!-- Section to Display Post Information-->
             <div class="col-md-11">
               <span class="subreddit-info">
@@ -35,7 +38,7 @@
               <hr />
               <span>
                 <a class="btnCommments" role="button">
-                  <!-- <fa-icon [icon]="faComments"></fa-icon> -->
+                  <fa-icon [icon]="faComments"></fa-icon>
                   Comments({{post.commentCount}})
                 </a>
                 <!-- <button class="login" (click)="goToPost(post.id)">
@@ -43,6 +46,7 @@
                 </button> -->
               </span>
             </div>
+
           </div>
         </div>
         <div class="col-md-3">
