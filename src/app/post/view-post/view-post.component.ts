@@ -6,8 +6,6 @@ import { throwError } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CommentPayload } from 'src/app/comment/comment.payload';
 import { CommentService } from 'src/app/comment/comment.service';
-// import { CommentPayload } from 'src/app/comment/comment.payload';
-// import { CommentService } from 'src/app/comment/comment.service';
 
 @Component({
   selector: 'app-view-post',
