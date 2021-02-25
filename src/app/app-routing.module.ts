@@ -9,12 +9,14 @@ import { CreatePostComponent } from './post/create-post/create-post.component';
 import { ViewPostComponent } from './post/view-post/view-post.component';
 import { CreateSubredditComponent } from './subreddit/create-subreddit/create-subreddit.component';
 import { ListSubredditsComponent } from './subreddit/list-subreddits/list-subreddits.component';
+import { ViewSubredditComponent } from './subreddit/view-subreddit/view-subreddit.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
     { path: 'user-profile/:name', component: UserProfileComponent },
     { path: 'list-subreddits', component: ListSubredditsComponent },
+    { path: 'view-subreddit/:id', component: ViewSubredditComponent },
     { path: 'create-post', component: CreatePostComponent },
     { path: 'create-subreddit', component: CreateSubredditComponent },
     { path: 'sign-up', component: SignupComponent },

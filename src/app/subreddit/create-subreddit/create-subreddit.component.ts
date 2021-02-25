@@ -16,16 +16,19 @@ export class CreateSubredditComponent implements OnInit {
   subredditModel: SubredditModel;
   title = new FormControl('');
   description = new FormControl('');
+  testowePole = new FormControl('');
 
   constructor(private router: Router, private subredditService: SubredditService) {
     this.createSubredditForm = new FormGroup({
       title: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required)
+      description: new FormControl('', Validators.required),
+      testowePole: new FormControl('', Validators.required)
     });
 
     this.subredditModel = {
       name: '',
-      description: ''
+      description: '',
+      testowePole: ''
     }
   }
 
@@ -39,6 +42,7 @@ export class CreateSubredditComponent implements OnInit {
   createSubreddit() {
     this.subredditModel.name = this.createSubredditForm.get('title').value;
     this.subredditModel.description = this.createSubredditForm.get('description').value;
+    this.subredditModel.testowePole = this.createSubredditForm.get('testowePole').value;
     
     this.subredditService.createSubreddit(this.subredditModel).subscribe(data => {
       this.router.navigateByUrl('/list-subreddits');
