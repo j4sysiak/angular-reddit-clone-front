@@ -4,7 +4,6 @@ import { throwError } from 'rxjs';
 import { SubredditModel } from '../subreddit-response';
 import { SubredditService } from '../subreddit.service';
 
-
 @Component({
   selector: 'app-view-subreddit',
   templateUrl: './view-subreddit.component.html',
@@ -13,6 +12,7 @@ import { SubredditService } from '../subreddit.service';
 export class ViewSubredditComponent implements OnInit {
 
   subredditId: number;
+  // tslint:disable-next-line:new-parens
   subreddit: SubredditModel = new SubredditModel;
 
   constructor(private subredditService: SubredditService, private activateRoute: ActivatedRoute) {
