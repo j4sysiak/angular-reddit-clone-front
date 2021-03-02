@@ -26,6 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 import { ViewSubredditComponent } from './subreddit/view-subreddit/view-subreddit.component';
 import { ProductSideBarComponent } from './shared/product-side-bar/product-side-bar.component';
+import { ViewProductComponent } from './product/view-product/view-product.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ProductSideBarComponent } from './shared/product-side-bar/product-side-
     ViewPostComponent,
     UserProfileComponent,
     ViewSubredditComponent,
-    ProductSideBarComponent
+    ProductSideBarComponent,
+    ViewProductComponent
   ],
   imports: [
     BrowserModule,

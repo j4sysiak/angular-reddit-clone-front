@@ -15,14 +15,14 @@ export class ViewSubredditComponent implements OnInit {
   // tslint:disable-next-line:new-parens
   subreddit: SubredditModel = new SubredditModel;
 
-  constructor(private subredditService: SubredditService, private activateRoute: ActivatedRoute) {
+  constructor(private subredditService: SubredditService,
+              private activateRoute: ActivatedRoute) {
       this.subredditId = this.activateRoute.snapshot.params.id;
     }
 
   ngOnInit(): void {
     this.getSubredditById();
   }
-
 
   getSubredditById() {
       this.subredditService.getSubreddit(this.subredditId).subscribe(data => {
