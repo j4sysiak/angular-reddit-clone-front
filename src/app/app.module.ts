@@ -27,6 +27,8 @@ import { UserProfileComponent } from './auth/user-profile/user-profile.component
 import { ViewSubredditComponent } from './subreddit/view-subreddit/view-subreddit.component';
 import { ProductSideBarComponent } from './shared/product-side-bar/product-side-bar.component';
 import { ViewProductComponent } from './product/view-product/view-product.component';
+import { PolicySideBarComponent } from './shared/policy-side-bar/policy-side-bar.component';
+import { ViewPolicyComponent } from './policy/view-policy/view-policy.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { ViewProductComponent } from './product/view-product/view-product.compon
     UserProfileComponent,
     ViewSubredditComponent,
     ProductSideBarComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    PolicySideBarComponent,
+    ViewPolicyComponent
   ],
   imports: [
     BrowserModule,
