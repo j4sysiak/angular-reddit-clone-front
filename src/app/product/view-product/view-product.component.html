@@ -1,0 +1,46 @@
+<div class="col-md-11">
+  <div class="product-title">
+    Product: <b>{{ product.name }}</b>
+  </div>
+  <div class="policy-title">
+    Id: <b>{{ product.id }}</b>
+  </div>
+</div>
+
+<BR>
+<BR>
+
+<table class="table">
+
+  <thead class="thead-dark">
+  <tr>
+    <th>PolicyId</th>
+    <th>Policy Name</th>
+    <th>Policy Description</th>
+    <th>Policy Created Date</th>
+    <th>Policy Product Name</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let tmpPolicy of policies">
+    <td>{{ tmpPolicy.policyId }}</td>
+    <td>{{ tmpPolicy.policyName }}</td>
+    <td>{{ tmpPolicy.policyDescription }}</td>
+    <td>{{ tmpPolicy.policyCreatedDate }}</td>
+    <td>{{ tmpPolicy.productName }}</td>
+  </tr>
+  </tbody>
+
+</table>
+
+
+
+<!--<div class="col-md-11">-->
+<!--  <div class="product-title">-->
+<!--    Policy: <b>{{ policy.policyName}}</b>-->
+<!--  </div>-->
+<!--  <div class="policy-title">-->
+<!--    Id: <b>{{ policy.policyId }}</b>-->
+<!--  </div>-->
+<!--</div>-->
