@@ -21,4 +21,9 @@ export class PolicyService {
   getAllPoliciesByProductId(productId: number): Observable<Array<PolicyModel>> {
     return this.http.get<Array<PolicyModel>>('http://localhost:8080/api/policy/by-product/' + productId);
   }
+
+  getPoliciesByKeyword(theKeyword: string): Observable<Array<PolicyModel>> {
+    console.log('theKeyword (in policy.service) = ' + theKeyword);
+    return this.http.get<Array<PolicyModel>>('http://localhost:8080/api/policy/by-name-containing/' + theKeyword);
+  }
 }

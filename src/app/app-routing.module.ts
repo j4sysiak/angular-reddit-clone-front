@@ -12,6 +12,8 @@ import {ListSubredditsComponent} from './subreddit/list-subreddits/list-subreddi
 import {ViewSubredditComponent} from './subreddit/view-subreddit/view-subreddit.component';
 import {ViewProductComponent} from './product/view-product/view-product.component';
 import {ViewPolicyComponent} from './policy/view-policy/view-policy.component';
+import {SearchPolicyComponent} from './policy/search-policy/search-policy.component';
+import {ViewSearchPoliciesComponent} from './policy/view-search-policies/view-search-policies.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -21,6 +23,7 @@ const routes: Routes = [
     { path: 'view-subreddit/:id', component: ViewSubredditComponent },
     { path: 'view-product/:id', component: ViewProductComponent },
     { path: 'view-policy/:id', component: ViewPolicyComponent },
+    { path: 'search-policy/:keyword', component: ViewSearchPoliciesComponent },
     { path: 'create-post', component: CreatePostComponent },
     { path: 'create-subreddit', component: CreateSubredditComponent },
     { path: 'sign-up', component: SignupComponent },
