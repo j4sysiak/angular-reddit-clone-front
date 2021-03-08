@@ -12,20 +12,27 @@ import {ListSubredditsComponent} from './subreddit/list-subreddits/list-subreddi
 import {ViewSubredditComponent} from './subreddit/view-subreddit/view-subreddit.component';
 import {ViewProductComponent} from './product/view-product/view-product.component';
 import {ViewPolicyComponent} from './policy/view-policy/view-policy.component';
-import {SearchPolicyComponent} from './policy/search-policy/search-policy.component';
 import {ViewSearchPoliciesComponent} from './policy/view-search-policies/view-search-policies.component';
+import {CreateProductComponent} from './product/create-product/create-product.component';
+import {ListProductComponent} from './product/list-product/list-product.component';
+import {CreatePolicyComponent} from './policy/create-policy/create-policy.component';
+import {ListPolicyComponent} from './policy/list-policy/list-policy.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
     { path: 'user-profile/:name', component: UserProfileComponent },
     { path: 'list-subreddits', component: ListSubredditsComponent },
+    { path: 'list-product', component: ListProductComponent },
+    { path: 'list-policy', component: ListPolicyComponent },
     { path: 'view-subreddit/:id', component: ViewSubredditComponent },
     { path: 'view-product/:id', component: ViewProductComponent },
     { path: 'view-policy/:id', component: ViewPolicyComponent },
     { path: 'search-policy/:keyword', component: ViewSearchPoliciesComponent },
     { path: 'create-post', component: CreatePostComponent },
     { path: 'create-subreddit', component: CreateSubredditComponent },
+    { path: 'create-product', component: CreateProductComponent },
+    { path: 'create-policy', component: CreatePolicyComponent },
     { path: 'sign-up', component: SignupComponent },
     { path: 'login', component: LoginComponent }
   ];

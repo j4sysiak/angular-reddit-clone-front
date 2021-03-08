@@ -18,6 +18,6 @@ export class ListSubredditsComponent implements OnInit {
       this.subreddits = data;
     }, error => {
       throwError(error);
-    })
+    });
   }
 }

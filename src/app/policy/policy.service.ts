@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {PolicyModel} from './policy-model';
+import {CreatePostPayload} from '../post/create-post/create-post.payload';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,9 @@ export class PolicyService {
   getPoliciesByKeyword(theKeyword: string): Observable<Array<PolicyModel>> {
     console.log('theKeyword (in policy.service) = ' + theKeyword);
     return this.http.get<Array<PolicyModel>>('http://localhost:8080/api/policy/by-name-containing/' + theKeyword);
+  }
+
+  createPolicy(policyModel: PolicyModel): Observable<any> {
+    return this.http.post('http://localhost:8080/api/policy/', policyModel);
   }
 }

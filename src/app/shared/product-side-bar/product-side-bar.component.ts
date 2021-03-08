@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductModel} from '../../product/product-response';
 import {ProductService} from '../../product/product.service';
+import {throwError} from 'rxjs';
 
 @Component({
   selector: 'app-product-side-bar',

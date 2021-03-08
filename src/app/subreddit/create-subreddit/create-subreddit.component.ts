@@ -29,7 +29,7 @@ export class CreateSubredditComponent implements OnInit {
       name: '',
       description: '',
       testowePole: ''
-    }
+    };
   }
 
   ngOnInit() {
@@ -43,12 +43,11 @@ export class CreateSubredditComponent implements OnInit {
     this.subredditModel.name = this.createSubredditForm.get('title').value;
     this.subredditModel.description = this.createSubredditForm.get('description').value;
     this.subredditModel.testowePole = this.createSubredditForm.get('testowePole').value;
-    
     this.subredditService.createSubreddit(this.subredditModel).subscribe(data => {
       this.router.navigateByUrl('/list-subreddits');
     }, error => {
       throwError(error);
-    })
+    });
   }
 
 }

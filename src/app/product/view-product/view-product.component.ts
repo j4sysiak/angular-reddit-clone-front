@@ -14,6 +14,7 @@ import {PolicyService} from '../../policy/policy.service';
 })
 export class ViewProductComponent implements OnInit {
 
+  products: Array<ProductModel>;
   productId: number;
   // tslint:disable-next-line:new-parens
   product: ProductModel = new ProductModel;

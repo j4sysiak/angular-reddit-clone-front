@@ -31,6 +31,10 @@ import { PolicySideBarComponent } from './shared/policy-side-bar/policy-side-bar
 import { ViewPolicyComponent } from './policy/view-policy/view-policy.component';
 import { SearchPolicyComponent } from './policy/search-policy/search-policy.component';
 import { ViewSearchPoliciesComponent } from './policy/view-search-policies/view-search-policies.component';
+import { CreateProductComponent } from './product/create-product/create-product.component';
+import { ListProductComponent } from './product/list-product/list-product.component';
+import { CreatePolicyComponent } from './policy/create-policy/create-policy.component';
+import { ListPolicyComponent } from './policy/list-policy/list-policy.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,11 @@ import { ViewSearchPoliciesComponent } from './policy/view-search-policies/view-
     PolicySideBarComponent,
     ViewPolicyComponent,
     SearchPolicyComponent,
-    ViewSearchPoliciesComponent
+    ViewSearchPoliciesComponent,
+    CreateProductComponent,
+    ListProductComponent,
+    CreatePolicyComponent,
+    ListPolicyComponent
   ],
   imports: [
     BrowserModule,

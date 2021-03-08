@@ -21,4 +21,11 @@ export class SideBarComponent implements OnInit {
     this.router.navigateByUrl('/create-subreddit');
   }
 
+  goToCreateProduct() {
+    this.router.navigateByUrl('/create-product');
+  }
+
+  goToCreatePolicy() {
+    this.router.navigateByUrl('/create-policy');
+  }
 }
