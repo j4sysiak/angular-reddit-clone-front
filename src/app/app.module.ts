@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxWebstorageModule } from 'ngx-webstorage';
@@ -35,6 +35,7 @@ import { CreateProductComponent } from './product/create-product/create-product.
 import { ListProductComponent } from './product/list-product/list-product.component';
 import { CreatePolicyComponent } from './policy/create-policy/create-policy.component';
 import { ListPolicyComponent } from './policy/list-policy/list-policy.component';
+import { PolicyDataDetailsComponent } from './policy/policy-data-details/policy-data-details.component';
 
 @NgModule({
   declarations: [
@@ -62,10 +63,12 @@ import { ListPolicyComponent } from './policy/list-policy/list-policy.component'
     CreateProductComponent,
     ListProductComponent,
     CreatePolicyComponent,
-    ListPolicyComponent
+    ListPolicyComponent,
+    PolicyDataDetailsComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,

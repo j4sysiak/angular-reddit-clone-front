@@ -19,6 +19,8 @@
     <th>Policy Description</th>
     <th>Policy Created Date</th>
     <th>Policy Product Name</th>
+    <th>Update</th>
+    <th>Delete</th>
   </tr>
   </thead>
 
@@ -29,6 +31,16 @@
     <td>{{ tmpPolicy.policyDescription }}</td>
     <td>{{ tmpPolicy.policyCreatedDate }}</td>
     <td>{{ tmpPolicy.productName }}</td>
+    <td>
+      <button (click)="updatePolicy(tmpPolicy.policyId)" class="btn btn-success" >
+        Edit
+      </button>
+    </td>
+    <td>
+      <button (click)="deletePolicy(tmpPolicy.policyId)" class="btn btn-warning" >
+        Delete
+      </button>
+    </td>
   </tr>
   </tbody>
 

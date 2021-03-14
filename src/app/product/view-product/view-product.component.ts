@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {throwError} from 'rxjs';
 
 import {ProductService} from '../product.service';
@@ -24,7 +24,8 @@ export class ViewProductComponent implements OnInit {
 
   constructor(private productService: ProductService,
               private policyService: PolicyService,
-              private activateRoute: ActivatedRoute) {
+              private activateRoute: ActivatedRoute,
+              private router: Router) {
     this.productId = this.activateRoute.snapshot.params.id;
   }
 
@@ -63,5 +64,15 @@ export class ViewProductComponent implements OnInit {
        throwError(error);
      });
    }
+  }
+
+  updatePolicy(id: number) {
+    console.log('(ViewProductComponent) update policy: ', id);
+    // lub console.log(`update policy: ${id}`);
+    this.router.navigate(['policies-data', id]);
+  }
+
+  deletePolicy(id: number) {
+    console.log(`delete policy: ${id}`);
   }
 }

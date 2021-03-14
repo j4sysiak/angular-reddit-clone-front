@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {PolicyModel} from './policy-model';
-import {CreatePostPayload} from '../post/create-post/create-post.payload';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +29,9 @@ export class PolicyService {
 
   createPolicy(policyModel: PolicyModel): Observable<any> {
     return this.http.post('http://localhost:8080/api/policy/', policyModel);
+  }
+
+  updatePolicy(id: number, policy: PolicyModel): Observable<any>  {
+    return this.http.put('http://localhost:8080/api/policy/' + id, policy);
   }
 }

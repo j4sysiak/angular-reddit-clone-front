@@ -17,6 +17,8 @@ import {CreateProductComponent} from './product/create-product/create-product.co
 import {ListProductComponent} from './product/list-product/list-product.component';
 import {CreatePolicyComponent} from './policy/create-policy/create-policy.component';
 import {ListPolicyComponent} from './policy/list-policy/list-policy.component';
+import {PolicyDataDetailsComponent} from './policy/policy-data-details/policy-data-details.component';
+
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -25,6 +27,7 @@ const routes: Routes = [
     { path: 'list-subreddits', component: ListSubredditsComponent },
     { path: 'list-product', component: ListProductComponent },
     { path: 'list-policy', component: ListPolicyComponent },
+    { path: 'policies-data/:id', component: PolicyDataDetailsComponent},
     { path: 'view-subreddit/:id', component: ViewSubredditComponent },
     { path: 'view-product/:id', component: ViewProductComponent },
     { path: 'view-policy/:id', component: ViewPolicyComponent },
@@ -38,7 +41,9 @@ const routes: Routes = [
   ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [
+      RouterModule.forRoot(routes)
+    ],
     exports: [RouterModule]
   })
   export class AppRoutingModule { }
