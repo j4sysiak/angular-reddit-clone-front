@@ -1,0 +1,60 @@
+<h4>DANE POLISY</h4>
+
+<!--{{ policy.policyId }}-->
+<!--{{ policy.policyName }}-->
+<!--{{ policy.policyDescription }}-->
+<!--{{ policy.policyCreatedDate }}-->
+<!--{{ policy.productName }}-->
+
+<div class="container">
+  <form (ngSubmit)="savePolicyDataDetails()" #policyForm="ngForm">
+
+    <fieldset class="form-group">
+      <label>Policy Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        [(ngModel)]="policy.policyName"
+        #policyName="ngModel"
+        required="required"
+        minlength="4"
+      />
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Policy Description</label>
+      <input
+        type="text"
+        class="form-control"
+        name="description"
+        [(ngModel)]="policy.policyDescription"
+        #policyName="ngModel"
+        required="required"
+        minlength="100"
+      />
+    </fieldset>
+
+<!--    <fieldset class="form-group">-->
+<!--      <label>Product Name</label>-->
+<!--      <input-->
+<!--        type="text"-->
+<!--        class="form-control"-->
+<!--        name="productName"-->
+<!--        [(ngModel)]="policy.productName"-->
+<!--        #policyName="ngModel"-->
+<!--        required="required"-->
+<!--        minlength="100"-->
+<!--      />-->
+<!--    </fieldset>-->
+
+    <select class="form-control" style="margin-top: 10px">
+      <option value="" selected disabled>Select Product</option>
+      <option *ngFor="let product of products">{{product.name}}</option>
+    </select>
+
+    <button type="submit" class="btn btn-success">
+      Save
+    </button>
+  </form>
+</div>

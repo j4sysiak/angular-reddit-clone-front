@@ -18,7 +18,8 @@ export class CreatePostComponent implements OnInit {
   postPayload: CreatePostPayload;
   subreddits: Array<SubredditModel>;
 
-  constructor(private router: Router, private postService: PostService,
+  constructor(private router: Router,
+              private postService: PostService,
               private subredditService: SubredditService) {
     this.postPayload = {
       postName: '',
