@@ -35,7 +35,7 @@ export class ViewProductComponent implements OnInit {
   }
 
   getProductById() {
-    this.productService.getProduct(this.productId).subscribe(data => {
+    this.productService.getProductById(this.productId).subscribe(data => {
       this.product = data;
     }, error => {
       throwError(error);

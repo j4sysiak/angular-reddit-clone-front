@@ -4,5 +4,7 @@ export class PolicyModel {
   policyDescription: string;
   policyCreatedDate: string;
 
+  productId?: number;
   productName: string;
+
 }
