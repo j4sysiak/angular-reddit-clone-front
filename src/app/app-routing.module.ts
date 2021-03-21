@@ -19,6 +19,7 @@ import {CreatePolicyComponent} from './policy/create-policy/create-policy.compon
 import {ListPolicyComponent} from './policy/list-policy/list-policy.component';
 import {PolicyDataDetailsComponent} from './policy/policy-data-details/policy-data-details.component';
 
+
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
