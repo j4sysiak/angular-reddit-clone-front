@@ -34,4 +34,8 @@ export class PolicyService {
   updatePolicy(id: number, policy: PolicyModel): Observable<any>  {
     return this.http.put('http://localhost:8080/api/policy/' + id, policy);
   }
+
+  deletePolicy(id: number): Observable<any>  {
+    return this.http.delete('http://localhost:8080/api/policy/' + id);
+  }
 }

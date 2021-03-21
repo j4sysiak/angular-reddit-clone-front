@@ -66,13 +66,31 @@ export class ViewProductComponent implements OnInit {
    }
   }
 
+  deletePolicy(id: number) {
+    console.log('(ViewProductComponent) delete policy: ', id);
+    // lub console.log(`delete policy: ${id}`);
+    this.policyService.deletePolicy(id).subscribe(
+      response => {
+        console.log(response);
+        this.refreshPolicies();
+        this.router.navigate(['view-product', id]);
+      }
+    );
+  }
+
   updatePolicy(id: number) {
     console.log('(ViewProductComponent) update policy: ', id);
     // lub console.log(`update policy: ${id}`);
     this.router.navigate(['policies-data', id]);
   }
 
-  deletePolicy(id: number) {
-    console.log(`delete policy: ${id}`);
+  private refreshPolicies() {
+    const hasProductId: boolean = this.activateRoute.snapshot.paramMap.has('id');
+    if(hasProductId){
+      this.productId = +this.activateRoute.snapshot.paramMap.get('id');
+      this.policyService.getAllPoliciesByProductId(this.productId).subscribe(data => {
+        this.policies = data;
+      });
+    }
   }
 }
