@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {throwError} from 'rxjs';
+
 import {PolicyService} from '../policy.service';
 import {PolicyModel} from '../policy-model';
-import {throwError} from 'rxjs';
+
 
 @Component({
   selector: 'app-view-policy',
@@ -12,11 +14,11 @@ import {throwError} from 'rxjs';
 export class ViewPolicyComponent implements OnInit {
 
   policyId: number;
-  // tslint:disable-next-line:new-parens
   policy: PolicyModel = new PolicyModel;
 
   constructor(private policyService: PolicyService,
-              private activateRoute: ActivatedRoute) {
+              private activateRoute: ActivatedRoute,
+              private router: Router) {
     this.policyId = this.activateRoute.snapshot.params.id;
   }
 
@@ -25,10 +27,27 @@ export class ViewPolicyComponent implements OnInit {
   }
 
   getPolicyById() {
-    this.policyService.getPolicy(this.policyId).subscribe(data => {
+    this.policyService.getPolicyById(this.policyId).subscribe(data => {
       this.policy = data;
     }, error => {
       throwError(error);
     });
+  }
+
+  updatePolicy(id: number) {
+    console.log('(ViewPolicyComponent) update policy: ', id);
+    // console.log(`update policy: ${id}`);
+    // this.router.navigate(['policies-data', id]);
+    this.router.navigateByUrl('/policies-data/' + id);
+  }
+
+  deletePolicy(id: number) {
+    console.log('(ViewPolicyComponent) delete policy: ', id);
+    // lub console.log(`delete policy: ${id}`);
+    this.policyService.deletePolicy(id).subscribe(
+      response => {
+        this.router.navigate(['/']);
+      }
+    );
   }
 }

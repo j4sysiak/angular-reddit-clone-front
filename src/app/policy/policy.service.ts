@@ -14,7 +14,7 @@ export class PolicyService {
     return this.http.get<Array<PolicyModel>>('http://localhost:8080/api/policy');
   }
 
-  getPolicy(id: number): Observable<PolicyModel> {
+  getPolicyById(id: number): Observable<PolicyModel> {
     return this.http.get<PolicyModel>('http://localhost:8080/api/policy/' + id);
   }
 

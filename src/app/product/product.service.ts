@@ -21,7 +21,6 @@ export class ProductService {
   }
 
   getProductByProductName(theName: string): Observable<ProductModel> {
-    console.log("theName = " + theName);
     return this.http.get<ProductModel>('http://localhost:8080/api/product/by-product-name/' + theName);
   }
 

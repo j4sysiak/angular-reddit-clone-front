@@ -31,6 +31,7 @@ const routes: Routes = [
     { path: 'view-subreddit/:id', component: ViewSubredditComponent },
     { path: 'view-product/:id', component: ViewProductComponent },
     { path: 'view-policy/:id', component: ViewPolicyComponent },
+    { path: 'policy-data-details/:id', component: PolicyDataDetailsComponent},
     { path: 'search-policy/:keyword', component: ViewSearchPoliciesComponent },
     { path: 'create-post', component: CreatePostComponent },
     { path: 'create-subreddit', component: CreateSubredditComponent },
