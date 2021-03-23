@@ -16,10 +16,8 @@ export class ViewProductComponent implements OnInit {
 
   products: Array<ProductModel>;
   productId: number;
-  // tslint:disable-next-line:new-parens
   product: ProductModel = new ProductModel;
   currentProductId: string;
-
   policies: PolicyModel[] = [];
 
   constructor(private productService: ProductService,
@@ -51,7 +49,7 @@ export class ViewProductComponent implements OnInit {
      console.log('Pokaż tylko wybrane polisy (by ProductId)');
      this.currentProductId = this.activateRoute.snapshot.paramMap.get('id');
 
-     this.policyService.getAllPoliciesByProductId(+this.currentProductId).subscribe(data => {
+     this.policyService.getPoliciesByProductId(+this.currentProductId).subscribe(data => {
        this.policies = data;
      }, error => {
        throwError(error);
@@ -88,7 +86,7 @@ export class ViewProductComponent implements OnInit {
     const hasProductId: boolean = this.activateRoute.snapshot.paramMap.has('id');
     if(hasProductId){
       this.productId = +this.activateRoute.snapshot.paramMap.get('id');
-      this.policyService.getAllPoliciesByProductId(this.productId).subscribe(data => {
+      this.policyService.getPoliciesByProductId(this.productId).subscribe(data => {
         this.policies = data;
       });
     }
