@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PostModel } from '../post-model';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { PostModel } from '../post-model';
 import { VotePayload } from './vote-payload';
 import { VoteType } from './vote-type';
 import { VoteService } from '../vote.service';
