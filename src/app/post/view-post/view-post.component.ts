@@ -20,10 +20,11 @@ export class ViewPostComponent implements OnInit {
   commentPayload: CommentPayload;
   comments: CommentPayload[];
 
-  constructor(private postService: PostService, private activateRoute: ActivatedRoute,
-    private commentService: CommentService, private router: Router) {
+  constructor(private postService: PostService,
+              private activateRoute: ActivatedRoute,
+              private commentService: CommentService,
+              private router: Router) {
     this.postId = this.activateRoute.snapshot.params.id;
-
     this.commentForm = new FormGroup({
       text: new FormControl('', Validators.required)
     });
@@ -38,6 +39,14 @@ export class ViewPostComponent implements OnInit {
     this.getCommentsForPost();
   }
 
+  private getPostById() {
+    this.postService.getPost(this.postId).subscribe(data => {
+      this.post = data;
+    }, error => {
+      throwError(error);
+    });
+  }
+
   postComment() {
     this.commentPayload.text = this.commentForm.get('text').value;
     this.commentService.postComment(this.commentPayload).subscribe(data => {
@@ -46,14 +55,6 @@ export class ViewPostComponent implements OnInit {
     }, error => {
       throwError(error);
     })
-  }
-
-  private getPostById() {
-    this.postService.getPost(this.postId).subscribe(data => {
-      this.post = data;
-    }, error => {
-      throwError(error);
-    });
   }
 
   private getCommentsForPost() {

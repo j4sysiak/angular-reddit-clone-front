@@ -18,11 +18,12 @@ import {ListProductComponent} from './product/list-product/list-product.componen
 import {CreatePolicyComponent} from './policy/create-policy/create-policy.component';
 import {ListPolicyComponent} from './policy/list-policy/list-policy.component';
 import {PolicyDataDetailsComponent} from './policy/policy-data-details/policy-data-details.component';
+import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
-    { path: 'user-profile/:name', component: UserProfileComponent },
+    { path: 'user-profile/:name', component: UserProfileComponent, canActivate: [AuthGuard] },
     { path: 'list-subreddits', component: ListSubredditsComponent },
     { path: 'list-product', component: ListProductComponent },
     { path: 'list-policy', component: ListPolicyComponent },
@@ -32,8 +33,8 @@ const routes: Routes = [
     { path: 'view-policy/:id', component: ViewPolicyComponent },
     { path: 'policy-data-details/:id', component: PolicyDataDetailsComponent},
     { path: 'search-policy/:keyword', component: ViewSearchPoliciesComponent },
-    { path: 'create-post', component: CreatePostComponent },
-    { path: 'create-subreddit', component: CreateSubredditComponent },
+    { path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard] },
+    { path: 'create-subreddit', component: CreateSubredditComponent, canActivate: [AuthGuard] },
     { path: 'create-product', component: CreateProductComponent },
     { path: 'create-policy', component: CreatePolicyComponent },
     { path: 'sign-up', component: SignupComponent },

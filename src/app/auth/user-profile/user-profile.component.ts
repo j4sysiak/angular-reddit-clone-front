@@ -17,10 +17,10 @@ export class UserProfileComponent implements OnInit {
   postLength: number;
   commentLength: number;
 
-  constructor(private activatedRoute: ActivatedRoute, private postService: PostService,
-    private commentService: CommentService) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private postService: PostService,
+              private commentService: CommentService) {
     this.name = this.activatedRoute.snapshot.params.name;
-
     this.postService.getAllPostsByUser(this.name).subscribe(data => {
       this.posts = data;
       this.postLength = data.length;
