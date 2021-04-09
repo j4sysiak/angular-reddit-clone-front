@@ -127,6 +127,7 @@
   },
   "defaultProject": "angular-reddit-clone",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "defaultCollection": "@ngrx/schematics"
   }
 }
