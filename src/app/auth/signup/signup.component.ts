@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   signupRequestPayload: SignupRequestPayload;
   signupForm: FormGroup;
 
-  constructor(private authService: AuthService, 
+  constructor(private authService: AuthService,
               private router: Router,
               private toastr: ToastrService) {
     this.signupRequestPayload = {
@@ -40,7 +40,8 @@ export class SignupComponent implements OnInit {
     this.signupRequestPayload.password = this.signupForm.get('password').value;
 
     this.authService.signup(this.signupRequestPayload)
-      .subscribe(data => {
+      .subscribe(response => {
+        console.log(response);
         this.router.navigate(['/login'],
           { queryParams: { registered: 'true' } });
       }, error => {

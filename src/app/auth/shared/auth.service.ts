@@ -21,7 +21,7 @@ export class AuthService {
   }
 
   constructor(private httpClient: HttpClient,
-    private localStorage: LocalStorageService) {
+              private localStorage: LocalStorageService) {
   }
 
   signup(signupRequestPayload: SignupRequestPayload): Observable<any> {
@@ -39,7 +39,8 @@ export class AuthService {
         this.loggedIn.emit(true);
         this.username.emit(data.username);
         return true;
-      }));
+      })
+    );
   }
 
   getJwtToken() {

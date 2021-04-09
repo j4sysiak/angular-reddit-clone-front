@@ -42,6 +42,9 @@ export class ViewPolicyComponent implements OnInit {
   }
 
   deletePolicy(id: number) {
+    if(!confirm('Are you sure?')) {
+      return;
+    }
     console.log('(ViewPolicyComponent) delete policy: ', id);
     // lub console.log(`delete policy: ${id}`);
     this.policyService.deletePolicy(id).subscribe(

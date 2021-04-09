@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
   registerSuccessMessage: string;
   isError: boolean;
 
-  constructor(private authService: AuthService, 
+  constructor(private authService: AuthService,
               private activatedRoute: ActivatedRoute,
-              private router: Router, 
+              private router: Router,
               private toastr: ToastrService) {
     this.loginRequestPayload = {
       username: '',
@@ -48,7 +48,8 @@ export class LoginComponent implements OnInit {
     this.loginRequestPayload.username = this.loginForm.get('username').value;
     this.loginRequestPayload.password = this.loginForm.get('password').value;
 
-    this.authService.login(this.loginRequestPayload).subscribe(data => {
+    this.authService.login(this.loginRequestPayload).subscribe(response => {
+      console.log('Login Successful');
       this.isError = false;
       this.router.navigateByUrl('');
       this.toastr.success('Login Successful');

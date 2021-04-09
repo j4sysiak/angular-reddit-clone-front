@@ -13,13 +13,13 @@ export class SubredditSideBarComponent implements OnInit {
 
   constructor(private subredditService: SubredditService) {
     this.subredditService.getAllSubreddits().subscribe(data => {
-      // if (data.length > 3) {
-      //   this.subreddits = data.splice(0, 3);
-      //   this.displayViewAll = true;
-      // } else {
-      //   this.subreddits = data;
-      // }
-      this.subreddits = data;
+      if (data.length >= 4) {
+        this.subreddits = data.splice(0, 3);
+        this.displayViewAll = true;
+      } else {
+        this.subreddits = data;
+      }
+      // this.subreddits = data;
     });
   }
 
