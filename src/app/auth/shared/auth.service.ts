@@ -6,6 +6,7 @@ import { LocalStorageService } from 'ngx-webstorage';
 import { LoginRequestPayload } from '../login/login-request.payload';
 import { LoginResponse } from '../login/login-response.payload';
 import { map, tap } from 'rxjs/operators';
+import {JwtAutResponse} from '../jwt-aut-response';
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +44,15 @@ export class AuthService {
     );
   }
 
+  // login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
+  //   return this.httpClient.post<JwtAutResponse>('http://localhost:8080/api/auth/login',
+  //     loginRequestPayload).pipe(map(response => {
+  //         this.localStorage.store('authenticationToken', response.authenticationToken);
+  //         this.localStorage.store('username', response.username);
+  //         return true;
+  //   }));
+  // }
+
   getJwtToken() {
     return this.localStorage.retrieve('authenticationToken');
   }
@@ -74,6 +84,11 @@ export class AuthService {
     this.localStorage.clear('expiresAt');
   }
 
+  // logout() {
+  //   this.localStorage.clear('authenticationToken');
+  //   this.localStorage.clear('username');
+  // }
+
   getUserName() {
     return this.localStorage.retrieve('username');
   }
@@ -83,5 +98,9 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return this.getJwtToken() != null;
+  }
+
+  isAuthenticated(): boolean {
+    return this.localStorage.retrieve('username') != null;
   }
 }

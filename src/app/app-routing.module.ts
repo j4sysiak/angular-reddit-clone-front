@@ -18,10 +18,13 @@ import {ListProductComponent} from './product/list-product/list-product.componen
 import {CreatePolicyComponent} from './policy/create-policy/create-policy.component';
 import {ListPolicyComponent} from './policy/list-policy/list-policy.component';
 import {PolicyDataDetailsComponent} from './policy/policy-data-details/policy-data-details.component';
+import {CreateBlogPostComponent} from './blog-post/create-blog-post/create-blog-post.component';
 // import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
+    // { path: '/', component: HomeComponent },
     { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
     { path: 'user-profile/:name', component: UserProfileComponent /*, canActivate: [AuthGuard]*/ },
     { path: 'list-subreddits', component: ListSubredditsComponent },
@@ -33,6 +36,7 @@ const routes: Routes = [
     { path: 'view-policy/:id', component: ViewPolicyComponent },
     { path: 'policy-data-details/:id', component: PolicyDataDetailsComponent},
     { path: 'search-policy/:keyword', component: ViewSearchPoliciesComponent },
+    { path: 'create-blog-post', component: CreateBlogPostComponent  /*, canActivate: [AuthGuard]*/ },
     { path: 'create-post', component: CreatePostComponent  /*, canActivate: [AuthGuard]*/ },
     { path: 'create-subreddit', component: CreateSubredditComponent   /*, canActivate: [AuthGuard]*/ },
     { path: 'create-product', component: CreateProductComponent },
@@ -42,9 +46,7 @@ const routes: Routes = [
   ];
 
 @NgModule({
-    imports: [
-      RouterModule.forRoot(routes)
-    ],
-    exports: [RouterModule]
-  })
-  export class AppRoutingModule { }
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

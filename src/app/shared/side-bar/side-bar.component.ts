@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {AuthService} from '../../auth/shared/auth.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -8,9 +9,16 @@ import { Router } from '@angular/router';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  isLoggedIn: boolean;
+
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    this.isLoggedIn = this.authService.isAuthenticated();
+  }
+
+  goToCreateBlogPost() {
+    this.router.navigateByUrl('/create-blog-post');
   }
 
   goToCreatePost() {

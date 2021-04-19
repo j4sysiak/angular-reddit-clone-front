@@ -6,6 +6,7 @@ import { throwError } from 'rxjs';
 import { AuthService } from '../shared/auth.service';
 import { LoginRequestPayload } from './login-request.payload';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -44,20 +45,29 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
   login() {
     this.loginRequestPayload.username = this.loginForm.get('username').value;
     this.loginRequestPayload.password = this.loginForm.get('password').value;
 
-    this.authService.login(this.loginRequestPayload).subscribe(response => {
-      console.log('Login Successful');
+    this.authService.login(this.loginRequestPayload).subscribe(data => {
       this.isError = false;
       this.router.navigateByUrl('');
       this.toastr.success('Login Successful');
     }, error => {
       this.isError = true;
       throwError(error);
+      this.toastr.error('Login Failed!!!');
     });
   }
 
 }
+
+
+
+
+
+
+
+
+
+
