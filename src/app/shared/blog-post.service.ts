@@ -14,11 +14,11 @@ export class BlogPostService {
     return this.httpClient.post('http://localhost:8080/api/blog/blogposts/', blogPostPayload);
   }
 
-  // getAllPosts(): Observable<Array<BlogPostPayload>>{
-  //   return this.httpClient.get<Array<BlogPostPayload>>("http://localhost:8080/api/posts/all");
-  // }
-  //
-  // getPost(permaLink: Number):Observable<BlogPostPayload>{
-  //   return this.httpClient.get<BlogPostPayload>('http://localhost:8080/api/posts/get/' + permaLink);
-  // }
+  getAllBlogPosts(): Observable<Array<BlogPostPayload>>{
+    return this.httpClient.get<Array<BlogPostPayload>>("http://localhost:8080/api/blog/blogposts/all");
+  }
+
+  getBlogPost(permaLink: Number):Observable<BlogPostPayload>{
+    return this.httpClient.get<BlogPostPayload>('http://localhost:8080/api/blog/blogposts/get/' + permaLink);
+  }
 }

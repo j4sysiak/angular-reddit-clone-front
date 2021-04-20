@@ -37,10 +37,10 @@ import { ListProductComponent } from './product/list-product/list-product.compon
 import { CreatePolicyComponent } from './policy/create-policy/create-policy.component';
 import { ListPolicyComponent } from './policy/list-policy/list-policy.component';
 import { PolicyDataDetailsComponent } from './policy/policy-data-details/policy-data-details.component';
-import { BlogPostComponent } from './blog-post/blog-post.component';
 import { CreateBlogPostComponent } from './blog-post/create-blog-post/create-blog-post.component';
 import { ViewBlogPostComponent } from './blog-post/view-blog-post/view-blog-post.component';
 import {HttpClientInterceptor} from './http-client-interceptor';
+import { BlogPostTileComponent } from './shared/blog-post-tile/blog-post-tile.component';
 
 @NgModule({
   declarations: [
@@ -70,9 +70,9 @@ import {HttpClientInterceptor} from './http-client-interceptor';
     CreatePolicyComponent,
     ListPolicyComponent,
     PolicyDataDetailsComponent,
-    BlogPostComponent,
     CreateBlogPostComponent,
-    ViewBlogPostComponent
+    ViewBlogPostComponent,
+    BlogPostTileComponent
   ],
   imports: [
     BrowserModule,

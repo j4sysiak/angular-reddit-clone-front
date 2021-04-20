@@ -19,6 +19,7 @@ import {CreatePolicyComponent} from './policy/create-policy/create-policy.compon
 import {ListPolicyComponent} from './policy/list-policy/list-policy.component';
 import {PolicyDataDetailsComponent} from './policy/policy-data-details/policy-data-details.component';
 import {CreateBlogPostComponent} from './blog-post/create-blog-post/create-blog-post.component';
+import {ViewBlogPostComponent} from './blog-post/view-blog-post/view-blog-post.component';
 // import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
+    { path: 'view-blog-post/:id', component: ViewBlogPostComponent },
     { path: 'user-profile/:name', component: UserProfileComponent /*, canActivate: [AuthGuard]*/ },
     { path: 'list-subreddits', component: ListSubredditsComponent },
     { path: 'list-product', component: ListProductComponent },
