@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +37,10 @@ import { ListProductComponent } from './product/list-product/list-product.compon
 import { CreatePolicyComponent } from './policy/create-policy/create-policy.component';
 import { ListPolicyComponent } from './policy/list-policy/list-policy.component';
 import { PolicyDataDetailsComponent } from './policy/policy-data-details/policy-data-details.component';
+import { CreateBlogPostComponent } from './blog-post/create-blog-post/create-blog-post.component';
+import { ViewBlogPostComponent } from './blog-post/view-blog-post/view-blog-post.component';
+import {HttpClientInterceptor} from './http-client-interceptor';
+import { BlogPostTileComponent } from './shared/blog-post-tile/blog-post-tile.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +69,10 @@ import { PolicyDataDetailsComponent } from './policy/policy-data-details/policy-
     ListProductComponent,
     CreatePolicyComponent,
     ListPolicyComponent,
-    PolicyDataDetailsComponent
+    PolicyDataDetailsComponent,
+    CreateBlogPostComponent,
+    ViewBlogPostComponent,
+    BlogPostTileComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +87,7 @@ import { PolicyDataDetailsComponent } from './policy/policy-data-details/policy-
     EditorModule,
     NgbModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

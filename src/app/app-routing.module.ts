@@ -18,11 +18,16 @@ import {ListProductComponent} from './product/list-product/list-product.componen
 import {CreatePolicyComponent} from './policy/create-policy/create-policy.component';
 import {ListPolicyComponent} from './policy/list-policy/list-policy.component';
 import {PolicyDataDetailsComponent} from './policy/policy-data-details/policy-data-details.component';
-// import {AuthGuard} from './auth/auth.guard';
+import {CreateBlogPostComponent} from './blog-post/create-blog-post/create-blog-post.component';
+import {ViewBlogPostComponent} from './blog-post/view-blog-post/view-blog-post.component';
+import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
+    // { path: '/', component: HomeComponent },
     { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
+    { path: 'view-blog-post/:id', component: ViewBlogPostComponent },
     { path: 'user-profile/:name', component: UserProfileComponent /*, canActivate: [AuthGuard]*/ },
     { path: 'list-subreddits', component: ListSubredditsComponent },
     { path: 'list-product', component: ListProductComponent },
@@ -33,18 +38,17 @@ const routes: Routes = [
     { path: 'view-policy/:id', component: ViewPolicyComponent },
     { path: 'policy-data-details/:id', component: PolicyDataDetailsComponent},
     { path: 'search-policy/:keyword', component: ViewSearchPoliciesComponent },
-    { path: 'create-post', component: CreatePostComponent  /*, canActivate: [AuthGuard]*/ },
-    { path: 'create-subreddit', component: CreateSubredditComponent   /*, canActivate: [AuthGuard]*/ },
-    { path: 'create-product', component: CreateProductComponent },
-    { path: 'create-policy', component: CreatePolicyComponent },
+    { path: 'create-blog-post', component: CreateBlogPostComponent, canActivate: [AuthGuard] },
+    { path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard] },
+    { path: 'create-subreddit', component: CreateSubredditComponent, canActivate: [AuthGuard] },
+    { path: 'create-product', component: CreateProductComponent, canActivate: [AuthGuard] },
+    { path: 'create-policy', component: CreatePolicyComponent, canActivate: [AuthGuard] },
     { path: 'sign-up', component: SignupComponent },
     { path: 'login', component: LoginComponent }
   ];
 
 @NgModule({
-    imports: [
-      RouterModule.forRoot(routes)
-    ],
-    exports: [RouterModule]
-  })
-  export class AppRoutingModule { }
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
