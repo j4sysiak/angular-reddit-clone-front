@@ -77,8 +77,8 @@ import { BlogPostTileComponent } from './shared/blog-post-tile/blog-post-tile.co
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
