@@ -1,1 +1,29 @@
-<app-server></app-server>Some code here<app-server></app-server>
+<label>Server Name</label>
+
+<!--One-Way-Databinding-->
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  (input)="onUpdateServerName($event)">-->
+
+<!--Two-Way-Databinding-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+
+<!--<p>{{ serverName }}</p>-->
+
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateStatus()">Add Server</button>
+
+<!--<p>{{ allowNewServer }}</p>-->
+<!--<p [innerText]="allowNewServer">{{ allowNewServer }}</p>-->
+
+<p>{{ serverCreationStatus }}</p>
+
+<app-server></app-server>
+  Some code here
+<app-server></app-server>
