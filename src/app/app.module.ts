@@ -39,8 +39,14 @@ import { ListPolicyComponent } from './policy/list-policy/list-policy.component'
 import { PolicyDataDetailsComponent } from './policy/policy-data-details/policy-data-details.component';
 import { CreateBlogPostComponent } from './blog-post/create-blog-post/create-blog-post.component';
 import { ViewBlogPostComponent } from './blog-post/view-blog-post/view-blog-post.component';
-import {HttpClientInterceptor} from './http-client-interceptor';
+import { HttpClientInterceptor } from './http-client-interceptor';
 import { BlogPostTileComponent } from './shared/blog-post-tile/blog-post-tile.component';
+import { ServerComponent } from './UdemyAngularTheCompleteGuide/server/server.component';
+import { ServersComponent } from './UdemyAngularTheCompleteGuide/servers/servers.component';
+import { WarningAlertComponent } from './UdemyAngularTheCompleteGuide/warning-alert/warning-alert.component';
+import { SuccessAlertComponent } from './UdemyAngularTheCompleteGuide/success-alert/success-alert.component';
+import { AssignmentSolutionComponent } from './UdemyAngularTheCompleteGuide/assignment-solution/assignment-solution.component';
+import { AssignmentSolution2Component } from './UdemyAngularTheCompleteGuide/assignment-solution2/assignment-solution2.component';
 
 @NgModule({
   declarations: [
@@ -72,13 +78,19 @@ import { BlogPostTileComponent } from './shared/blog-post-tile/blog-post-tile.co
     PolicyDataDetailsComponent,
     CreateBlogPostComponent,
     ViewBlogPostComponent,
-    BlogPostTileComponent
+    BlogPostTileComponent,
+    ServerComponent,
+    ServersComponent,
+    WarningAlertComponent,
+    SuccessAlertComponent,
+    AssignmentSolutionComponent,
+    AssignmentSolution2Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
