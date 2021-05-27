@@ -46,6 +46,7 @@ import { ServersComponent } from './UdemyAngularTheCompleteGuide/servers/servers
 import { WarningAlertComponent } from './UdemyAngularTheCompleteGuide/warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './UdemyAngularTheCompleteGuide/success-alert/success-alert.component';
 import { AssignmentSolutionComponent } from './UdemyAngularTheCompleteGuide/assignment-solution/assignment-solution.component';
+import { AssignmentSolution2Component } from './UdemyAngularTheCompleteGuide/assignment-solution2/assignment-solution2.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { AssignmentSolutionComponent } from './UdemyAngularTheCompleteGuide/assi
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    AssignmentSolutionComponent
+    AssignmentSolutionComponent,
+    AssignmentSolution2Component
   ],
   imports: [
     BrowserModule,
