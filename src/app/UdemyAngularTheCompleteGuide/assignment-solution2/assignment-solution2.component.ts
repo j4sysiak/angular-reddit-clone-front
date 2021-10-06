@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment-solution2.component.css']
 })
 export class AssignmentSolution2Component implements OnInit {
-
   showSecret = false;
   log = [];
 
@@ -17,7 +16,7 @@ export class AssignmentSolution2Component implements OnInit {
 
   onToggleDetails() {
     this.showSecret = !this.showSecret;
-    // this.log.push(this.log.length + 1);
+    this.log.push(this.log.length + 1);
     this.log.push(new Date());
   }
 }
