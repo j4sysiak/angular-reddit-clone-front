@@ -16,7 +16,7 @@ export class CmpDatabindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAddServer() {
+  o nAddServer() {
     this.serverElements.push({
       type: 'server',
       name: this.newServerName,
