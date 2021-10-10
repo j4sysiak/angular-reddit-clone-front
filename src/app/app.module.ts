@@ -55,6 +55,8 @@ import { Ng4RecipeItemComponent } from './UdemyAngularTheCompleteGuide/ng4-compl
 import { Ng4ShoppingListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
 import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-edit/ng4-shopping-edit.component';
 import { CmpDatabindingComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/cmp-databinding/cmp-databinding.component';
+import { CockpitComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/cockpit/cockpit.component';
+import { ServerElementComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +102,9 @@ import { CmpDatabindingComponent } from './UdemyAngularTheCompleteGuide/cmp-data
     Ng4RecipeItemComponent,
     Ng4ShoppingListComponent,
     Ng4ShoppingEditComponent,
-    CmpDatabindingComponent
+    CmpDatabindingComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
