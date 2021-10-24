@@ -8,4 +8,15 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'angular-reddit-clone';
   name = 'Jacek';
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+  onIntervalFired(fireNumber: number) {
+    console.log(fireNumber);
+    if (fireNumber % 2 === 0) {
+      this.evenNumbers.push(fireNumber);
+    } else {
+      this.oddNumbers.push(fireNumber);
+    }
+  }
 }
