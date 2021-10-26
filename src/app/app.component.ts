@@ -10,6 +10,7 @@ export class AppComponent {
   name = 'Jacek';
   oddNumbers: number[] = [];
   evenNumbers: number[] = [];
+  loadedFeature = 'recipe';
 
   onIntervalFired(fireNumber: number) {
     console.log(fireNumber);
@@ -18,5 +19,9 @@ export class AppComponent {
     } else {
       this.oddNumbers.push(fireNumber);
     }
+  }
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 }
