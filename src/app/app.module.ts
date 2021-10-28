@@ -60,6 +60,9 @@ import { ServerElementComponent } from './UdemyAngularTheCompleteGuide/cmp-datab
 import { GameControlComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja5-Databinding/game-control/game-control.component';
 import { OddComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja5-Databinding/odd/odd.component';
 import { EvenComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja5-Databinding/even/even.component';
+import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/assignment-directives/assignment-directives.component';
+import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -110,7 +113,10 @@ import { EvenComponent } from './UdemyAngularTheCompleteGuide/assignment-solutio
     ServerElementComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    AssignmentDirectivesComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
