@@ -63,6 +63,7 @@ import { EvenComponent } from './UdemyAngularTheCompleteGuide/assignment-solutio
 import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/assignment-directives/assignment-directives.component';
 import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/unless/unless.directive';
 
 @NgModule({
   declarations: [
@@ -116,7 +117,8 @@ import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignm
     EvenComponent,
     AssignmentDirectivesComponent,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
