@@ -65,9 +65,6 @@ import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignme
 import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/unless/unless.directive';
 import {DropdownDirective} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
-import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
-import { AccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/account/account.component';
-import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -123,10 +120,7 @@ import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-s
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective,
-    AssignmentServicesComponent,
-    AccountComponent,
-    NewAccountComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
