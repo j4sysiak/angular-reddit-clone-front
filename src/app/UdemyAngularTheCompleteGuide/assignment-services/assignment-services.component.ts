@@ -21,7 +21,6 @@ export class AssignmentServicesComponent {
     }
   ];
 
-
   onAccountAdded(newAccount: {name: string, status: string}) {
     this.accounts.push(newAccount);
   }
