@@ -68,8 +68,12 @@ import {DropdownDirective} from './UdemyAngularTheCompleteGuide/ng4-complete-gui
 import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
 import { AccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/account/account.component';
 import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/new-account/new-account.component';
-import {AccountsService} from "./UdemyAngularTheCompleteGuide/assignment-services/accounts.service";
-import {LoggingService} from "./UdemyAngularTheCompleteGuide/assignment-services/logging.service";
+import {AccountsService} from './UdemyAngularTheCompleteGuide/assignment-services/accounts.service';
+import {LoggingService} from './UdemyAngularTheCompleteGuide/assignment-services/logging.service';
+import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/assignment-solution-sekcja9-services.component';
+import { ActiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/active-users/active-users.component';
+import { InactiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/inactive-users/inactive-users.component';
+import {CounterService} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
 
 @NgModule({
   declarations: [
@@ -128,7 +132,10 @@ import {LoggingService} from "./UdemyAngularTheCompleteGuide/assignment-services
     DropdownDirective,
     AssignmentServicesComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    AssignmentSolutionSekcja9ServicesComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -143,7 +150,10 @@ import {LoggingService} from "./UdemyAngularTheCompleteGuide/assignment-services
     EditorModule,
     NgbModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}, AccountsService, LoggingService],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
+              AccountsService,
+              LoggingService,
+              CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
