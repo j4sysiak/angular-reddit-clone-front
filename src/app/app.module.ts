@@ -64,6 +64,7 @@ import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/as
 import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/unless/unless.directive';
+import {DropdownDirective} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -118,7 +119,8 @@ import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-direc
     AssignmentDirectivesComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
