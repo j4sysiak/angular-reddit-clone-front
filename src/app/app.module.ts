@@ -68,6 +68,8 @@ import {DropdownDirective} from './UdemyAngularTheCompleteGuide/ng4-complete-gui
 import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
 import { AccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/account/account.component';
 import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/new-account/new-account.component';
+import {AccountsService} from "./UdemyAngularTheCompleteGuide/assignment-services/accounts.service";
+import {LoggingService} from "./UdemyAngularTheCompleteGuide/assignment-services/logging.service";
 
 @NgModule({
   declarations: [
@@ -141,7 +143,7 @@ import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-s
     EditorModule,
     NgbModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}, AccountsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
