@@ -73,7 +73,8 @@ import {LoggingService} from './UdemyAngularTheCompleteGuide/assignment-services
 import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/assignment-solution-sekcja9-services.component';
 import { ActiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/active-users/active-users.component';
 import { InactiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/inactive-users/inactive-users.component';
-import {CounterService} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
+import { CounterService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
+import { ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -153,7 +154,8 @@ import {CounterService} from './UdemyAngularTheCompleteGuide/assignment-solution
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
               AccountsService,
               LoggingService,
-              CounterService],
+              CounterService,
+              ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
