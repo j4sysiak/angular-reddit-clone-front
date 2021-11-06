@@ -64,17 +64,24 @@ import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/as
 import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/unless/unless.directive';
-import {DropdownDirective} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
+import { DropdownDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
 import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
 import { AccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/account/account.component';
 import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/new-account/new-account.component';
-import {AccountsService} from './UdemyAngularTheCompleteGuide/assignment-services/accounts.service';
-import {LoggingService} from './UdemyAngularTheCompleteGuide/assignment-services/logging.service';
+import { AccountsService } from './UdemyAngularTheCompleteGuide/assignment-services/accounts.service';
+import { LoggingService} from './UdemyAngularTheCompleteGuide/assignment-services/logging.service';
 import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/assignment-solution-sekcja9-services.component';
 import { ActiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/active-users/active-users.component';
 import { InactiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/inactive-users/inactive-users.component';
 import { CounterService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
 import { ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/shopping-list.service';
+import { AssignmentRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/assignment-routing.component';
+import { HomeRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/home-routing/home-routing.component';
+import { ServersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
+import { EditServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
+import { ServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
+import { UsersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
+import { UserRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
 
 @NgModule({
   declarations: [
@@ -136,7 +143,14 @@ import { ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete
     NewAccountComponent,
     AssignmentSolutionSekcja9ServicesComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    AssignmentRoutingComponent,
+    HomeRoutingComponent,
+    ServersRoutingComponent,
+    EditServerRoutingComponent,
+    ServerRoutingComponent,
+    UsersRoutingComponent,
+    UserRoutingComponent
   ],
   imports: [
     BrowserModule,

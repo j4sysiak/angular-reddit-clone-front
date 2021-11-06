@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        href="#"
+        class="list-group-item"
+        *ngFor="let server of serversRouting">
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <app-edit-server-routing></app-edit-server-routing>
+    <hr>
+    <app-servers-routing></app-servers-routing>
+  </div>
+</div>
+
