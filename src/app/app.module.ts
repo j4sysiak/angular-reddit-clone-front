@@ -146,8 +146,8 @@ import { UserRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-
     InactiveUsersComponent,
     AssignmentRoutingComponent,
     HomeRoutingComponent,
-    ServersRoutingComponent,
     EditServerRoutingComponent,
+    ServersRoutingComponent,
     ServerRoutingComponent,
     UsersRoutingComponent,
     UserRoutingComponent

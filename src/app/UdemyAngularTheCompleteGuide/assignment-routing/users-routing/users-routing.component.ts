@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {UserRoutingComponent} from './user-routing/user-routing.component';
 
 @Component({
   selector: 'app-users-routing',

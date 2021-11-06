@@ -23,9 +23,6 @@ export class ServersRoutingService {
     }
   ];
 
-  constructor() {
-  }
-
   getServersRouting() {
     return this.serversRouting;
   }
