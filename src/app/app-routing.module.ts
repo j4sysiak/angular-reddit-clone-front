@@ -53,8 +53,9 @@ const routes: Routes = [
     // app-assignment-routing
     { path: 'home-routing', component: HomeRoutingComponent },      /* localhost:4200/home-routing */
     { path: 'users-routing', component: UsersRoutingComponent },    /* localhost:4200/users-routing */
-    { path: 'users-routing/:id/:name', component: UserRoutingComponent }, /* localhost:4200/users-routing/id/name */
-    { path: 'servers-routing', component: ServersRoutingComponent } /* localhost:4200/servers-routing */
+    { path: 'users-routing/:id/:name', component: UserRoutingComponent },    /* localhost:4200/users-routing/id/name */
+    { path: 'servers-routing', component: ServersRoutingComponent },         /* localhost:4200/servers-routing */
+    { path: 'servers-routing/:id/edit', component: ServersRoutingComponent } /* localhost:4200/servers-routing/id/edit */
   ];
 
 @NgModule({

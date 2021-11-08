@@ -13,8 +13,8 @@ export class HomeRoutingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onLoadServersRouting() {
+  onLoadServersRouting(id: number) {
     // complex calculation
-    this.router.navigate(['/servers-routing']);
+    this.router.navigate(['/servers-routing', id, 'edit'], { queryParams: {allowEdit: '1'}, fragment: 'loading' });
   }
 }

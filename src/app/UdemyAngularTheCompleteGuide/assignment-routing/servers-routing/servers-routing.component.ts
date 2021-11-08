@@ -13,13 +13,13 @@ export class ServersRoutingComponent implements OnInit {
 
   constructor(private serversRoutingService: ServersRoutingService,
               private router: Router,
-              private route:  ActivatedRoute) {}
+              private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.serversRouting = this.serversRoutingService.getServersRouting();
   }
 
   onReload() {
-    // this.router.navigate(['servers-routing'], {relativeTo: this.route});
+    this.router.navigate(['/servers-routing'], {relativeTo: this.route});
   }
 }
