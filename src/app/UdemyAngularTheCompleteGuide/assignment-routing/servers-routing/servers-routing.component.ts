@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ServersRoutingService} from './servers-routing.service';
-import {UserRoutingComponent} from '../users-routing/user-routing/user-routing.component';
 
 @Component({
   selector: 'app-servers-routing',
