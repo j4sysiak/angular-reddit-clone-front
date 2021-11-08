@@ -24,6 +24,7 @@ import {AuthGuard} from './auth/auth.guard';
 import {HomeRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/home-routing/home-routing.component';
 import {UsersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
 import {ServersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
+import {UserRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
 
 const routes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -48,8 +49,11 @@ const routes: Routes = [
     { path: 'create-policy', component: CreatePolicyComponent, canActivate: [AuthGuard] },
     { path: 'sign-up', component: SignupComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'home-routing', component: HomeRoutingComponent },     /* localhost:4200/home-routing */
+
+    // app-assignment-routing
+    { path: 'home-routing', component: HomeRoutingComponent },      /* localhost:4200/home-routing */
     { path: 'users-routing', component: UsersRoutingComponent },    /* localhost:4200/users-routing */
+    { path: 'users-routing/:id/:name', component: UserRoutingComponent }, /* localhost:4200/users-routing/id/name */
     { path: 'servers-routing', component: ServersRoutingComponent } /* localhost:4200/servers-routing */
   ];
 

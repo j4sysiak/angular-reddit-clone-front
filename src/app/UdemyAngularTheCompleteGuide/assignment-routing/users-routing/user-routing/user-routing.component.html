@@ -1,3 +1,8 @@
-<p>UserRouting with ID _ID_ loaded.</p>
-<p>UserRouting name is _NAME_</p>
+<p>UserRoutingComponent works!</p>
+<hr>
 
+<p>UserRouting with ID {{ userRouting.id }} loaded.</p>
+<p>UserRouting name is {{ userRouting.name }}</p>
+
+<hr>
+<a [routerLink]="['/users-routing', 10, 'Anna']">Load Anna(10)</a>
