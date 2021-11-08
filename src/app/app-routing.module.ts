@@ -21,9 +21,12 @@ import {PolicyDataDetailsComponent} from './policy/policy-data-details/policy-da
 import {CreateBlogPostComponent} from './blog-post/create-blog-post/create-blog-post.component';
 import {ViewBlogPostComponent} from './blog-post/view-blog-post/view-blog-post.component';
 import {AuthGuard} from './auth/auth.guard';
+import {HomeRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/home-routing/home-routing.component';
+import {UsersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
+import {ServersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
 
 const routes: Routes = [
-    // { path: '/', component: HomeComponent },
+    // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
@@ -44,7 +47,10 @@ const routes: Routes = [
     { path: 'create-product', component: CreateProductComponent, canActivate: [AuthGuard] },
     { path: 'create-policy', component: CreatePolicyComponent, canActivate: [AuthGuard] },
     { path: 'sign-up', component: SignupComponent },
-    { path: 'login', component: LoginComponent }
+    { path: 'login', component: LoginComponent },
+    { path: 'home-routing', component: HomeRoutingComponent },     /* localhost:4200/home-routing */
+    { path: 'users-routing', component: UsersRoutingComponent },    /* localhost:4200/users-routing */
+    { path: 'servers-routing', component: ServersRoutingComponent } /* localhost:4200/servers-routing */
   ];
 
 @NgModule({
