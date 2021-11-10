@@ -1,9 +1,11 @@
 <p>UsersRoutingComponent works!</p>
 <hr>
+
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
       <a
+        [routerLink]="['/users-routing', userRouting.id, userRouting.name]"
         href="#"
         class="list-group-item"
         *ngFor="let userRouting of usersRouting">

@@ -25,6 +25,7 @@ import {HomeRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-ro
 import {UsersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
 import {ServersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
 import {UserRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
+import {ServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
 
 const routes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -55,6 +56,7 @@ const routes: Routes = [
     { path: 'users-routing', component: UsersRoutingComponent },    /* localhost:4200/users-routing */
     { path: 'users-routing/:id/:name', component: UserRoutingComponent },    /* localhost:4200/users-routing/id/name */
     { path: 'servers-routing', component: ServersRoutingComponent },         /* localhost:4200/servers-routing */
+    { path: 'servers-routing/:id', component: ServerRoutingComponent }, /* localhost:4200/servers-routing/id */
     { path: 'servers-routing/:id/edit', component: ServersRoutingComponent } /* localhost:4200/servers-routing/id/edit */
   ];
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServersRoutingService} from '../servers-routing.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-edit-server-routing',
@@ -11,9 +12,14 @@ export class EditServerRoutingComponent implements OnInit {
   serverRoutingName = '';
   serverRoutingStatus = '';
 
-  constructor(private serversRoutingService: ServersRoutingService) { }
+  constructor(private serversRoutingService: ServersRoutingService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(this.route.snapshot.queryParams);
+    console.log(this.route.snapshot.fragment);
+    this.route.queryParams.subscribe();
+    this.route.fragment.subscribe();
     this.serverRouting = this.serversRoutingService.getServerRouting(1);
     this.serverRoutingName = this.serverRouting.name;
     this.serverRoutingStatus = this.serverRouting.status;
