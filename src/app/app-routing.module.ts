@@ -29,7 +29,7 @@ import {ServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-
 import {EditServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
 import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 
-const routes: Routes = [
+const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
@@ -67,7 +67,8 @@ const routes: Routes = [
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
