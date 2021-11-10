@@ -82,6 +82,7 @@ import { EditServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assig
 import { ServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
 import { UsersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
 import { UserRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
+import { PageNotFoundComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -150,7 +151,8 @@ import { UserRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-
     ServersRoutingComponent,
     ServerRoutingComponent,
     UsersRoutingComponent,
-    UserRoutingComponent
+    UserRoutingComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

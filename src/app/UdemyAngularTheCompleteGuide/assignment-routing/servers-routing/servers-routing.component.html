@@ -6,7 +6,7 @@
     <div class="list-group">
       <a
         [routerLink]="['/servers-routing', serverRouting.id]"
-        [queryParams]="{ allowEdit: '1' }"
+        [queryParams]="{ allowEdit: serverRouting.id === 3 ? '1' : '0' }"
         [fragment]="'loading'"
         href="#"
         class="list-group-item"
@@ -16,12 +16,10 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
 <!--    <a routerLink="/servers-routing">Reload Page</a>-->
-<!--    <hr>-->
-    <button class="btn btn-primary" (click)="onReload()">Reload Page</button>
-    <hr>
-    <app-edit-server-routing></app-edit-server-routing>
-    <hr>
+<!--    <button class="btn btn-primary" (click)="onReload()">Reload Page</button>-->
+<!--    <app-edit-server-routing></app-edit-server-routing>-->
 <!--    <app-server-routing></app-server-routing>-->
   </div>
 </div>

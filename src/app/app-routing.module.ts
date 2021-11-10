@@ -26,6 +26,8 @@ import {UsersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-r
 import {ServersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
 import {UserRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
 import {ServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
+import {EditServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
+import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 
 const routes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -53,11 +55,15 @@ const routes: Routes = [
 
     // app-assignment-routing
     { path: 'home-routing', component: HomeRoutingComponent },      /* localhost:4200/home-routing */
-    { path: 'users-routing', component: UsersRoutingComponent },    /* localhost:4200/users-routing */
-    { path: 'users-routing/:id/:name', component: UserRoutingComponent },    /* localhost:4200/users-routing/id/name */
-    { path: 'servers-routing', component: ServersRoutingComponent },         /* localhost:4200/servers-routing */
-    { path: 'servers-routing/:id', component: ServerRoutingComponent }, /* localhost:4200/servers-routing/id */
-    { path: 'servers-routing/:id/edit', component: ServersRoutingComponent } /* localhost:4200/servers-routing/id/edit */
+    { path: 'users-routing', component: UsersRoutingComponent, children: [
+        { path: ':id/:name', component: UserRoutingComponent }
+      ] },
+    { path: 'servers-routing', component: ServersRoutingComponent, children: [
+        { path: ':id', component: ServerRoutingComponent },
+        { path: ':id/edit', component: EditServerRoutingComponent }
+      ] },
+    { path: 'not-found', component: PageNotFoundComponent },
+    { path: '**', redirectTo: '/not-found' }
   ];
 
 @NgModule({
