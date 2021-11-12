@@ -1,12 +1,5 @@
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthService {
+export class AuthRoutingService {
   loggedIn = false;
-
-  constructor() { }
 
   isAuthenticated() {
     const promise = new Promise(

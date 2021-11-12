@@ -83,6 +83,8 @@ import { ServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignmen
 import { UsersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
 import { UserRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
 import { PageNotFoundComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
+import {AuthRoutingService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing.service';
+import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
 
 @NgModule({
   declarations: [
@@ -171,7 +173,9 @@ import { PageNotFoundComponent } from './UdemyAngularTheCompleteGuide/assignment
               AccountsService,
               LoggingService,
               CounterService,
-              ShoppingListService],
+              ShoppingListService,
+              AuthRoutingService,
+              AuthRoutingGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

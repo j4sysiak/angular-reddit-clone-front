@@ -28,6 +28,7 @@ import {UserRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-ro
 import {ServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
 import {EditServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
 import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
+import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -58,7 +59,7 @@ const appRoutes: Routes = [
     { path: 'users-routing', component: UsersRoutingComponent, children: [
         { path: ':id/:name', component: UserRoutingComponent }
       ] },
-    { path: 'servers-routing', component: ServersRoutingComponent, children: [
+    { path: 'servers-routing', canActivate: [AuthRoutingGuardService], component: ServersRoutingComponent, children: [
         { path: ':id', component: ServerRoutingComponent },
         { path: ':id/edit', component: EditServerRoutingComponent }
       ] },
