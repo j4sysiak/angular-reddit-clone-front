@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthRoutingService} from '../auth-routing.service';
 
 @Component({
   selector: 'app-home-routing',
@@ -8,7 +9,8 @@ import {Router} from '@angular/router';
 })
 export class HomeRoutingComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private authRoutingService: AuthRoutingService) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +18,13 @@ export class HomeRoutingComponent implements OnInit {
   onLoadServersRouting(id: number) {
     // complex calculation
     this.router.navigate(['/servers-routing', id, 'edit'], { queryParams: {allowEdit: '1'}, fragment: 'loading' });
+  }
+
+  onLogin() {
+    this.authRoutingService.login();
+  }
+
+  onLogout() {
+    this.authRoutingService.logout();
   }
 }

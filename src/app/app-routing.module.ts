@@ -59,7 +59,12 @@ const appRoutes: Routes = [
     { path: 'users-routing', component: UsersRoutingComponent, children: [
         { path: ':id/:name', component: UserRoutingComponent }
       ] },
-    { path: 'servers-routing', canActivate: [AuthRoutingGuardService], component: ServersRoutingComponent, children: [
+    {
+      path: 'servers-routing',
+      // canActivate: [AuthRoutingGuardService],
+      canActivateChild: [AuthRoutingGuardService],
+      component: ServersRoutingComponent,
+      children: [
         { path: ':id', component: ServerRoutingComponent },
         { path: ':id/edit', component: EditServerRoutingComponent }
       ] },
