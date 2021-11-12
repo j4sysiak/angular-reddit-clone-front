@@ -29,6 +29,7 @@ import {ServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-
 import {EditServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
 import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
+import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -66,7 +67,7 @@ const appRoutes: Routes = [
       component: ServersRoutingComponent,
       children: [
         { path: ':id', component: ServerRoutingComponent },
-        { path: ':id/edit', component: EditServerRoutingComponent }
+        { path: ':id/edit', component: EditServerRoutingComponent, canDeactivate: [CanDeactivateRoutingGuardService] }
       ] },
     { path: 'not-found', component: PageNotFoundComponent },
     { path: '**', redirectTo: '/not-found' }
