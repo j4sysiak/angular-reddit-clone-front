@@ -75,10 +75,10 @@ const appRoutes: Routes = [
       ] },
     // { path: 'not-found', component: PageNotFoundComponent },
     { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
-    { path: '**', redirectTo: '/not-found' },
+    // { path: '**', redirectTo: '/not-found' },
 
      // aplikacja: ng4-complete-guide
-    { path: 'ng4-complete-guide', redirectTo: '/recipes' },
+    { path: 'ng4-complete-guide', redirectTo: '/recipes'},
     { path: 'recipes', component: Ng4RecipesComponent },
     { path: 'shopping-list', component: Ng4ShoppingListComponent }
   ];
