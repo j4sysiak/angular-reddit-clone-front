@@ -88,6 +88,7 @@ import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment
 import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 import { ErrorPageComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
 import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
+import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -158,7 +159,8 @@ import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assig
     UsersRoutingComponent,
     UserRoutingComponent,
     PageNotFoundComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    Ng4RecipeStartComponent
   ],
   imports: [
     BrowserModule,
