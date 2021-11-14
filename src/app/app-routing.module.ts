@@ -32,6 +32,8 @@ import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment
 import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 import {ErrorPageComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
 import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
+import {Ng4RecipesComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
+import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -57,7 +59,7 @@ const appRoutes: Routes = [
     { path: 'sign-up', component: SignupComponent },
     { path: 'login', component: LoginComponent },
 
-    // app-assignment-routing
+    // aplikacja: app-assignment-routing
     { path: 'home-routing', component: HomeRoutingComponent },      /* localhost:4200/home-routing */
     { path: 'users-routing', component: UsersRoutingComponent, children: [
         { path: ':id/:name', component: UserRoutingComponent }
@@ -73,7 +75,12 @@ const appRoutes: Routes = [
       ] },
     // { path: 'not-found', component: PageNotFoundComponent },
     { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
-    { path: '**', redirectTo: '/not-found' }
+    { path: '**', redirectTo: '/not-found' },
+
+     // aplikacja: ng4-complete-guide
+    { path: 'ng4-complete-guide', redirectTo: '/recipes' },
+    { path: 'recipes', component: Ng4RecipesComponent },
+    { path: 'shopping-list', component: Ng4ShoppingListComponent }
   ];
 
 @NgModule({
