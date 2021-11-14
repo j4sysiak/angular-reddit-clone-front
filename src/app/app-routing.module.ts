@@ -30,6 +30,8 @@ import {EditServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignm
 import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
 import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
+import {ErrorPageComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
+import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -66,10 +68,11 @@ const appRoutes: Routes = [
       canActivateChild: [AuthRoutingGuardService],
       component: ServersRoutingComponent,
       children: [
-        { path: ':id', component: ServerRoutingComponent },
+        { path: ':id', component: ServerRoutingComponent, resolve: {serverRoutingResolverService: ServerRoutingResolverService} },
         { path: ':id/edit', component: EditServerRoutingComponent, canDeactivate: [CanDeactivateRoutingGuardService] }
       ] },
-    { path: 'not-found', component: PageNotFoundComponent },
+    // { path: 'not-found', component: PageNotFoundComponent },
+    { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
     { path: '**', redirectTo: '/not-found' }
   ];
 
