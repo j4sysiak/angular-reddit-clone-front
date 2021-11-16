@@ -90,6 +90,7 @@ import { ErrorPageComponent } from './UdemyAngularTheCompleteGuide/assignment-ro
 import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
 import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
 import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
+import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 
 @NgModule({
   declarations: [
@@ -162,7 +163,8 @@ import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-compl
     PageNotFoundComponent,
     ErrorPageComponent,
     Ng4RecipeStartComponent,
-    Ng4RecipeEditComponent
+    Ng4RecipeEditComponent,
+    AssignmentObservablesComponent
   ],
   imports: [
     BrowserModule,

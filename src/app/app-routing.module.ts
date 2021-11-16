@@ -37,6 +37,7 @@ import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-compl
 import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
 import {Ng4RecipeDetailComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
 import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
+import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -81,6 +82,10 @@ const appRoutes: Routes = [
     { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
     // { path: '**', redirectTo: '/not-found' },
 
+     // aplikacja: app-assignment-observable
+    { path: 'app-assignment-observables', redirectTo: '/observable', pathMatch: 'full' },
+    {path: 'observable', component: AssignmentObservablesHomeComponent},
+    {path: 'observable-user/:id', component: AssignmentObservablesUserComponent},
 
      // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
