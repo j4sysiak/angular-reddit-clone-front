@@ -85,6 +85,8 @@ const appRoutes: Routes = [
       { path: '', component: Ng4RecipeStartComponent },
       { path: ':id', component: Ng4RecipeDetailComponent }
       ]},
+    { path: 'ng4-complete-guide', redirectTo: '/recipes'},
+    { path: 'recipes', component: Ng4RecipesComponent },
     { path: 'shopping-list', component: Ng4ShoppingListComponent }
   ];
 
