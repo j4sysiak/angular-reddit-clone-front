@@ -36,6 +36,7 @@ import {Ng4RecipesComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-g
 import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
 import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
 import {Ng4RecipeDetailComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
+import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     { path: 'sign-up', component: SignupComponent },
     { path: 'login', component: LoginComponent },
 
+
     // aplikacja: app-assignment-routing
     { path: 'home-routing', component: HomeRoutingComponent },      /* localhost:4200/home-routing */
     { path: 'users-routing', component: UsersRoutingComponent, children: [
@@ -79,16 +81,19 @@ const appRoutes: Routes = [
     { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
     // { path: '**', redirectTo: '/not-found' },
 
+
      // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
     { path: 'recipes', component: Ng4RecipesComponent, children: [
       { path: '', component: Ng4RecipeStartComponent },
-      { path: ':id', component: Ng4RecipeDetailComponent }
+      { path: 'new', component: Ng4RecipeEditComponent },
+      { path: ':id', component: Ng4RecipeDetailComponent },
+      { path: ':id/edit', component: Ng4RecipeEditComponent }
       ]},
-    { path: 'ng4-complete-guide', redirectTo: '/recipes'},
-    { path: 'recipes', component: Ng4RecipesComponent },
     { path: 'shopping-list', component: Ng4ShoppingListComponent }
   ];
+
+
 
 @NgModule({
   // imports: [RouterModule.forRoot(routes)],
