@@ -43,7 +43,7 @@ import {AssignmentObservablesUserComponent} from './UdemyAngularTheCompleteGuide
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
-    { path: '', component: HomeComponent },
+    // { path: '', component: HomeComponent },    komentuje, bo dużo różnych aplikacji można będzie odpalać
     { path: 'home', component: HomeComponent },
     { path: 'view-post/:id', component: ViewPostComponent },
     { path: 'view-blog-post/:id', component: ViewBlogPostComponent },
