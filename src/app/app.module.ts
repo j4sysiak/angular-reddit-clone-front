@@ -91,6 +91,8 @@ import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assig
 import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
 import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
 import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
+import { AssignmentObservablesUserComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
+import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
 
 @NgModule({
   declarations: [
@@ -164,7 +166,9 @@ import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/a
     ErrorPageComponent,
     Ng4RecipeStartComponent,
     Ng4RecipeEditComponent,
-    AssignmentObservablesComponent
+    AssignmentObservablesComponent,
+    AssignmentObservablesUserComponent,
+    AssignmentObservablesHomeComponent
   ],
   imports: [
     BrowserModule,
