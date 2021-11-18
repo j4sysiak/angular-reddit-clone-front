@@ -1,7 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {interval, Subscription, Observable } from 'rxjs';
-import {error} from 'protractor';
-
 
 @Component({
   selector: 'app-assignment-observables-home',
@@ -24,7 +22,7 @@ export class AssignmentObservablesHomeComponent implements OnInit, OnDestroy {
       let count = 0;
       setInterval(() => {
         observer.next(count);
-        if (count === 4) {
+        if (count === 5) {
           observer.complete();
         }
         if (count > 3) {
@@ -36,7 +34,7 @@ export class AssignmentObservablesHomeComponent implements OnInit, OnDestroy {
 
     this.firstObsSubscription = customIntervalObservable
       .subscribe(
-        data => {console.log(data);
+        data => {console.log('Round: ' + (data + 1));
                 }, error => {
                 console.log(error);
                 alert(error.message);
