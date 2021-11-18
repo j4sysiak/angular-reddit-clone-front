@@ -11,7 +11,7 @@ export class AssignmentObservablesUserComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
     });
