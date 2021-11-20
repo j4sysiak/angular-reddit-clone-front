@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
+import {ObservablesUserService} from '../observables-user.service';
 
 @Component({
   selector: 'app-assignment-observables-user',
@@ -9,7 +10,8 @@ import {ActivatedRoute, Params} from '@angular/router';
 export class AssignmentObservablesUserComponent implements OnInit {
   id: number;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+              private  observablesUserService: ObservablesUserService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
@@ -17,4 +19,7 @@ export class AssignmentObservablesUserComponent implements OnInit {
     });
   }
 
+  onActivate() {
+    this.observablesUserService.activatedEmitter.emit(true);
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ObservablesUserService} from './observables-user.service';
 
 @Component({
   selector: 'app-assignment-observables',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment-observables.component.css']
 })
 export class AssignmentObservablesComponent implements OnInit {
+  userActivated: false;
 
-  constructor() { }
+  constructor(private observablesUserService: ObservablesUserService) { }
 
   ngOnInit(): void {
+    this.observablesUserService.activatedEmitter.subscribe(didActivate => {
+      this.userActivated = didActivate;
+    });
   }
 
 }
