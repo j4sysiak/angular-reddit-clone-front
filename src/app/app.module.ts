@@ -64,16 +64,37 @@ import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/as
 import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/unless/unless.directive';
-import {DropdownDirective} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
+import { DropdownDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
 import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
 import { AccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/account/account.component';
 import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/new-account/new-account.component';
-import {AccountsService} from './UdemyAngularTheCompleteGuide/assignment-services/accounts.service';
-import {LoggingService} from './UdemyAngularTheCompleteGuide/assignment-services/logging.service';
+import { AccountsService } from './UdemyAngularTheCompleteGuide/assignment-services/accounts.service';
+import { LoggingService} from './UdemyAngularTheCompleteGuide/assignment-services/logging.service';
 import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/assignment-solution-sekcja9-services.component';
 import { ActiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/active-users/active-users.component';
 import { InactiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/inactive-users/inactive-users.component';
-import {CounterService} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
+import { CounterService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
+import { ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/shopping-list.service';
+import { AssignmentRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/assignment-routing.component';
+import { HomeRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/home-routing/home-routing.component';
+import { ServersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
+import { EditServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
+import { ServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
+import { UsersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
+import { UserRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
+import { PageNotFoundComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
+import {AuthRoutingService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing.service';
+import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
+import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
+import { ErrorPageComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
+import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
+import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
+import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
+import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
+import { AssignmentObservablesUserComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
+import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
+import {ObservablesUserService} from './UdemyAngularTheCompleteGuide/assignment-observables/observables-user.service';
+import { AssignmentFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
 
 @NgModule({
   declarations: [
@@ -135,7 +156,22 @@ import {CounterService} from './UdemyAngularTheCompleteGuide/assignment-solution
     NewAccountComponent,
     AssignmentSolutionSekcja9ServicesComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    AssignmentRoutingComponent,
+    HomeRoutingComponent,
+    EditServerRoutingComponent,
+    ServersRoutingComponent,
+    ServerRoutingComponent,
+    UsersRoutingComponent,
+    UserRoutingComponent,
+    PageNotFoundComponent,
+    ErrorPageComponent,
+    Ng4RecipeStartComponent,
+    Ng4RecipeEditComponent,
+    AssignmentObservablesComponent,
+    AssignmentObservablesUserComponent,
+    AssignmentObservablesHomeComponent,
+    AssignmentFormsComponent
   ],
   imports: [
     BrowserModule,
@@ -153,7 +189,13 @@ import {CounterService} from './UdemyAngularTheCompleteGuide/assignment-solution
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
               AccountsService,
               LoggingService,
-              CounterService],
+              CounterService,
+              ShoppingListService,
+              AuthRoutingService,
+              AuthRoutingGuardService,
+              CanDeactivateRoutingGuardService,
+              ServerRoutingResolverService,
+              ObservablesUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

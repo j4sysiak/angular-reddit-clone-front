@@ -100,21 +100,32 @@
 <app-assignment-solution-sekcja9-services></app-assignment-solution-sekcja9-services>
 -->
 
-<!-- ng4-complete-guide - Angular - The Complete Guide (2021 Edition)-->
+<!--Sekcja-11 - Routing
+<app-assignment-routing></app-assignment-routing>
+-->
+
+<!--Sekcja-13 - Observable
+<app-assignment-observables></app-assignment-observables>
+-->
+
+<!--Sekcja-15 - Forms -->
+<app-assignment-forms></app-assignment-forms>
+
+
+<!-- ng4-complete-guide - Angular - The Complete Guide (2021 Edition)
 <h1>{{ title }}</h1>
 <input type="text" [(ngModel)] ="name">
 <p>{{ name }}</p>
 
-<app-ng4-header (featureSelected)="onNavigate($event)"></app-ng4-header>
+<app-ng4-header></app-ng4-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-ng4-recipes *ngIf="loadedFeature === 'recipe'"></app-ng4-recipes>
-      <app-ng4-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-ng4-shopping-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
-
+-->
 
 
 
