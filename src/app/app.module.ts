@@ -94,6 +94,7 @@ import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/a
 import { AssignmentObservablesUserComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
 import {ObservablesUserService} from './UdemyAngularTheCompleteGuide/assignment-observables/observables-user.service';
+import { AssignmentFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
 
 @NgModule({
   declarations: [
@@ -169,7 +170,8 @@ import {ObservablesUserService} from './UdemyAngularTheCompleteGuide/assignment-
     Ng4RecipeEditComponent,
     AssignmentObservablesComponent,
     AssignmentObservablesUserComponent,
-    AssignmentObservablesHomeComponent
+    AssignmentObservablesHomeComponent,
+    AssignmentFormsComponent
   ],
   imports: [
     BrowserModule,
