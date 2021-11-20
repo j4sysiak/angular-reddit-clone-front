@@ -93,6 +93,7 @@ import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-compl
 import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 import { AssignmentObservablesUserComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
+import {ObservablesUserService} from './UdemyAngularTheCompleteGuide/assignment-observables/observables-user.service';
 
 @NgModule({
   declarations: [
@@ -191,7 +192,8 @@ import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGui
               AuthRoutingService,
               AuthRoutingGuardService,
               CanDeactivateRoutingGuardService,
-              ServerRoutingResolverService],
+              ServerRoutingResolverService,
+              ObservablesUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
