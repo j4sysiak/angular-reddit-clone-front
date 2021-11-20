@@ -40,6 +40,7 @@ import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complet
 import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 import {AssignmentObservablesHomeComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
 import {AssignmentObservablesUserComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
+import {AssignmentFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -88,6 +89,10 @@ const appRoutes: Routes = [
     { path: 'app-assignment-observables', redirectTo: '/observable', pathMatch: 'full' },
     {path: 'observable', component: AssignmentObservablesHomeComponent},
     {path: 'observable-user/:id', component: AssignmentObservablesUserComponent},
+
+     // aplikacja: app-assignment-forms
+     { path: 'app-assignment-forms', redirectTo: '/forms', pathMatch: 'full' },
+     {path: 'forms', component: AssignmentFormsComponent},
 
      // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
