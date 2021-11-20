@@ -20,6 +20,7 @@ export class AssignmentObservablesUserComponent implements OnInit {
   }
 
   onActivate() {
-    this.observablesUserService.activatedEmitter.emit(true);
+    // this.observablesUserService.activatedEmitter.emit(true);
+    this.observablesUserService.activatedEmitter.next(true);
   }
 }
