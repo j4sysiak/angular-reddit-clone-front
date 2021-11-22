@@ -113,17 +113,8 @@
 -->
 
 <!--assignment-solution-Sekcja-15 Template-Driven Forms -->
-<div class="row">
-  <div class="col-xs-12">
-    <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
-    <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
-  </div>
-</div>
+<app-assignment-solution-sekcja15-td-forms></app-assignment-solution-sekcja15-td-forms>
+
 
 
 <!-- ng4-complete-guide - Angular - The Complete Guide (2021 Edition)
