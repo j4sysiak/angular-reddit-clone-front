@@ -96,6 +96,7 @@ import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGui
 import {ObservablesUserService} from './UdemyAngularTheCompleteGuide/assignment-observables/observables-user.service';
 import { AssignmentFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
 import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-td-forms/assignment-solution-sekcja15-td-forms.component';
+import { AssignmentSolutionSekcja15ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -173,7 +174,8 @@ import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCom
     AssignmentObservablesUserComponent,
     AssignmentObservablesHomeComponent,
     AssignmentFormsComponent,
-    AssignmentSolutionSekcja15TdFormsComponent
+    AssignmentSolutionSekcja15TdFormsComponent,
+    AssignmentSolutionSekcja15ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
