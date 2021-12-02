@@ -43,6 +43,7 @@ import {AssignmentObservablesUserComponent} from './UdemyAngularTheCompleteGuide
 import {AssignmentFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
 import {AssignmentSolutionSekcja15TdFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-td-forms/assignment-solution-sekcja15-td-forms.component';
 import {AssignmentSolutionSekcja15ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
+import {AssignmentSolutionSekcja152ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -103,6 +104,11 @@ const appRoutes: Routes = [
      // aplikacja:  app-assignment-solution-sekcja15-reactive-forms
      { path: 'app-assignment-solution-sekcja15-reactive-forms', redirectTo: '/assignment-reactive-forms', pathMatch: 'full' },
      { path: 'assignment-reactive-forms', component: AssignmentSolutionSekcja15ReactiveFormsComponent },
+
+     // aplikacja: app-assignment-solution-sekcja15-2-reactive-forms
+     { path: 'app-assignment-solution-sekcja15-2-reactive-forms', redirectTo: '/assignment-reactive-forms-2', pathMatch: 'full' },
+     { path: 'assignment-reactive-forms-2', component: AssignmentSolutionSekcja152ReactiveFormsComponent },
+
 
   // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},

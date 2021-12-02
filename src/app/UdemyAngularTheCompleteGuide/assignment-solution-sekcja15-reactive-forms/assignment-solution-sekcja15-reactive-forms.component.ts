@@ -41,6 +41,7 @@ export class AssignmentSolutionSekcja15ReactiveFormsComponent implements OnInit 
 
   onSubmit() {
     console.log(this.signupForm);
+    this.signupForm.reset();
   }
 
   onAddHobby() {
@@ -49,10 +50,10 @@ export class AssignmentSolutionSekcja15ReactiveFormsComponent implements OnInit 
   }
 
   getControls() {
-    return (<FormArray>this.signupForm.get('hobbies')).controls;
+    return (<FormArray> this.signupForm.get('hobbies')).controls;
   }
 
-  forbiddenNames(control: FormControl):  {[s: string]: boolean} {
+  forbiddenNames(control: FormControl): {[s: string]: boolean} {
     if (this.forbiddenUsernames.indexOf(control.value) !== -1) {
       return {'nameIsForbidden': true};
     }
@@ -67,7 +68,7 @@ export class AssignmentSolutionSekcja15ReactiveFormsComponent implements OnInit 
         } else {
           resolve(null);
         }
-      },1500);
+      }, 1500);
     });
     return promise;
   }
