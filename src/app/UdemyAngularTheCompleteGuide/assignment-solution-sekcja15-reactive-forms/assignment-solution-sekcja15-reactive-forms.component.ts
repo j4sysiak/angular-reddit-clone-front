@@ -29,6 +29,14 @@ export class AssignmentSolutionSekcja15ReactiveFormsComponent implements OnInit 
     this.signupForm.statusChanges.subscribe(
       (status) => console.log(status)
     );
+    this.signupForm.setValue({
+      'userData': {
+        'username': 'Jacek',
+        'email': 'test@wp.pl'
+      },
+      'gender': 'male',
+      'hobbies': []
+    });
   }
 
   onSubmit() {
