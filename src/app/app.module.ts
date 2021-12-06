@@ -83,21 +83,21 @@ import { ServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignmen
 import { UsersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/users-routing.component';
 import { UserRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
 import { PageNotFoundComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
-import {AuthRoutingService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing.service';
-import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
-import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
+import { AuthRoutingService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing.service';
+import { AuthRoutingGuardService } from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
+import { CanDeactivateRoutingGuardService } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 import { ErrorPageComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
-import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
+import { ServerRoutingResolverService } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
 import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
 import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
 import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 import { AssignmentObservablesUserComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
-import {ObservablesUserService} from './UdemyAngularTheCompleteGuide/assignment-observables/observables-user.service';
+import { ObservablesUserService } from './UdemyAngularTheCompleteGuide/assignment-observables/observables-user.service';
 import { AssignmentFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
 import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-td-forms/assignment-solution-sekcja15-td-forms.component';
 import { AssignmentSolutionSekcja15ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
-import {AssignmentSolutionSekcja152ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
+import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
 
 @NgModule({
   declarations: [
