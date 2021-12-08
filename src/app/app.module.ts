@@ -98,6 +98,7 @@ import { AssignmentFormsComponent } from './UdemyAngularTheCompleteGuide/assignm
 import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-td-forms/assignment-solution-sekcja15-td-forms.component';
 import { AssignmentSolutionSekcja15ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
 import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
+import { RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/recipe.service';
 
 @NgModule({
   declarations: [
@@ -201,7 +202,8 @@ import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngula
               AuthRoutingGuardService,
               CanDeactivateRoutingGuardService,
               ServerRoutingResolverService,
-              ObservablesUserService],
+              ObservablesUserService,
+              RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
