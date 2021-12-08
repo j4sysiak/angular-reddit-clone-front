@@ -18,6 +18,7 @@ export class Ng4RecipeListComponent implements OnInit {
   ngOnInit(): void {
     this.recipeService.recipesChanged
       .subscribe(
+        // @ts-ignore
         (recipes: Ng4Recipe[]) => {
           this.recipes = recipes;
         });

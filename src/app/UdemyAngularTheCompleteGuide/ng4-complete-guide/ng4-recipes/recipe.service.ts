@@ -48,11 +48,19 @@ export class RecipeService {
 
   addRecipe(recipe: Ng4Recipe) {
     this.recipes.push(recipe);
+    // @ts-ignore
     this.recipesChanged.next(this.recipes.slice());
   }
 
   updateRecipe(index: number, newRecipe: Ng4Recipe) {
     this.recipes[index] = newRecipe;
+    // @ts-ignore
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  deleteRecipe(index: number) {
+    this.recipes.splice(index, 1);
+    // @ts-ignore
     this.recipesChanged.next(this.recipes.slice());
   }
 
