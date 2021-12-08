@@ -10,6 +10,7 @@ import {ShoppingListService} from '../ng4-shopping-list/shopping-list.service';
 export class RecipeService {
   // recipeSelected = new EventEmitter<Ng4Recipe>();
   //    recipeSelected = new Subject<Ng4Recipe>();
+  recipesChanged = new Subject<Ng4Recipe>();
 
   private recipes: Ng4Recipe[] = [
     new Ng4Recipe(
@@ -45,5 +46,14 @@ export class RecipeService {
     this.shoppingListService.addIngredients(ingredients);
   }
 
+  addRecipe(recipe: Ng4Recipe) {
+    this.recipes.push(recipe);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  updateRecipe(index: number, newRecipe: Ng4Recipe) {
+    this.recipes[index] = newRecipe;
+    this.recipesChanged.next(this.recipes.slice());
+  }
 
 }
