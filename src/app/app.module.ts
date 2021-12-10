@@ -99,6 +99,7 @@ import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCom
 import { AssignmentSolutionSekcja15ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
 import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
 import { RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/recipe.service';
+import { AssignmentSolutionSekcja17PipesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 
 @NgModule({
   declarations: [
@@ -178,7 +179,8 @@ import { RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide
     AssignmentFormsComponent,
     AssignmentSolutionSekcja15TdFormsComponent,
     AssignmentSolutionSekcja15ReactiveFormsComponent,
-    AssignmentSolutionSekcja152ReactiveFormsComponent
+    AssignmentSolutionSekcja152ReactiveFormsComponent,
+    AssignmentSolutionSekcja17PipesComponent
   ],
   imports: [
     BrowserModule,
