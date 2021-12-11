@@ -102,6 +102,8 @@ import { RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide
 import { AssignmentSolutionSekcja17PipesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/shorten.pipe';
 import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/filter.pipe';
+import { ReversePipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/reverse.pipe';
+import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -184,7 +186,9 @@ import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-s
     AssignmentSolutionSekcja152ReactiveFormsComponent,
     AssignmentSolutionSekcja17PipesComponent,
     ShortenPipe,
-    FilterPipe
+    FilterPipe,
+    ReversePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
