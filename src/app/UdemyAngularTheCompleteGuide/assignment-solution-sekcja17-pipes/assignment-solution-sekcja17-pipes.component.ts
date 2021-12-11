@@ -9,7 +9,7 @@ export class AssignmentSolutionSekcja17PipesComponent implements OnInit {
   servers = [
     {
       instanceType: 'medium',
-      name: 'Production Server',
+      name: 'Product',
       status: 'stable',
       started: new Date(15, 1, 2017)
     },

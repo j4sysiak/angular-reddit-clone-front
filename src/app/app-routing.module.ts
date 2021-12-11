@@ -110,7 +110,7 @@ const appRoutes: Routes = [
      { path: 'app-assignment-solution-sekcja15-2-reactive-forms', redirectTo: '/assignment-reactive-forms-2', pathMatch: 'full' },
      { path: 'assignment-reactive-forms-2', component: AssignmentSolutionSekcja152ReactiveFormsComponent },
 
-     //aplikacja: app-assignment-solution-sekcja17-pipes
+     // aplikacja: app-assignment-solution-sekcja17-pipes
      { path: 'app-assignment-solution-sekcja17-pipes', redirectTo: '/assignment-pipes', pathMatch: 'full' },
      { path: 'assignment-pipes', component: AssignmentSolutionSekcja17PipesComponent },
 
