@@ -6,6 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./assignment-solution-sekcja17-pipes.component.css']
 })
 export class AssignmentSolutionSekcja17PipesComponent implements OnInit {
+  filteredStatus = '';
   servers = [
     {
       instanceType: 'medium',
@@ -48,4 +49,12 @@ export class AssignmentSolutionSekcja17PipesComponent implements OnInit {
   }
 
 
+  onAddServer() {
+    this.servers.push({
+      instanceType: 'small',
+      name: 'New Server',
+      status: 'stable',
+      started: new Date(15, 1, 2017)
+    });
+  }
 }

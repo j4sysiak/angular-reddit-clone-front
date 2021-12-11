@@ -101,6 +101,7 @@ import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngula
 import { RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/recipe.service';
 import { AssignmentSolutionSekcja17PipesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/shorten.pipe';
+import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -182,7 +183,8 @@ import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-
     AssignmentSolutionSekcja15ReactiveFormsComponent,
     AssignmentSolutionSekcja152ReactiveFormsComponent,
     AssignmentSolutionSekcja17PipesComponent,
-    ShortenPipe
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
