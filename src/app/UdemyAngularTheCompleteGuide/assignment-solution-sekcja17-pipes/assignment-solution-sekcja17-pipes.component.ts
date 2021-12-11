@@ -6,6 +6,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./assignment-solution-sekcja17-pipes.component.css']
 })
 export class AssignmentSolutionSekcja17PipesComponent implements OnInit {
+  appStatus = new Promise((resolve => {
+    setTimeout(() => {
+      resolve('stable');
+    }, 2000);
+  }));
   filteredStatus = '';
   servers = [
     {
