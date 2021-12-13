@@ -104,6 +104,7 @@ import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-
 import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/filter.pipe';
 import { ReversePipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/reverse.pipe';
 import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/sort.pipe';
+import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
 
 @NgModule({
   declarations: [
@@ -188,7 +189,8 @@ import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sek
     ShortenPipe,
     FilterPipe,
     ReversePipe,
-    SortPipe
+    SortPipe,
+    AssignmentSolutionSekcja18HttpComponent
   ],
   imports: [
     BrowserModule,

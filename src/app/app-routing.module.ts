@@ -45,6 +45,7 @@ import {AssignmentSolutionSekcja15TdFormsComponent} from './UdemyAngularTheCompl
 import {AssignmentSolutionSekcja15ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
 import {AssignmentSolutionSekcja152ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
 import {AssignmentSolutionSekcja17PipesComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
+import {AssignmentSolutionSekcja18HttpComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -113,6 +114,10 @@ const appRoutes: Routes = [
      // aplikacja: app-assignment-solution-sekcja17-pipes
      { path: 'app-assignment-solution-sekcja17-pipes', redirectTo: '/assignment-pipes', pathMatch: 'full' },
      { path: 'assignment-pipes', component: AssignmentSolutionSekcja17PipesComponent },
+
+     // aplikacja: app-assignment-solution-sekcja18-http
+     { path: 'app-assignment-solution-sekcja18-http', redirectTo: '/assignment-https', pathMatch: 'full' },
+     { path: 'assignment-https', component: AssignmentSolutionSekcja18HttpComponent },
 
   // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
