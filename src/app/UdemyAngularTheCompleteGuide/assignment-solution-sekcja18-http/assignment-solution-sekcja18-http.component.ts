@@ -9,7 +9,8 @@ import {Post} from './post.model';
   styleUrls: ['./assignment-solution-sekcja18-http.component.css']
 })
 export class AssignmentSolutionSekcja18HttpComponent implements OnInit {
-  loadedPosts = [];
+  loadedPosts: Post[] = [];
+  isFetching = false;
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +21,7 @@ export class AssignmentSolutionSekcja18HttpComponent implements OnInit {
   onCreatePost(postData: Post) {
     // Send Http request
     // console.log(postData);
-    this.http.post<{name: string}>('https://ng4-complete-guide-13-12-2021-default-rtdb.firebaseio.com/posts.json', postData)
+    this.http.post<{ name: string }>('https://ng4-complete-guide-13-12-2021-default-rtdb.firebaseio.com/posts.json', postData)
       .subscribe(responseData => {
         // console.log(responseData);
       });
@@ -36,6 +37,7 @@ export class AssignmentSolutionSekcja18HttpComponent implements OnInit {
   }
 
   private fetchPosts() {
+    this.isFetching = true;
     this.http.get<{ [key: string]: Post }>('https://ng4-complete-guide-13-12-2021-default-rtdb.firebaseio.com/posts.json')
       .pipe(map(responseData => {
         const postsArray: Post[] = [];
@@ -47,8 +49,9 @@ export class AssignmentSolutionSekcja18HttpComponent implements OnInit {
         return postsArray;
       }))
       .subscribe(posts => {
-        //...
         console.log(posts);
+        this.isFetching = false;
+        this.loadedPosts = posts;
       });
   }
 
