@@ -16,7 +16,13 @@ export class AssignmentSolutionSekcja18HttpComponent implements OnInit {
   constructor(private http: HttpClient, private postsService: PostsService) {}
 
   ngOnInit() {
-    this.postsService.fetchPosts();
+    this.isFetching = true;
+    this.postsService.fetchPosts()
+      .subscribe(posts => {
+        console.log(posts);
+        this.isFetching = false;
+        this.loadedPosts = posts;
+      });
   }
 
   onCreatePost(postData: Post) {
@@ -26,7 +32,12 @@ export class AssignmentSolutionSekcja18HttpComponent implements OnInit {
 
   onFetchPosts() {
     // Send Http request
-    this.postsService.fetchPosts();
+    this.postsService.fetchPosts()
+      .subscribe(posts => {
+        console.log(posts);
+        this.isFetching = false;
+        this.loadedPosts = posts;
+      });
   }
 
   onClearPosts() {
