@@ -105,6 +105,7 @@ import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-s
 import { ReversePipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/reverse.pipe';
 import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/sort.pipe';
 import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
+import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -205,7 +206,9 @@ import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheComple
     EditorModule,
     NgbModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
+  providers: [
+              {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
+              {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},
               AccountsService,
               LoggingService,
               CounterService,
