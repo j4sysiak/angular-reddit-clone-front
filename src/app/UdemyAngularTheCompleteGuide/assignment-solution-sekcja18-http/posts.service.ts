@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Post} from './post.model';
-import {map} from 'rxjs/operators';
+import {catchError, map} from 'rxjs/operators';
+import {Subject, throwError} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
+  error = new Subject<string>();
 
   constructor(private http: HttpClient) { }
 
@@ -19,6 +21,8 @@ export class PostsService {
       )
       .subscribe(responseData => {
         console.log(responseData);
+      }, error => {
+          this.error.next(error.message);
       });
   }
 
@@ -36,8 +40,15 @@ export class PostsService {
             }
           }
           return postsArray;
+        }), catchError(errorRes => {
+          // Send to analytics server
+          return throwError(errorRes);
         })
       );
       // .subscribe(posts => {console.log(posts);});
+  }
+
+  deletePosts() {
+    return this.http.delete('https://ng4-complete-guide-13-12-2021-default-rtdb.firebaseio.com/posts.json');
   }
 }
