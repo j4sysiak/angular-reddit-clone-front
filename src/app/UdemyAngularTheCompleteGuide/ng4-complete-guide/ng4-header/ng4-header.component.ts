@@ -15,6 +15,6 @@ export class Ng4HeaderComponent {
   }
 
   onFetchData() {
-    this.dataStorageService.fetchRecipes();
+    this.dataStorageService.fetchRecipes().subscribe();
   }
 }
