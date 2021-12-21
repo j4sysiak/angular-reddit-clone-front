@@ -9,33 +9,42 @@ import {ShoppingListService} from '../ng4-shopping-list/shopping-list.service';
 })
 export class RecipeService {
   // recipeSelected = new EventEmitter<Ng4Recipe>();
-  //    recipeSelected = new Subject<Ng4Recipe>();
+  // recipeSelected = new Subject<Ng4Recipe>();
   recipesChanged = new Subject<Ng4Recipe>();
 
-  private recipes: Ng4Recipe[] = [
-    new Ng4Recipe(
-      'Tasty Schnitzel',
-      'A super-tasty Schnitzel - just awesome!',
-      'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
-      [
-        new Ingredient('Meat', 1),
-        new Ingredient('French Fries', 20)
-      ]),
-    new Ng4Recipe('Big Fat Burger',
-      'What else you need to say?',
-      'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
-      [
-        new Ingredient('Buns', 2),
-        new Ingredient('Meat', 1)
-      ])
-  ];
+  // private recipes: Ng4Recipe[] = [
+  //   new Ng4Recipe(
+  //     'Tasty Schnitzel',
+  //     'A super-tasty Schnitzel - just awesome!',
+  //     'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+  //     [
+  //       new Ingredient('Meat', 1),
+  //       new Ingredient('French Fries', 20)
+  //     ]),
+  //   new Ng4Recipe('Big Fat Burger',
+  //     'What else you need to say?',
+  //     'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+  //     [
+  //       new Ingredient('Buns', 2),
+  //       new Ingredient('Meat', 1)
+  //     ])
+  // ];
+  private recipes: Ng4Recipe[] = [];
 
   constructor(private shoppingListService: ShoppingListService) {
   }
 
+  setRecipes(recipes: Ng4Recipe[]) {
+    this.recipes = recipes;
+    // @ts-ignore
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+
   getRecipes() {
     return this.recipes.slice();
   }
+
 
   getRecipe(index: number) {
     // return this.recipes.slice()[index];
