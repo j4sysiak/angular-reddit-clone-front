@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {DataStorageService} from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-ng4-header',
@@ -6,4 +7,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./ng4-header.component.css']
 })
 export class Ng4HeaderComponent {
+
+  constructor(private dataStorageService: DataStorageService) {
+  }
+  onSaveData() {
+    this.dataStorageService.storeRecipes();
+  }
 }
