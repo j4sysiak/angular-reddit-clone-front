@@ -47,6 +47,7 @@ import {AssignmentSolutionSekcja152ReactiveFormsComponent} from './UdemyAngularT
 import {AssignmentSolutionSekcja17PipesComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 import {AssignmentSolutionSekcja18HttpComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
 import {RecipesResolverService} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/recipes-resolver.service';
+import {AuthComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/auth/auth.component';
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -122,13 +123,25 @@ const appRoutes: Routes = [
 
   // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
-    { path: 'recipes', component: Ng4RecipesComponent, children: [
-      { path: '', component: Ng4RecipeStartComponent },
-      { path: 'new', component: Ng4RecipeEditComponent },
-      { path: ':id', component: Ng4RecipeDetailComponent, resolve: [RecipesResolverService] },
-      { path: ':id/edit', component: Ng4RecipeEditComponent, resolve: [RecipesResolverService] }
-      ]},
-    { path: 'shopping-list', component: Ng4ShoppingListComponent }
+    { path: 'recipes',
+      component: Ng4RecipesComponent,
+        children: [
+          { path: '', component: Ng4RecipeStartComponent },
+          { path: 'new', component: Ng4RecipeEditComponent },
+          {
+            path: ':id',
+            component: Ng4RecipeDetailComponent,
+            resolve: [RecipesResolverService]
+          },
+          {
+            path: ':id/edit',
+            component: Ng4RecipeEditComponent,
+            resolve: [RecipesResolverService]
+          }
+      ]
+    },
+    { path: 'shopping-list', component: Ng4ShoppingListComponent },
+    { path: 'auth', component: AuthComponent }
   ];
 
 

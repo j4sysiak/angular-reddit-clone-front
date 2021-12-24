@@ -107,6 +107,7 @@ import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sek
 import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
 import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/auth-interceptor.service';
 import {LoggingInterceptorService} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
+import { AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -192,7 +193,8 @@ import {LoggingInterceptorService} from './UdemyAngularTheCompleteGuide/assignme
     FilterPipe,
     ReversePipe,
     SortPipe,
-    AssignmentSolutionSekcja18HttpComponent
+    AssignmentSolutionSekcja18HttpComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
