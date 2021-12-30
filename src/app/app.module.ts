@@ -106,8 +106,13 @@ import { ReversePipe } from './UdemyAngularTheCompleteGuide/assignment-solution-
 import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/sort.pipe';
 import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
 import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/auth-interceptor.service';
-import {LoggingInterceptorService} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
-import { AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/auth/auth.component';
+import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
+import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
+// import firebase modules
+// import { AngularFireModule } from '@angular/fire/compat';
+// import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+// import {environment} from './environments/environment';
 
 @NgModule({
   declarations: [
@@ -194,7 +199,7 @@ import { AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide
     ReversePipe,
     SortPipe,
     AssignmentSolutionSekcja18HttpComponent,
-    AuthComponent
+    Ng4AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -208,6 +213,10 @@ import { AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide
     FontAwesomeModule,
     EditorModule,
     NgbModule
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFireDatabaseModule,
+    // AngularFireModule,
+    // AngularFirestoreModule
   ],
   providers: [
               {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
