@@ -220,7 +220,7 @@ import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-gu
   ],
   providers: [
               {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
-              {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},
+              // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na CORS problem
               {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true},
               AccountsService,
               LoggingService,
