@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {AuthResponseData, Ng4AuthService} from './ng4-auth.service';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-ng4-auth',
@@ -13,7 +14,7 @@ export class Ng4AuthComponent   {
   isLoading = false;
   error: string = null;
 
-  constructor(private authService: Ng4AuthService) {}
+  constructor(private authService: Ng4AuthService, private router: Router) {}
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -40,6 +41,7 @@ export class Ng4AuthComponent   {
       resData => {
         console.log(resData);
         this.isLoading = false;
+        this.router.navigate(['/recipes']);
       },
       errorMessage => {
         console.log(errorMessage);
