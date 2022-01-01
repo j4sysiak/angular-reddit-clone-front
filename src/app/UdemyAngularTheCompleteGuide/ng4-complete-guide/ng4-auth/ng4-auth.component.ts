@@ -8,7 +8,6 @@ import {Ng4AuthService} from './ng4-auth.service';
   styleUrls: ['./ng4-auth.component.css']
 })
 export class Ng4AuthComponent   {
-
   isLoginMode = true;
   isLoading = false;
   error: string = null;
@@ -26,15 +25,19 @@ export class Ng4AuthComponent   {
     const email = form.value.email;
     const password = form.value.password;
 
+    this.isLoading = true;
     if (this.isLoginMode) {
       // ...
     } else {
       this.authService.signup(email, password).subscribe(
         resData => {
           console.log(resData);
+          this.isLoading = false;
         },
-        error => {
-          console.log(error);
+        errorMessage => {
+          console.log(errorMessage);
+          this.error = errorMessage;
+          this.isLoading = false;
         }
       );
     }

@@ -108,6 +108,8 @@ import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheComple
 import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/auth-interceptor.service';
 import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
 import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
+// tslint:disable-next-line:max-line-length
+import { LoadingSpinnerComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/loading-spinner/loading-spinner.component';
 // import firebase modules
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -199,7 +201,8 @@ import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-gu
     ReversePipe,
     SortPipe,
     AssignmentSolutionSekcja18HttpComponent,
-    Ng4AuthComponent
+    Ng4AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -220,8 +223,8 @@ import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-gu
   ],
   providers: [
               {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
-              // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na CORS problem
-              {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true},
+              // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na problem z CORS
+              // {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true},
               AccountsService,
               LoggingService,
               CounterService,

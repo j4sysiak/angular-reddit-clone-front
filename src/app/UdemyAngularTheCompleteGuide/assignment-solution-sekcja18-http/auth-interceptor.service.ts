@@ -14,7 +14,7 @@ export class AuthInterceptorService implements HttpInterceptor {
     // console.log('Request is on its way');
     // console.log(req.url);
     const  modifiedRequest = req.clone({
-      // komentuję ze względu na CORS problem
+      // komentuję ze względu na problem z CORS
      //    headers: req.headers.append('Auth', 'xyz')
      //    headers: req.headers.append('sec-fetch-mode', 'no-cors')  - to działa
     });
