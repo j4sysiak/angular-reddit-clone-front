@@ -110,6 +110,7 @@ import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assign
 import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
 // tslint:disable-next-line:max-line-length
 import { LoadingSpinnerComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/loading-spinner/loading-spinner.component';
+import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-interceptor.service';
 // import firebase modules
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -225,6 +226,7 @@ import { LoadingSpinnerComponent } from './UdemyAngularTheCompleteGuide/ng4-comp
               {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
               // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na problem z CORS
               // {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true},
+              {provide: HTTP_INTERCEPTORS, useClass: Ng4AuthInterceptorService, multi: true},
               AccountsService,
               LoggingService,
               CounterService,
