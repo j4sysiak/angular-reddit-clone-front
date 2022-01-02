@@ -8,10 +8,9 @@ import {Ng4AuthService} from './ng4-auth.service';
 
 @Injectable()
 export class Ng4AuthInterceptorService implements HttpInterceptor {
+  constructor(private authService: Ng4AuthService) {}
 
-  constructor(private authService: Ng4AuthService) { }
-
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(req: HttpRequest<any>, next: HttpHandler) {
     return this.authService.user.pipe(
       take(1),
       exhaustMap(user => {
@@ -25,8 +24,6 @@ export class Ng4AuthInterceptorService implements HttpInterceptor {
       })
     );
   }
-
-
 }
 
 

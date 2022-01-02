@@ -7,7 +7,7 @@ import {ShoppingListService} from '../ng4-shopping-list/shopping-list.service';
 @Injectable({
   providedIn: 'root'
 })
-export class RecipeService {
+export class Ng4RecipeService {
   // recipeSelected = new EventEmitter<Ng4Recipe>();
   // recipeSelected = new Subject<Ng4Recipe>();
   recipesChanged = new Subject<Ng4Recipe>();

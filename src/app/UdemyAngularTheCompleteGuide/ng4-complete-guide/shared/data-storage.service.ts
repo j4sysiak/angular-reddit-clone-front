@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Ng4Recipe} from '../ng4-recipes/ng4-recipe.model';
-import {RecipeService} from '../ng4-recipes/recipe.service';
+import {Ng4RecipeService} from '../ng4-recipes/ng4-recipe.service';
 import {exhaustMap, map, take, tap} from 'rxjs/operators';
 import {Ng4AuthService} from '../ng4-auth/ng4-auth.service';
 
@@ -12,7 +12,7 @@ export class DataStorageService {
 
   constructor(
     private http: HttpClient,
-    private recipeService: RecipeService,
+    private recipeService: Ng4RecipeService,
     private authService: Ng4AuthService
   ) {}
 

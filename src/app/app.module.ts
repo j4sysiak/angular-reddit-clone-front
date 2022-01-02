@@ -98,7 +98,7 @@ import { AssignmentFormsComponent } from './UdemyAngularTheCompleteGuide/assignm
 import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-td-forms/assignment-solution-sekcja15-td-forms.component';
 import { AssignmentSolutionSekcja15ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
 import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
-import { RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/recipe.service';
+import { Ng4RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.service';
 import { AssignmentSolutionSekcja17PipesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/shorten.pipe';
 import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/filter.pipe';
@@ -236,7 +236,7 @@ import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-co
               CanDeactivateRoutingGuardService,
               ServerRoutingResolverService,
               ObservablesUserService,
-              RecipeService],
+              Ng4RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
