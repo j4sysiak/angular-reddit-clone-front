@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Ng4AuthService} from '../../ng4-auth/ng4-auth.service';
 
 @Component({
   selector: 'app-ng4-recipe-start',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ng4RecipeStartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: Ng4AuthService) {}
 
   ngOnInit(): void {
+    this.authService.autoLogin();
   }
 
 }
