@@ -111,6 +111,7 @@ import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-gu
 // tslint:disable-next-line:max-line-length
 import { LoadingSpinnerComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/loading-spinner/loading-spinner.component';
 import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-interceptor.service';
+import { Ng4AlertComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-alert/ng4-alert.component';
 // import firebase modules
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -203,7 +204,8 @@ import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-co
     SortPipe,
     AssignmentSolutionSekcja18HttpComponent,
     Ng4AuthComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    Ng4AlertComponent
   ],
   imports: [
     BrowserModule,
