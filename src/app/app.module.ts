@@ -241,6 +241,9 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
               ServerRoutingResolverService,
               ObservablesUserService,
               Ng4RecipeService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    Ng4AlertComponent
+  ]
 })
 export class AppModule { }

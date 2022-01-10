@@ -1,9 +1,10 @@
-import {Component, ComponentFactoryResolver, OnInit} from '@angular/core';
+import {Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {AuthResponseData, Ng4AuthService} from './ng4-auth.service';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router';
 import {Ng4AlertComponent} from '../shared/ng4-alert/ng4-alert.component';
+import {Ng4PlaceholderDirective} from '../shared/ng4-placeholder/ng4-placeholder.directive';
 
 @Component({
   selector: 'app-ng4-auth',
@@ -14,6 +15,7 @@ export class Ng4AuthComponent   {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
+  @ViewChild(Ng4PlaceholderDirective, {static: false}) alertHost: Ng4PlaceholderDirective;
 
   constructor(
     private authService: Ng4AuthService,
@@ -65,7 +67,10 @@ export class Ng4AuthComponent   {
   private showErrorAlert(message: string) {
     // const alertCmp = new Ng4AuthComponent();
     const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(Ng4AlertComponent);
+    const hostViewContainerRef = this.alertHost.viewContainerRef;
+    hostViewContainerRef.clear();
 
+    hostViewContainerRef.createComponent(alertCmpFactory);
   }
 }
 
