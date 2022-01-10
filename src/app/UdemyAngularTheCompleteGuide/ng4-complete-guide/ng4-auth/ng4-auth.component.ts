@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ComponentFactoryResolver, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {AuthResponseData, Ng4AuthService} from './ng4-auth.service';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router';
+import {Ng4AlertComponent} from '../shared/ng4-alert/ng4-alert.component';
 
 @Component({
   selector: 'app-ng4-auth',
@@ -14,7 +15,10 @@ export class Ng4AuthComponent   {
   isLoading = false;
   error: string = null;
 
-  constructor(private authService: Ng4AuthService, private router: Router) {}
+  constructor(
+    private authService: Ng4AuthService,
+    private router: Router,
+    private componentFactoryResolver: ComponentFactoryResolver) {}
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -46,6 +50,7 @@ export class Ng4AuthComponent   {
       errorMessage => {
         console.log(errorMessage);
         this.error = errorMessage;
+        this.showErrorAlert(errorMessage);
         this.isLoading = false;
       }
     );
@@ -53,4 +58,40 @@ export class Ng4AuthComponent   {
     form.reset();
   }
 
+  onHandleError() {
+    this.error = null;
+  }
+
+  private showErrorAlert(message: string) {
+    // const alertCmp = new Ng4AuthComponent();
+    const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(Ng4AlertComponent);
+
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

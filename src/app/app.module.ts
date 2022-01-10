@@ -112,6 +112,7 @@ import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-gu
 import { LoadingSpinnerComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/loading-spinner/loading-spinner.component';
 import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-interceptor.service';
 import { Ng4AlertComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-alert/ng4-alert.component';
+import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-placeholder/ng4-placeholder.directive';
 // import firebase modules
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -205,7 +206,8 @@ import { Ng4AlertComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-g
     AssignmentSolutionSekcja18HttpComponent,
     Ng4AuthComponent,
     LoadingSpinnerComponent,
-    Ng4AlertComponent
+    Ng4AlertComponent,
+    Ng4PlaceholderDirective
   ],
   imports: [
     BrowserModule,
