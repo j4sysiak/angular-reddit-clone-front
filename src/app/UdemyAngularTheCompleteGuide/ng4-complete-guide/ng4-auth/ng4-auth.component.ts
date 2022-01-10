@@ -1,7 +1,7 @@
-import {Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
+import {Component, ComponentFactoryResolver, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {AuthResponseData, Ng4AuthService} from './ng4-auth.service';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {Router} from '@angular/router';
 import {Ng4AlertComponent} from '../shared/ng4-alert/ng4-alert.component';
 import {Ng4PlaceholderDirective} from '../shared/ng4-placeholder/ng4-placeholder.directive';
@@ -11,11 +11,12 @@ import {Ng4PlaceholderDirective} from '../shared/ng4-placeholder/ng4-placeholder
   templateUrl: './ng4-auth.component.html',
   styleUrls: ['./ng4-auth.component.css']
 })
-export class Ng4AuthComponent   {
+export class Ng4AuthComponent implements OnDestroy {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
   @ViewChild(Ng4PlaceholderDirective, {static: false}) alertHost: Ng4PlaceholderDirective;
+  private closeSub: Subscription;
 
   constructor(
     private authService: Ng4AuthService,
@@ -70,7 +71,19 @@ export class Ng4AuthComponent   {
     const hostViewContainerRef = this.alertHost.viewContainerRef;
     hostViewContainerRef.clear();
 
-    hostViewContainerRef.createComponent(alertCmpFactory);
+    const componentRef = hostViewContainerRef.createComponent(alertCmpFactory);
+
+    componentRef.instance.message = message;
+    this.closeSub = componentRef.instance.close.subscribe(() => {
+      this.closeSub.unsubscribe();
+      hostViewContainerRef.clear();
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.closeSub) {
+      this.closeSub.unsubscribe();
+    }
   }
 }
 
