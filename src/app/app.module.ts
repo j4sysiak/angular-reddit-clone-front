@@ -48,10 +48,6 @@ import { SuccessAlertComponent } from './UdemyAngularTheCompleteGuide/success-al
 import { AssignmentSolutionComponent } from './UdemyAngularTheCompleteGuide/assignment-solution/assignment-solution.component';
 import { AssignmentSolution2Component } from './UdemyAngularTheCompleteGuide/assignment-solution2/assignment-solution2.component';
 import { Ng4HeaderComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-header/ng4-header.component';
-import { Ng4RecipesComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
-import { Ng4RecipeListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-list/ng4-recipe-list.component';
-import { Ng4RecipeDetailComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
-import { Ng4RecipeItemComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-list/ng4-recipe-item/ng4-recipe-item.component';
 import { Ng4ShoppingListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
 import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-edit/ng4-shopping-edit.component';
 import { CmpDatabindingComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/cmp-databinding/cmp-databinding.component';
@@ -88,8 +84,6 @@ import { AuthRoutingGuardService } from './UdemyAngularTheCompleteGuide/assignme
 import { CanDeactivateRoutingGuardService } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 import { ErrorPageComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
 import { ServerRoutingResolverService } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
-import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
-import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
 import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 import { AssignmentObservablesUserComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
@@ -105,19 +99,28 @@ import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-s
 import { ReversePipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/reverse.pipe';
 import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/sort.pipe';
 import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
-import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/auth-interceptor.service';
-import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
 import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
 // tslint:disable-next-line:max-line-length
 import { LoadingSpinnerComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/loading-spinner/loading-spinner.component';
 import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-interceptor.service';
 import { Ng4AlertComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-alert/ng4-alert.component';
 import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-placeholder/ng4-placeholder.directive';
+import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/auth-interceptor.service';
+import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
+
+import { Ng4RecipesModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.module';
 // import firebase modules
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 // import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 // import {environment} from './environments/environment';
+
+import { Ng4RecipesComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
+import { Ng4RecipeListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-list/ng4-recipe-list.component';
+import { Ng4RecipeDetailComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
+import { Ng4RecipeItemComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-list/ng4-recipe-item/ng4-recipe-item.component';
+import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
+import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -157,10 +160,14 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
     AssignmentSolutionComponent,
     AssignmentSolution2Component,
     Ng4HeaderComponent,
-    Ng4RecipesComponent,
-    Ng4RecipeListComponent,
-    Ng4RecipeDetailComponent,
-    Ng4RecipeItemComponent,
+
+    // Ng4RecipesComponent,
+    // Ng4RecipeListComponent,
+    // Ng4RecipeDetailComponent,
+    // Ng4RecipeItemComponent,
+    // Ng4RecipeStartComponent,
+    // Ng4RecipeEditComponent,
+
     Ng4ShoppingListComponent,
     Ng4ShoppingEditComponent,
     CmpDatabindingComponent,
@@ -189,8 +196,6 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
     UserRoutingComponent,
     PageNotFoundComponent,
     ErrorPageComponent,
-    Ng4RecipeStartComponent,
-    Ng4RecipeEditComponent,
     AssignmentObservablesComponent,
     AssignmentObservablesUserComponent,
     AssignmentObservablesHomeComponent,
@@ -214,6 +219,7 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    Ng4RecipesModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
