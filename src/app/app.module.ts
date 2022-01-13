@@ -219,14 +219,14 @@ import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-compl
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    Ng4RecipesModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FontAwesomeModule,
     EditorModule,
-    NgbModule
+    NgbModule,
+    Ng4RecipesModule
     // AngularFireModule.initializeApp(environment.firebaseConfig),
     // AngularFireDatabaseModule,
     // AngularFireModule,

@@ -27,17 +27,11 @@ import {ServersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment
 import {UserRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
 import {ServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
 import {EditServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
-import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
 import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 import {ErrorPageComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
 import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
-import {Ng4RecipesComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
 import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
-import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
-import {Ng4RecipeDetailComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
-import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
-import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 import {AssignmentObservablesHomeComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
 import {AssignmentObservablesUserComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import {AssignmentFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
@@ -46,9 +40,16 @@ import {AssignmentSolutionSekcja15ReactiveFormsComponent} from './UdemyAngularTh
 import {AssignmentSolutionSekcja152ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
 import {AssignmentSolutionSekcja17PipesComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 import {AssignmentSolutionSekcja18HttpComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
-import {Ng4RecipesResolverService} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes-resolver.service';
 import {Ng4AuthComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
-import {Ng4AuthGuard} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-guard';
+// import {Ng4RecipesResolverService} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes-resolver.service';
+// import {Ng4AuthGuard} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-guard';
+// import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
+// import {Ng4RecipeDetailComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
+// import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
+// import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
+// import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
+// import {Ng4RecipesComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
+
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -95,8 +96,8 @@ const appRoutes: Routes = [
 
      // aplikacja: app-assignment-observable
     { path: 'app-assignment-observables', redirectTo: '/observable', pathMatch: 'full' },
-    {path: 'observable', component: AssignmentObservablesHomeComponent},
-    {path: 'observable-user/:id', component: AssignmentObservablesUserComponent},
+    { path: 'observable', component: AssignmentObservablesHomeComponent},
+    { path: 'observable-user/:id', component: AssignmentObservablesUserComponent},
 
      // aplikacja: app-assignment-forms
      { path: 'app-assignment-forms', redirectTo: '/forms', pathMatch: 'full' },
@@ -124,24 +125,6 @@ const appRoutes: Routes = [
 
   // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
-    { path: 'recipes',
-      component: Ng4RecipesComponent,
-      // canActivate: [Ng4AuthGuard],  // wywalam to, bo po odświeżeniu trzeba się od nowa logować
-        children: [
-          { path: '', component: Ng4RecipeStartComponent },
-          { path: 'new', component: Ng4RecipeEditComponent },
-          {
-            path: ':id',
-            component: Ng4RecipeDetailComponent,
-            resolve: [Ng4RecipesResolverService]
-          },
-          {
-            path: ':id/edit',
-            component: Ng4RecipeEditComponent,
-            resolve: [Ng4RecipesResolverService]
-          }
-      ]
-    },
     { path: 'shopping-list', component: Ng4ShoppingListComponent },
     { path: 'ng4-auth', component: Ng4AuthComponent }
   ];

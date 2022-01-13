@@ -9,7 +9,7 @@ import {Ng4RecipeDetailComponent} from './ng4-recipe-detail/ng4-recipe-detail.co
 import {Ng4RecipeItemComponent} from './ng4-recipe-list/ng4-recipe-item/ng4-recipe-item.component';
 import {Ng4RecipeStartComponent} from './ng4-recipe-start/ng4-recipe-start.component';
 import {Ng4RecipeEditComponent} from './ng4-recipe-edit/ng4-recipe-edit.component';
-
+import {Ng4RecipesRoutingModule} from './ng4-recipes-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,12 @@ import {Ng4RecipeEditComponent} from './ng4-recipe-edit/ng4-recipe-edit.componen
     Ng4RecipeStartComponent,
     Ng4RecipeEditComponent
   ],
-  imports: [RouterModule, CommonModule, ReactiveFormsModule],
+  imports: [
+    RouterModule,
+    CommonModule,
+    ReactiveFormsModule,
+    Ng4RecipesRoutingModule
+  ],
   exports: [
     Ng4RecipesComponent,
     Ng4RecipeListComponent,
