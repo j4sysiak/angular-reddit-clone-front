@@ -31,7 +31,6 @@ import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment
 import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 import {ErrorPageComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
 import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
-import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
 import {AssignmentObservablesHomeComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
 import {AssignmentObservablesUserComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import {AssignmentFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
@@ -49,6 +48,7 @@ import {Ng4AuthComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guid
 // import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 // import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 // import {Ng4RecipesComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
+// import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
 
 
 const appRoutes: Routes = [
@@ -125,7 +125,6 @@ const appRoutes: Routes = [
 
   // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
-    { path: 'shopping-list', component: Ng4ShoppingListComponent },
     { path: 'ng4-auth', component: Ng4AuthComponent }
   ];
 

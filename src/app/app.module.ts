@@ -107,6 +107,7 @@ import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignmen
 import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
 
 import { Ng4RecipesModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.module';
+import {Ng4ShoppingListModule} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
 // import firebase modules
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -227,7 +228,8 @@ import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-com
     FontAwesomeModule,
     EditorModule,
     NgbModule,
-    Ng4RecipesModule
+    Ng4RecipesModule,
+    Ng4ShoppingListModule
     // AngularFireModule.initializeApp(environment.firebaseConfig),
     // AngularFireDatabaseModule,
     // AngularFireModule,
