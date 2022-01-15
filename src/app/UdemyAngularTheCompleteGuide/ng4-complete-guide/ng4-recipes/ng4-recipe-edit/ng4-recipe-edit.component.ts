@@ -100,6 +100,10 @@ export class Ng4RecipeEditComponent implements OnInit {
     (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
     // (<FormArray>this.recipeForm.get('ingredients')).clear();
   }
+
+  get ingredientCtrl() {
+    return (this.recipeForm.get('ingredients') as FormArray).controls;
+  }
 }
 
 
