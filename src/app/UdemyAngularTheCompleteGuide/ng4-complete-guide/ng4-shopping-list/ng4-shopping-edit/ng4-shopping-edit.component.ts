@@ -2,7 +2,7 @@ import {NgForm} from '@angular/forms';
 import {Subscription} from 'rxjs';
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Ingredient} from '../../shared/ingredient.model';
-import {ShoppingListService} from '../shopping-list.service';
+import {Ng4ShoppingListService} from '../ng4-shopping-list.service';
 
 
 @Component({
@@ -21,7 +21,7 @@ export class Ng4ShoppingEditComponent implements OnInit, OnDestroy {
   editedItemIndex: number;
   editedItem: Ingredient;
 
-  constructor(private shoppingListService: ShoppingListService) { }
+  constructor(private shoppingListService: Ng4ShoppingListService) { }
 
   ngOnInit(): void {
     this.subscription = this.shoppingListService.startedEditing

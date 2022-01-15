@@ -5,7 +5,7 @@ import {Ingredient} from '../shared/ingredient.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ShoppingListService {
+export class Ng4ShoppingListService {
   // ingredientsChanged = new EventEmitter<Ingredient[]>();
   ingredientsChanged = new Subject<Ingredient[]>();
   startedEditing = new Subject<number>();

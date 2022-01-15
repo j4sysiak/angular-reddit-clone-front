@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs';
 import {Ng4Recipe} from './ng4-recipe.model';
 import {Ingredient} from '../shared/ingredient.model';
-import {ShoppingListService} from '../ng4-shopping-list/shopping-list.service';
+import {Ng4ShoppingListService} from '../ng4-shopping-list/ng4-shopping-list.service';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,7 @@ export class Ng4RecipeService {
   // ];
   private recipes: Ng4Recipe[] = [];
 
-  constructor(private shoppingListService: ShoppingListService) {
+  constructor(private shoppingListService: Ng4ShoppingListService) {
   }
 
   setRecipes(recipes: Ng4Recipe[]) {

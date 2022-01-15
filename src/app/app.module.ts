@@ -67,7 +67,7 @@ import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCom
 import { ActiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/active-users/active-users.component';
 import { InactiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/inactive-users/inactive-users.component';
 import { CounterService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
-import { ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/shopping-list.service';
+import { Ng4ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.service';
 import { AssignmentRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/assignment-routing.component';
 import { HomeRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/home-routing/home-routing.component';
 import { ServersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
@@ -242,9 +242,6 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
   ],
   providers: [
               {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
-              // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na problem z CORS
-              // {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true},
-              {provide: HTTP_INTERCEPTORS, useClass: Ng4AuthInterceptorService, multi: true},
               AccountsService,
               LoggingService,
               CounterService,
@@ -253,8 +250,12 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
               CanDeactivateRoutingGuardService,
               ServerRoutingResolverService,
               ObservablesUserService,
-              ShoppingListService,
-              Ng4RecipeService],
+              Ng4ShoppingListService,
+              Ng4RecipeService,
+              {provide: HTTP_INTERCEPTORS, useClass: Ng4AuthInterceptorService, multi: true},
+           // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na problem z CORS
+           // {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
