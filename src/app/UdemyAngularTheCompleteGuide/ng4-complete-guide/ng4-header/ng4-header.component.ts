@@ -3,6 +3,7 @@ import {Subscription} from 'rxjs';
 
 import {DataStorageService} from '../shared/data-storage.service';
 import {Ng4AuthService} from '../ng4-auth/ng4-auth.service';
+import {Ng4LoggingService} from '../ng4-logging.service';
 
 @Component({
   selector: 'app-ng4-header',
@@ -13,7 +14,10 @@ export class Ng4HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub: Subscription;
 
-  constructor(private dataStorageService: DataStorageService, private authService: Ng4AuthService) {
+  constructor(
+    private dataStorageService: DataStorageService,
+    private authService: Ng4AuthService,
+    private loggingService: Ng4LoggingService) {
   }
 
   ngOnInit(): void {
@@ -22,6 +26,7 @@ export class Ng4HeaderComponent implements OnInit, OnDestroy {
       console.log(!user);
       console.log(!!user);
     });
+    this.loggingService.printLog('Hello from Ng4HeaderComponent ngOnInit');
   }
 
   onSaveData() {

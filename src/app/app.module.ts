@@ -121,9 +121,10 @@ import { Ng4RecipesModule } from './UdemyAngularTheCompleteGuide/ng4-complete-gu
 import { Ng4ShoppingListModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
 import { Ng4AuthModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.module';
 
+import { Ng4LoggingService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-logging.service';
 import { Ng4HeaderComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-header/ng4-header.component';
 import { Ng4SharedModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-shared.module';
-import { Ng4CoreModule } from './ng4-core.module';
+import { Ng4CoreModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-core.module';
 
 @NgModule({
   declarations: [
@@ -252,12 +253,13 @@ import { Ng4CoreModule } from './ng4-core.module';
               ServerRoutingResolverService,
               ObservablesUserService
 
+              // Ng4LoggingService
               // Ng4ShoppingListService,
               // Ng4RecipeService,
               // {provide: HTTP_INTERCEPTORS, useClass: Ng4AuthInterceptorService, multi: true}
            // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na problem z CORS
            // {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
