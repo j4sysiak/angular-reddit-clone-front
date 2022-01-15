@@ -101,7 +101,7 @@ import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assign
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 // import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-// import {environment} from './environments/environment';
+// import {environment} from './environments_old/environment';
 
 import { Ng4RecipesComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
 import { Ng4RecipeListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-list/ng4-recipe-list.component';
