@@ -58,7 +58,6 @@ import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/as
 import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/unless/unless.directive';
-import { DropdownDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
 import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
 import { AccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/account/account.component';
 import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/new-account/new-account.component';
@@ -101,13 +100,13 @@ import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-gu
 // tslint:disable-next-line:max-line-length
 import { LoadingSpinnerComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/loading-spinner/loading-spinner.component';
 import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-interceptor.service';
-import { Ng4AlertComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-alert/ng4-alert.component';
-import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-placeholder/ng4-placeholder.directive';
 import { AuthInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/auth-interceptor.service';
 import { LoggingInterceptorService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/logging-interceptor.service';
 
 import { Ng4RecipesModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.module';
-import {Ng4ShoppingListModule} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
+import { Ng4ShoppingListModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
+import { Ng4SharedModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-shared.module';
+
 // import firebase modules
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -122,6 +121,10 @@ import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-comp
 import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
 import { Ng4ShoppingListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
 import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-edit/ng4-shopping-edit.component';
+import { DropdownDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
+import { Ng4AlertComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-alert/ng4-alert.component';
+import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-placeholder/ng4-placeholder.directive';
+
 
 @NgModule({
   declarations: [
@@ -160,18 +163,6 @@ import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-com
     SuccessAlertComponent,
     AssignmentSolutionComponent,
     AssignmentSolution2Component,
-    Ng4HeaderComponent,
-
-    // Ng4RecipesComponent,
-    // Ng4RecipeListComponent,
-    // Ng4RecipeDetailComponent,
-    // Ng4RecipeItemComponent,
-    // Ng4RecipeStartComponent,
-    // Ng4RecipeEditComponent,
-
-    // Ng4ShoppingListComponent,
-    // Ng4ShoppingEditComponent,
-
     CmpDatabindingComponent,
     CockpitComponent,
     ServerElementComponent,
@@ -182,7 +173,6 @@ import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-com
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective,
     AssignmentServicesComponent,
     AccountComponent,
     NewAccountComponent,
@@ -211,10 +201,24 @@ import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-com
     ReversePipe,
     SortPipe,
     AssignmentSolutionSekcja18HttpComponent,
-    Ng4AuthComponent,
-    LoadingSpinnerComponent,
-    Ng4AlertComponent,
-    Ng4PlaceholderDirective
+
+    // Ng4RecipesComponent,
+    // Ng4RecipeListComponent,
+    // Ng4RecipeDetailComponent,
+    // Ng4RecipeItemComponent,
+    // Ng4RecipeStartComponent,
+    // Ng4RecipeEditComponent,
+
+    // Ng4ShoppingListComponent,
+    // Ng4ShoppingEditComponent,
+
+    // DropdownDirective,
+    // LoadingSpinnerComponent,
+    // Ng4PlaceholderDirective
+    // Ng4AlertComponent
+
+    Ng4HeaderComponent,
+    Ng4AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -229,7 +233,8 @@ import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-com
     EditorModule,
     NgbModule,
     Ng4RecipesModule,
-    Ng4ShoppingListModule
+    Ng4ShoppingListModule,
+    Ng4SharedModule
     // AngularFireModule.initializeApp(environment.firebaseConfig),
     // AngularFireDatabaseModule,
     // AngularFireModule,
@@ -243,16 +248,13 @@ import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-com
               AccountsService,
               LoggingService,
               CounterService,
-              ShoppingListService,
               AuthRoutingService,
               AuthRoutingGuardService,
               CanDeactivateRoutingGuardService,
               ServerRoutingResolverService,
               ObservablesUserService,
+              ShoppingListService,
               Ng4RecipeService],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    Ng4AlertComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
