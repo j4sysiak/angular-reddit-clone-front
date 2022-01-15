@@ -9,7 +9,7 @@ import {Ng4RecipesResolverService} from './ng4-recipes-resolver.service';
 
 const ng4routes: Routes = [
   {
-    path: 'recipes',
+    path: '',
     component: Ng4RecipesComponent,
     // canActivate: [Ng4AuthGuard],  // wywalam to, bo po odświeżeniu trzeba się od nowa logować
     children: [

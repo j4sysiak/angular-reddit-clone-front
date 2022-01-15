@@ -45,29 +45,22 @@ import { ServerComponent } from './UdemyAngularTheCompleteGuide/server/server.co
 import { ServersComponent } from './UdemyAngularTheCompleteGuide/servers/servers.component';
 import { WarningAlertComponent } from './UdemyAngularTheCompleteGuide/warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './UdemyAngularTheCompleteGuide/success-alert/success-alert.component';
-import { AssignmentSolutionComponent } from './UdemyAngularTheCompleteGuide/assignment-solution/assignment-solution.component';
-import { AssignmentSolution2Component } from './UdemyAngularTheCompleteGuide/assignment-solution2/assignment-solution2.component';
-import { Ng4HeaderComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-header/ng4-header.component';
 import { CmpDatabindingComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/cmp-databinding/cmp-databinding.component';
 import { CockpitComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/cockpit/cockpit.component';
 import { ServerElementComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/server-element/server-element.component';
 import { GameControlComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja5-Databinding/game-control/game-control.component';
 import { OddComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja5-Databinding/odd/odd.component';
 import { EvenComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja5-Databinding/even/even.component';
-import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/assignment-directives/assignment-directives.component';
 import { BasicHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './UdemyAngularTheCompleteGuide/assignment-directives/unless/unless.directive';
-import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
 import { AccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/account/account.component';
 import { NewAccountComponent } from './UdemyAngularTheCompleteGuide/assignment-services/new-account/new-account.component';
 import { AccountsService } from './UdemyAngularTheCompleteGuide/assignment-services/accounts.service';
 import { LoggingService} from './UdemyAngularTheCompleteGuide/assignment-services/logging.service';
-import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/assignment-solution-sekcja9-services.component';
 import { ActiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/active-users/active-users.component';
 import { InactiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/inactive-users/inactive-users.component';
 import { CounterService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
-import { AssignmentRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/assignment-routing.component';
 import { HomeRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/home-routing/home-routing.component';
 import { ServersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
 import { EditServerRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
@@ -81,6 +74,15 @@ import { CanDeactivateRoutingGuardService } from './UdemyAngularTheCompleteGuide
 import { ErrorPageComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
 import { ServerRoutingResolverService } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
 import { ObservablesUserService } from './UdemyAngularTheCompleteGuide/assignment-observables/observables-user.service';
+import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/shorten.pipe';
+import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/filter.pipe';
+import { ReversePipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/reverse.pipe';
+import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/sort.pipe';
+import { AssignmentSolutionComponent } from './UdemyAngularTheCompleteGuide/assignment-solution/assignment-solution.component';
+import { AssignmentSolution2Component } from './UdemyAngularTheCompleteGuide/assignment-solution2/assignment-solution2.component';
+import { AssignmentDirectivesComponent } from './UdemyAngularTheCompleteGuide/assignment-directives/assignment-directives.component';
+import { AssignmentRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/assignment-routing.component';
+import { AssignmentServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-services/assignment-services.component';
 import { AssignmentObservablesComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 import { AssignmentObservablesUserComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import { AssignmentObservablesHomeComponent } from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
@@ -89,10 +91,7 @@ import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCom
 import { AssignmentSolutionSekcja15ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
 import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
 import { AssignmentSolutionSekcja17PipesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
-import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/shorten.pipe';
-import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/filter.pipe';
-import { ReversePipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/reverse.pipe';
-import { SortPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/sort.pipe';
+import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/assignment-solution-sekcja9-services.component';
 import { AssignmentSolutionSekcja18HttpComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
 // tslint:disable-next-line:max-line-length
 import { Ng4AuthInterceptorService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-interceptor.service';
@@ -118,12 +117,13 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
 import { Ng4RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.service';
 import { Ng4ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.service';
 import { Ng4AuthComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
-
 import { Ng4RecipesModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.module';
 import { Ng4ShoppingListModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
+import { Ng4AuthModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.module';
+
+import { Ng4HeaderComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-header/ng4-header.component';
 import { Ng4SharedModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-shared.module';
 import { Ng4CoreModule } from './ng4-core.module';
-import { Ng4AuthModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.module';
 
 @NgModule({
   declarations: [
@@ -231,15 +231,15 @@ import { Ng4AuthModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide
     FontAwesomeModule,
     EditorModule,
     NgbModule,
-    Ng4RecipesModule,
-    Ng4ShoppingListModule,
-    Ng4SharedModule,
-    Ng4CoreModule,
-    Ng4AuthModule
+    // Ng4RecipesModule,
+    // Ng4ShoppingListModule,
+    // Ng4AuthModule
     // AngularFireModule.initializeApp(environment.firebaseConfig),
     // AngularFireDatabaseModule,
     // AngularFireModule,
     // AngularFirestoreModule
+    Ng4SharedModule,
+    Ng4CoreModule
   ],
   providers: [
               {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},

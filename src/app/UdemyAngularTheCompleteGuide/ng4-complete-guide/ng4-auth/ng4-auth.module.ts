@@ -13,7 +13,7 @@ import {Ng4SharedModule} from '../shared/ng4-shared.module';
     CommonModule,
     FormsModule,
     RouterModule.forChild([
-      { path: 'ng4-auth', component: Ng4AuthComponent }
+      { path: '', component: Ng4AuthComponent }
     ]),
     Ng4SharedModule
   ]

@@ -40,6 +40,7 @@ import {AssignmentSolutionSekcja152ReactiveFormsComponent} from './UdemyAngularT
 import {AssignmentSolutionSekcja17PipesComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 import {AssignmentSolutionSekcja18HttpComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
 import {Ng4AuthComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
+import {Ng4ShoppingListModule} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
 // import {Ng4RecipesResolverService} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes-resolver.service';
 // import {Ng4AuthGuard} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-guard';
 // import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
@@ -124,7 +125,16 @@ const appRoutes: Routes = [
      { path: 'assignment-https', component: AssignmentSolutionSekcja18HttpComponent },
 
   // aplikacja: ng4-complete-guide
-    { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'}
+    { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
+    { path: 'recipes',
+        loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.module')
+          .then(m => m.Ng4RecipesModule) },
+    { path: 'shopping-list',
+        loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module')
+          .then(m => m.Ng4ShoppingListModule)},
+    { path: 'ng4-auth',
+        loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.module')
+          .then(m => m.Ng4AuthModule)}
   ];
 
 

@@ -11,7 +11,7 @@ declarations: [ Ng4ShoppingListComponent, Ng4ShoppingEditComponent],
 imports: [
       FormsModule,
       RouterModule.forChild([
-              { path: 'shopping-list', component: Ng4ShoppingListComponent }
+              { path: '', component: Ng4ShoppingListComponent }
            ]),
            Ng4SharedModule
          ]
