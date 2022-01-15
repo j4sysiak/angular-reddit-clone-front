@@ -67,7 +67,6 @@ import { AssignmentSolutionSekcja9ServicesComponent } from './UdemyAngularTheCom
 import { ActiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/active-users/active-users.component';
 import { InactiveUsersComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/inactive-users/inactive-users.component';
 import { CounterService } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja9-services/counter.service';
-import { Ng4ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.service';
 import { AssignmentRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/assignment-routing.component';
 import { HomeRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/home-routing/home-routing.component';
 import { ServersRoutingComponent } from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/servers-routing.component';
@@ -89,7 +88,6 @@ import { AssignmentFormsComponent } from './UdemyAngularTheCompleteGuide/assignm
 import { AssignmentSolutionSekcja15TdFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-td-forms/assignment-solution-sekcja15-td-forms.component';
 import { AssignmentSolutionSekcja15ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
 import { AssignmentSolutionSekcja152ReactiveFormsComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
-import { Ng4RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.service';
 import { AssignmentSolutionSekcja17PipesComponent } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
 import { ShortenPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/shorten.pipe';
 import { FilterPipe } from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/filter.pipe';
@@ -124,7 +122,9 @@ import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-com
 import { DropdownDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/dropdown.directive';
 import { Ng4AlertComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-alert/ng4-alert.component';
 import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-placeholder/ng4-placeholder.directive';
-
+import { Ng4RecipeService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.service';
+import { Ng4ShoppingListService } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.service';
+import {Ng4CoreModule} from './ng4-core.module';
 
 @NgModule({
   declarations: [
@@ -161,22 +161,17 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    AssignmentSolutionComponent,
-    AssignmentSolution2Component,
     CmpDatabindingComponent,
     CockpitComponent,
     ServerElementComponent,
     GameControlComponent,
     OddComponent,
     EvenComponent,
-    AssignmentDirectivesComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    AssignmentServicesComponent,
     AccountComponent,
     NewAccountComponent,
-    AssignmentSolutionSekcja9ServicesComponent,
     ActiveUsersComponent,
     InactiveUsersComponent,
     AssignmentRoutingComponent,
@@ -188,6 +183,11 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
     UserRoutingComponent,
     PageNotFoundComponent,
     ErrorPageComponent,
+    AssignmentSolutionComponent,
+    AssignmentSolution2Component,
+    AssignmentDirectivesComponent,
+    AssignmentServicesComponent,
+    AssignmentSolutionSekcja9ServicesComponent,
     AssignmentObservablesComponent,
     AssignmentObservablesUserComponent,
     AssignmentObservablesHomeComponent,
@@ -196,11 +196,11 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
     AssignmentSolutionSekcja15ReactiveFormsComponent,
     AssignmentSolutionSekcja152ReactiveFormsComponent,
     AssignmentSolutionSekcja17PipesComponent,
+    AssignmentSolutionSekcja18HttpComponent,
     ShortenPipe,
     FilterPipe,
     ReversePipe,
     SortPipe,
-    AssignmentSolutionSekcja18HttpComponent,
 
     // Ng4RecipesComponent,
     // Ng4RecipeListComponent,
@@ -234,7 +234,8 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
     NgbModule,
     Ng4RecipesModule,
     Ng4ShoppingListModule,
-    Ng4SharedModule
+    Ng4SharedModule,
+    Ng4CoreModule
     // AngularFireModule.initializeApp(environment.firebaseConfig),
     // AngularFireDatabaseModule,
     // AngularFireModule,
@@ -249,10 +250,11 @@ import { Ng4PlaceholderDirective } from './UdemyAngularTheCompleteGuide/ng4-comp
               AuthRoutingGuardService,
               CanDeactivateRoutingGuardService,
               ServerRoutingResolverService,
-              ObservablesUserService,
-              Ng4ShoppingListService,
-              Ng4RecipeService,
-              {provide: HTTP_INTERCEPTORS, useClass: Ng4AuthInterceptorService, multi: true},
+              ObservablesUserService
+
+              // Ng4ShoppingListService,
+              // Ng4RecipeService,
+              // {provide: HTTP_INTERCEPTORS, useClass: Ng4AuthInterceptorService, multi: true}
            // {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},  // komentuję ze względu na problem z CORS
            // {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi: true}
   ],
