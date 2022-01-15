@@ -124,8 +124,7 @@ const appRoutes: Routes = [
      { path: 'assignment-https', component: AssignmentSolutionSekcja18HttpComponent },
 
   // aplikacja: ng4-complete-guide
-    { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
-    { path: 'ng4-auth', component: Ng4AuthComponent }
+    { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'}
   ];
 
 
