@@ -25,14 +25,14 @@ import {Ng4RecipesRoutingModule} from './ng4-recipes-routing.module';
     CommonModule,
     ReactiveFormsModule,
     Ng4RecipesRoutingModule
-  ],
-  exports: [
-    Ng4RecipesComponent,
-    Ng4RecipeListComponent,
-    Ng4RecipeDetailComponent,
-    Ng4RecipeItemComponent,
-    Ng4RecipeStartComponent,
-    Ng4RecipeEditComponent
   ]
+  // exports: [
+  //   Ng4RecipesComponent,
+  //   Ng4RecipeListComponent,
+  //   Ng4RecipeDetailComponent,
+  //   Ng4RecipeItemComponent,
+  //   Ng4RecipeStartComponent,
+  //   Ng4RecipeEditComponent
+  // ]
 })
 export class Ng4RecipesModule {}

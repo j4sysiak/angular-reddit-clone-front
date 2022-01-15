@@ -48,8 +48,6 @@ import { SuccessAlertComponent } from './UdemyAngularTheCompleteGuide/success-al
 import { AssignmentSolutionComponent } from './UdemyAngularTheCompleteGuide/assignment-solution/assignment-solution.component';
 import { AssignmentSolution2Component } from './UdemyAngularTheCompleteGuide/assignment-solution2/assignment-solution2.component';
 import { Ng4HeaderComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-header/ng4-header.component';
-import { Ng4ShoppingListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
-import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-edit/ng4-shopping-edit.component';
 import { CmpDatabindingComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/cmp-databinding/cmp-databinding.component';
 import { CockpitComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/cockpit/cockpit.component';
 import { ServerElementComponent } from './UdemyAngularTheCompleteGuide/cmp-databinding/server-element/server-element.component';
@@ -121,6 +119,8 @@ import { Ng4RecipeDetailComponent } from './UdemyAngularTheCompleteGuide/ng4-com
 import { Ng4RecipeItemComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-list/ng4-recipe-item/ng4-recipe-item.component';
 import { Ng4RecipeStartComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
 import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
+import { Ng4ShoppingListComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
+import { Ng4ShoppingEditComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-edit/ng4-shopping-edit.component';
 
 @NgModule({
   declarations: [
@@ -168,8 +168,9 @@ import { Ng4RecipeEditComponent } from './UdemyAngularTheCompleteGuide/ng4-compl
     // Ng4RecipeStartComponent,
     // Ng4RecipeEditComponent,
 
-    Ng4ShoppingListComponent,
-    Ng4ShoppingEditComponent,
+    // Ng4ShoppingListComponent,
+    // Ng4ShoppingEditComponent,
+
     CmpDatabindingComponent,
     CockpitComponent,
     ServerElementComponent,
