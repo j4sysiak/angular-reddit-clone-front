@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 
 import {LoginComponent} from './auth/login/login.component';
 import {SignupComponent} from './auth/signup/signup.component';
@@ -27,20 +27,30 @@ import {ServersRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment
 import {UserRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/users-routing/user-routing/user-routing.component';
 import {ServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing.component';
 import {EditServerRoutingComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/edit-server-routing.component';
-import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
 import {AuthRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/auth-routing-guard.service';
 import {CanDeactivateRoutingGuardService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/edit-server-routing/can-deactivate-routing-guard.service';
 import {ErrorPageComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/error-page/error-page.component';
 import {ServerRoutingResolverService} from './UdemyAngularTheCompleteGuide/assignment-routing/servers-routing/server-routing/server-routing-resolver.service';
-import {Ng4RecipesComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
-import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
-import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
-import {Ng4RecipeDetailComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
-import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
-import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 import {AssignmentObservablesHomeComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-home/assignment-observables-home.component';
 import {AssignmentObservablesUserComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables-user/assignment-observables-user.component';
 import {AssignmentFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-forms/assignment-forms.component';
+import {AssignmentSolutionSekcja15TdFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-td-forms/assignment-solution-sekcja15-td-forms.component';
+import {AssignmentSolutionSekcja15ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-reactive-forms/assignment-solution-sekcja15-reactive-forms.component';
+import {AssignmentSolutionSekcja152ReactiveFormsComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja15-2-reactive-forms/assignment-solution-sekcja15-2-reactive-forms.component';
+import {AssignmentSolutionSekcja17PipesComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja17-pipes/assignment-solution-sekcja17-pipes.component';
+import {AssignmentSolutionSekcja18HttpComponent} from './UdemyAngularTheCompleteGuide/assignment-solution-sekcja18-http/assignment-solution-sekcja18-http.component';
+import {Ng4AuthComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.component';
+import {Ng4ShoppingListModule} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
+// import {Ng4RecipesResolverService} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes-resolver.service';
+// import {Ng4AuthGuard} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-guard';
+// import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
+// import {Ng4RecipeDetailComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
+// import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
+// import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
+// import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
+// import {Ng4RecipesComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.component';
+// import {Ng4ShoppingListComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.component';
+
 
 const appRoutes: Routes = [
     // { path: '/', component: HomeComponent },   komentuje, bo dużo różnych aplikacji można będzie odpalać
@@ -87,22 +97,44 @@ const appRoutes: Routes = [
 
      // aplikacja: app-assignment-observable
     { path: 'app-assignment-observables', redirectTo: '/observable', pathMatch: 'full' },
-    {path: 'observable', component: AssignmentObservablesHomeComponent},
-    {path: 'observable-user/:id', component: AssignmentObservablesUserComponent},
+    { path: 'observable', component: AssignmentObservablesHomeComponent},
+    { path: 'observable-user/:id', component: AssignmentObservablesUserComponent},
 
      // aplikacja: app-assignment-forms
      { path: 'app-assignment-forms', redirectTo: '/forms', pathMatch: 'full' },
-     {path: 'forms', component: AssignmentFormsComponent},
+     { path: 'forms', component: AssignmentFormsComponent },
 
-     // aplikacja: ng4-complete-guide
+     // aplikacja:  app-assignment-solution-sekcja15-td-forms
+     { path: 'app-assignment-solution-sekcja15-td-forms', redirectTo: '/assignment-td-forms', pathMatch: 'full' },
+     { path: 'assignment-td-forms', component: AssignmentSolutionSekcja15TdFormsComponent },
+
+     // aplikacja:  app-assignment-solution-sekcja15-reactive-forms
+     { path: 'app-assignment-solution-sekcja15-reactive-forms', redirectTo: '/assignment-reactive-forms', pathMatch: 'full' },
+     { path: 'assignment-reactive-forms', component: AssignmentSolutionSekcja15ReactiveFormsComponent },
+
+     // aplikacja: app-assignment-solution-sekcja15-2-reactive-forms
+     { path: 'app-assignment-solution-sekcja15-2-reactive-forms', redirectTo: '/assignment-reactive-forms-2', pathMatch: 'full' },
+     { path: 'assignment-reactive-forms-2', component: AssignmentSolutionSekcja152ReactiveFormsComponent },
+
+     // aplikacja: app-assignment-solution-sekcja17-pipes
+     { path: 'app-assignment-solution-sekcja17-pipes', redirectTo: '/assignment-pipes', pathMatch: 'full' },
+     { path: 'assignment-pipes', component: AssignmentSolutionSekcja17PipesComponent },
+
+     // aplikacja: app-assignment-solution-sekcja18-http
+     { path: 'app-assignment-solution-sekcja18-http', redirectTo: '/assignment-https', pathMatch: 'full' },
+     { path: 'assignment-https', component: AssignmentSolutionSekcja18HttpComponent },
+
+  // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
-    { path: 'recipes', component: Ng4RecipesComponent, children: [
-      { path: '', component: Ng4RecipeStartComponent },
-      { path: 'new', component: Ng4RecipeEditComponent },
-      { path: ':id', component: Ng4RecipeDetailComponent },
-      { path: ':id/edit', component: Ng4RecipeEditComponent }
-      ]},
-    { path: 'shopping-list', component: Ng4ShoppingListComponent }
+    { path: 'recipes',
+        loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.module')
+          .then(m => m.Ng4RecipesModule) },
+    { path: 'shopping-list',
+        loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module')
+          .then(m => m.Ng4ShoppingListModule)},
+    { path: 'ng4-auth',
+        loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.module')
+          .then(m => m.Ng4AuthModule)}
   ];
 
 
@@ -110,7 +142,7 @@ const appRoutes: Routes = [
 @NgModule({
   // imports: [RouterModule.forRoot(routes)],
   // imports: [RouterModule.forRoot(appRoutes, {useHash: true})],
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
