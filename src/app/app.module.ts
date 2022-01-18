@@ -138,6 +138,9 @@ import { Parent3Component } from './AngularTutorials/6_PassingDataFromOneCompone
 import { Child4Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/child4/child4.component';
 import { Child5Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/child5/child5.component';
 import { Parent4Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/parent4/parent4.component';
+import { Child6Component } from './AngularTutorials/7_PassCheckboxValueOntoComponents/child6/child6.component';
+import { Parent6Component } from './AngularTutorials/7_PassCheckboxValueOntoComponents/parent6/parent6.component';
+import { Test1Component } from './AngularTutorials/7_PassCheckboxValueOntoComponents/test1/test1.component';
 
 @NgModule({
   declarations: [
@@ -244,7 +247,10 @@ import { Parent4Component } from './AngularTutorials/6_PassingDataFromOneCompone
     Parent3Component,
     Child4Component,
     Child5Component,
-    Parent4Component
+    Parent4Component,
+    Child6Component,
+    Parent6Component,
+    Test1Component
 
     // Ng4AuthComponent
   ],
