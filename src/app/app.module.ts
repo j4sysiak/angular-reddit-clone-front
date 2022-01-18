@@ -135,6 +135,9 @@ import { Child2Component } from './AngularTutorials/6_PassingDataFromOneComponen
 import { Parent2Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ParentToChild/parent2/parent2.component';
 import { Child3Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ChildToParent/child3/child3.component';
 import { Parent3Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ChildToParent/parent3/parent3.component';
+import { Child4Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/child4/child4.component';
+import { Child5Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/child5/child5.component';
+import { Parent4Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/parent4/parent4.component';
 
 @NgModule({
   declarations: [
@@ -238,7 +241,10 @@ import { Parent3Component } from './AngularTutorials/6_PassingDataFromOneCompone
     Child2Component,
     Parent2Component,
     Child3Component,
-    Parent3Component
+    Parent3Component,
+    Child4Component,
+    Child5Component,
+    Parent4Component
 
     // Ng4AuthComponent
   ],
