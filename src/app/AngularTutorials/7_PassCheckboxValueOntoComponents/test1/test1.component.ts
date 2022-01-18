@@ -13,8 +13,8 @@ export class Test1Component implements OnInit {
   constructor(private myEventService: MyEventService) { }
 
   ngOnInit() {
-    this.eventService.checkBoxSubject$.subscribe(res => {
+    this.myEventService.checkBoxSubject$.subscribe(res => {
       this.checboxTest1 = res;
-    })
+    });
   }
 }
