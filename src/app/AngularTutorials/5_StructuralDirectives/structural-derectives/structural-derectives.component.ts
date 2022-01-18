@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./structural-derectives.component.css']
 })
 export class StructuralDerectivesComponent implements OnInit {
+  displayName = true;
 
   constructor() { }
 
