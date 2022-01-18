@@ -125,8 +125,10 @@ import { Ng4LoggingService } from './UdemyAngularTheCompleteGuide/ng4-complete-g
 import { Ng4HeaderComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-header/ng4-header.component';
 import { Ng4SharedModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-shared.module';
 import { Ng4CoreModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-core.module';
-import { ParentComponent } from './1_PassDataParentToChild/parent/parent.component';
-import { ChildComponent } from './1_PassDataParentToChild/child/child.component';
+import { ParentComponent } from './AngularTutorials/1_PassDataParentToChild/parent/parent.component';
+import { ChildComponent } from './AngularTutorials/1_PassDataParentToChild/child/child.component';
+import { TestComponent } from './AngularTutorials/2_EventBinding/test/test.component';
+import { TemplateReferenceVariablesComponent } from './AngularTutorials/3_TemplateReferenceVariables/template-reference-variables/template-reference-variables.component';
 
 @NgModule({
   declarations: [
@@ -222,8 +224,10 @@ import { ChildComponent } from './1_PassDataParentToChild/child/child.component'
     Ng4HeaderComponent,
 
     ParentComponent,
-
     ChildComponent,
+    TestComponent,
+    TemplateReferenceVariablesComponent
+
     // Ng4AuthComponent
   ],
   imports: [
