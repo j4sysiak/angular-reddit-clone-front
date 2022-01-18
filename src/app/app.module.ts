@@ -131,6 +131,10 @@ import { TestComponent } from './AngularTutorials/2_EventBinding/test/test.compo
 import { TemplateReferenceVariablesComponent } from './AngularTutorials/3_TemplateReferenceVariables/template-reference-variables/template-reference-variables.component';
 import { TwoWayBindingComponent } from './AngularTutorials/4_TwoWayBinding/two-way-binding/two-way-binding.component';
 import { StructuralDerectivesComponent } from './AngularTutorials/5_StructuralDirectives/structural-derectives/structural-derectives.component';
+import { Child2Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ParentToChild/child2/child2.component';
+import { Parent2Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ParentToChild/parent2/parent2.component';
+import { Child3Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ChildToParent/child3/child3.component';
+import { Parent3Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ChildToParent/parent3/parent3.component';
 
 @NgModule({
   declarations: [
@@ -230,7 +234,11 @@ import { StructuralDerectivesComponent } from './AngularTutorials/5_StructuralDi
     TestComponent,
     TemplateReferenceVariablesComponent,
     TwoWayBindingComponent,
-    StructuralDerectivesComponent
+    StructuralDerectivesComponent,
+    Child2Component,
+    Parent2Component,
+    Child3Component,
+    Parent3Component
 
     // Ng4AuthComponent
   ],
