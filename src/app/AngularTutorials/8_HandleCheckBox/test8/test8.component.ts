@@ -6,16 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test8.component.css']
 })
 export class Test8Component implements OnInit {
-  public student: student;
-  public courselist: course[];
-  public studentlist: student[] = [];
-  public uniqueId = 0;
-  public studentid =  0;
+  public student: Student;
+  public courselist: Course[];
+  public studentlist: Student[] = [];
+  public uniqueKey: number = 0;
+  public studentId: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
     this.getCourses();
+    this.student = new Student();
     this.resetForm();
   }
 
@@ -27,24 +28,32 @@ export class Test8Component implements OnInit {
     ];
   }
 
-  // onSubmit() {
-  //   if (this.studentid === 0) {
-  //     this.uniqueId = this.uniqueId + 1;
-  //     this.student.id = this.uniqueId;
-  //     this.studentlist.push(this.student);
-  //   } else {
-  //     for (var i = 0; i < this.studentlist.length; i++) {
-  //       if (this.studentlist[i] === this.studentid) {
-  //         this.studentlist[i].name = this.student.name;
-  //         this.studentlist[i].courseid = this.student.courseid;
-  //         this.studentlist[i].coursename = this.student.coursename;
-  //       }
-  //     }
-  //     this.studentid = 0;
-  //   }
-  //   this.resetForm();
-  //   this.courselist.forEach(item => item.isselected = false);
-  // }
+  onSubmit() {
+    this.student.courseid = this.courselist.filter(x => x.isselected === true).map(x => x.id).join(',').toString();
+    this.student.coursename = this.courselist.filter(x => x.isselected === true).map(x => x.name).join(',').toString();
+    this.uniqueKey = this.uniqueKey + 1;
+    this.student.id = this.uniqueKey;
+    this.studentlist.push(this.student);
+    this.student = new Student();
+    this.getCourses();
+
+    // if (this.studentid === 0) {
+    //   this.uniqueId = this.uniqueId + 1;
+    //   this.student.id = this.uniqueId;
+    //   this.studentlist.push(this.student);
+    // } else {
+    //   for (var i = 0; i < this.studentlist.length; i++) {
+    //     if (this.studentlist[i] === this.studentid) {
+    //       this.studentlist[i].name = this.student.name;
+    //       this.studentlist[i].courseid = this.student.courseid;
+    //       this.studentlist[i].coursename = this.student.coursename;
+    //     }
+    //   }
+    //   this.studentid = 0;
+    // }
+    // this.resetForm();
+    // this.courselist.forEach(item => item.isselected = false);
+  }
 
   onChange() {
     console.warn(this.courselist);
@@ -66,7 +75,7 @@ export class Test8Component implements OnInit {
   }
 }
 
-class student {
+class Student {
   id: number;
   name: string;
   courseid: string;
@@ -74,7 +83,7 @@ class student {
 }
 
 
-class course {
+class Course {
   id: number;
   name: string;
   isselected: boolean;
