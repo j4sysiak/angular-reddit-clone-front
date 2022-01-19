@@ -29,11 +29,18 @@ export class Test8Component implements OnInit {
   }
 
   onSubmit() {
+    let index = this.studentlist.findIndex(x => x.id === this.student.id);
+
     this.student.courseid = this.courselist.filter(x => x.isselected === true).map(x => x.id).join(',').toString();
     this.student.coursename = this.courselist.filter(x => x.isselected === true).map(x => x.name).join(',').toString();
-    this.uniqueKey = this.uniqueKey + 1;
-    this.student.id = this.uniqueKey;
-    this.studentlist.push(this.student);
+
+    if (index === -1) {
+      this.uniqueKey = this.uniqueKey + 1;
+      this.student.id = this.uniqueKey;
+      this.studentlist.push(this.student);
+    } else {
+      this.studentlist[index] = this.student;
+    }
     this.student = new Student();
     this.getCourses();
 
@@ -61,8 +68,14 @@ export class Test8Component implements OnInit {
     // this.student.coursename = this.courselist.filter(student => student.?????);
   }
 
-  edit(id: number) {
-     // #TO DO
+  edit(item: Student) {
+     let selectedCourseIdList = item.courseid.split(',');
+
+     for (let i = 0; i < selectedCourseIdList.length; i++) {
+       this.courselist.filter(x => x.id === Number(selectedCourseIdList[i])).map(x => x.isselected = true );
+     }
+     this.student.name = item.name;
+     this.student.id = item.id;
   }
 
   private resetForm() {
