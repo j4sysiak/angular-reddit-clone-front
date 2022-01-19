@@ -1,0 +1,20 @@
+<p>Test8Component works!</p>
+<hr>
+
+<form>
+  <div class="container">
+    <div *ngFor="let item of courselist" class="row">
+      <div class="col-8 col-chk">
+        <input
+          type="checkbox"
+          name="{{ item.name }}"
+          (change)="onChange()"
+           [(ngModel)]="item.isselected"
+        >
+      </div>
+      <div class="col-35">
+        <label>{{ item.name }}</label>
+      </div>
+    </div>
+  </div>
+</form>
