@@ -9,8 +9,8 @@ export class Test8Component implements OnInit {
   public student: Student;
   public courselist: Course[];
   public studentlist: Student[] = [];
-  public uniqueKey: number = 0;
-  public studentId: number = 0;
+  public uniqueKey = 0;
+  public studentId = 0;
 
   constructor() { }
 
