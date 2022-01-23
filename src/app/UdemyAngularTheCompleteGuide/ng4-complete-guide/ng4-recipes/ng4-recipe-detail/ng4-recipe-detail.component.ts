@@ -16,7 +16,7 @@ export class Ng4RecipeDetailComponent implements OnInit {
   }
 
   onAddToShoppingList() {
-    console.warn('1: ' + this.recipe.ingredients);
+    console.log(this.recipe.ingredients[0].name);
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
 }
