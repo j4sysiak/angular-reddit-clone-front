@@ -55,13 +55,13 @@ export class Ng4ShoppingEditComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  onClear() {
-    this.shoppingListForm.reset();
-    this.editMode = false;
-  }
-
   onDelete() {
     this.shoppingListService.deleteIngredient(this.editedItemIndex);
     this.onClear();
+  }
+
+  onClear() {
+    this.shoppingListForm.reset();
+    this.editMode = false;
   }
 }

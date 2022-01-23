@@ -1,17 +1,16 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Subscription} from 'rxjs';
 
 import {CarsService} from '../shared/cars.service';
 import {Car} from '../shared/car.model';
-import {Ingredient} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ingredient.model';
 
 @Component({
   selector: 'app-screen-one-edit',
   templateUrl: './screen-one-edit.component.html',
   styleUrls: ['./screen-one-edit.component.css']
 })
-export class ScreenOneEditComponent implements OnInit {
+export class ScreenOneEditComponent implements OnInit, OnDestroy {
   @ViewChild('f', {static: false}) screenOneForm: NgForm;
   subscription: Subscription;
   editMode = false;
@@ -35,8 +34,15 @@ export class ScreenOneEditComponent implements OnInit {
       });
   }
 
-  onDelete() {}
-  onClear() {}
+  onDelete() {
+    this.carsService.deleteCar(this.editedItemIndex);
+    this.onClear();
+  }
+
+  onClear() {
+    this.screenOneForm.reset();
+    this.editMode = false;
+  }
 
   onSubmit(form: NgForm) {
     const value = form.value;
@@ -49,5 +55,9 @@ export class ScreenOneEditComponent implements OnInit {
     }
     this.editMode = false;
     form.reset();
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

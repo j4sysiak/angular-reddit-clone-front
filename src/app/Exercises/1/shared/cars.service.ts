@@ -1,6 +1,5 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {Car} from './car.model';
-import {Ingredient} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ingredient.model';
 import {Subject} from 'rxjs';
 
 @Injectable({
@@ -34,6 +33,11 @@ export class CarsService {
 
   updateCar(i: number, newCar: Car) {
     this.cars[i] = newCar;
+    this.carsChanged2.next(this.cars.slice());
+  }
+
+  deleteCar(i: number) {
+    this.cars.splice(i, 1);
     this.carsChanged2.next(this.cars.slice());
   }
 }
