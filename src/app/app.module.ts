@@ -144,6 +144,8 @@ import { Test1Component } from './AngularTutorials/7_PassCheckboxValueOntoCompon
 import { Test8Component } from './AngularTutorials/8_HandleCheckBox/test8/test8.component';
 import { Parent7Component } from './AngularTutorials/AngularTutorialForBeginers_Codevolution/Part15_ComponentInteraction/parent7/parent7.component';
 import { Child7Component } from './AngularTutorials/AngularTutorialForBeginers_Codevolution/Part15_ComponentInteraction/child7/child7.component';
+import { ScreenOneComponent } from './Exercises/screen-one/screen-one.component';
+import { ScreenTwoComponent } from './Exercises/screen-two/screen-two.component';
 
 @NgModule({
   declarations: [
@@ -256,7 +258,9 @@ import { Child7Component } from './AngularTutorials/AngularTutorialForBeginers_C
     Test1Component,
     Test8Component,
     Parent7Component,
-    Child7Component
+    Child7Component,
+    ScreenOneComponent,
+    ScreenTwoComponent
 
     // Ng4AuthComponent
   ],
