@@ -4,6 +4,7 @@ import {Subscription} from 'rxjs';
 
 import {CarsService} from '../shared/cars.service';
 import {Car} from '../shared/car.model';
+import {Ingredient} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ingredient.model';
 
 @Component({
   selector: 'app-screen-one-edit',
@@ -34,15 +35,19 @@ export class ScreenOneEditComponent implements OnInit {
       });
   }
 
-  onSubmit(f: NgForm) {
+  onDelete() {}
+  onClear() {}
 
-  }
-
-  onDelete() {
-
-  }
-
-  onClear() {
-
+  onSubmit(form: NgForm) {
+    const value = form.value;
+    const newCar = new Car(value.make, value.type, value.year);
+    // this.ingredientAdded.emit(newIngredient);
+    if (this.editMode) {
+      this.carsService.updateCar(this.editedItemIndex, newCar);
+    } else {
+      this.carsService.addCar(newCar);
+    }
+    this.editMode = false;
+    form.reset();
   }
 }

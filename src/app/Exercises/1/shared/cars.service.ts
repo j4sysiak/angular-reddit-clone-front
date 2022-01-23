@@ -26,4 +26,14 @@ export class CarsService {
   getCar(i: number) {
     return this.cars[i];
   }
+
+  addCar(car: Car) {
+    this.cars.push(car);
+    this.carsChanged2.next(this.cars.slice());
+  }
+
+  updateCar(i: number, newCar: Car) {
+    this.cars[i] = newCar;
+    this.carsChanged2.next(this.cars.slice());
+  }
 }
