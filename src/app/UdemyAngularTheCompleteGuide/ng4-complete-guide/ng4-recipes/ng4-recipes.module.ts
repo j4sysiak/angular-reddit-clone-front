@@ -11,6 +11,7 @@ import {Ng4RecipeEditComponent} from './ng4-recipe-edit/ng4-recipe-edit.componen
 import {Ng4RecipesRoutingModule} from './ng4-recipes-routing.module';
 import {Ng4SharedModule} from '../shared/ng4-shared.module';
 
+
 @NgModule({
   declarations: [
     Ng4RecipesComponent,
