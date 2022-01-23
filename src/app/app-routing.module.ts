@@ -124,17 +124,26 @@ const appRoutes: Routes = [
      { path: 'app-assignment-solution-sekcja18-http', redirectTo: '/assignment-https', pathMatch: 'full' },
      { path: 'assignment-https', component: AssignmentSolutionSekcja18HttpComponent },
 
+     // aplikacja to ćwiczeń (Exercices: src/app/Exercises/1): app-garage
+     { path: 'app-garage', redirectTo: '/garage', pathMatch: 'full'},
+     { path: 'garage',
+         loadChildren: () => import('./Exercises/1/shared/garage.module').then(m => m.GarageModule)
+     },
+
   // aplikacja: ng4-complete-guide
     { path: 'ng4-complete-guide', redirectTo: '/recipes', pathMatch: 'full'},
     { path: 'recipes',
         loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes.module')
-          .then(m => m.Ng4RecipesModule) },
+          .then(m => m.Ng4RecipesModule)
+    },
     { path: 'shopping-list',
         loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module')
-          .then(m => m.Ng4ShoppingListModule)},
+          .then(m => m.Ng4ShoppingListModule)
+    },
     { path: 'ng4-auth',
         loadChildren: () => import('./UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth.module')
-          .then(m => m.Ng4AuthModule)}
+          .then(m => m.Ng4AuthModule)
+    }
   ];
 
 

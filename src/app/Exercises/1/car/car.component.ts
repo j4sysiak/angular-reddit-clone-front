@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import {Subscription} from 'rxjs';
 import {Car} from '../shared/car.model';
 import {CarsService} from '../shared/cars.service';
-import {Ingredient} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ingredient.model';
-import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'app-screen-one',
-  templateUrl: './screen-one.component.html',
-  styleUrls: ['./screen-one.component.css']
+  selector: 'app-car',
+  templateUrl: './car.component.html',
+  styleUrls: ['./car.component.css']
 })
-export class ScreenOneComponent implements OnInit {
+export class CarComponent implements OnInit {
   private subscription: Subscription;
   cars: Car[];
 

@@ -1,16 +1,15 @@
-import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Subscription} from 'rxjs';
-
-import {CarsService} from '../shared/cars.service';
 import {Car} from '../shared/car.model';
+import {CarsService} from '../shared/cars.service';
 
 @Component({
-  selector: 'app-screen-one-edit',
-  templateUrl: './screen-one-edit.component.html',
-  styleUrls: ['./screen-one-edit.component.css']
+  selector: 'app-car-edit',
+  templateUrl: './car-edit.component.html',
+  styleUrls: ['./car-edit.component.css']
 })
-export class ScreenOneEditComponent implements OnInit, OnDestroy {
+export class CarEditComponent implements OnInit {
   @ViewChild('f', {static: false}) screenOneForm: NgForm;
   subscription: Subscription;
   editMode = false;
@@ -34,16 +33,6 @@ export class ScreenOneEditComponent implements OnInit, OnDestroy {
       });
   }
 
-  onDelete() {
-    this.carsService.deleteCar(this.editedItemIndex);
-    this.onClear();
-  }
-
-  onClear() {
-    this.screenOneForm.reset();
-    this.editMode = false;
-  }
-
   onSubmit(form: NgForm) {
     const value = form.value;
     const newCar = new Car(value.make, value.type, value.year);
@@ -55,6 +44,16 @@ export class ScreenOneEditComponent implements OnInit, OnDestroy {
     }
     this.editMode = false;
     form.reset();
+  }
+
+  onDelete() {
+    this.carsService.deleteCar(this.editedItemIndex);
+    this.onClear();
+  }
+
+  onClear() {
+    this.screenOneForm.reset();
+    this.editMode = false;
   }
 
   ngOnDestroy(): void {

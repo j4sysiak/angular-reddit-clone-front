@@ -144,9 +144,12 @@ import { Test1Component } from './AngularTutorials/7_PassCheckboxValueOntoCompon
 import { Test8Component } from './AngularTutorials/8_HandleCheckBox/test8/test8.component';
 import { Parent7Component } from './AngularTutorials/AngularTutorialForBeginers_Codevolution/Part15_ComponentInteraction/parent7/parent7.component';
 import { Child7Component } from './AngularTutorials/AngularTutorialForBeginers_Codevolution/Part15_ComponentInteraction/child7/child7.component';
-import { ScreenOneComponent } from './Exercises/1/screen-one/screen-one.component';
-import { ScreenTwoComponent } from './Exercises/1/screen-two/screen-two.component';
-import { ScreenOneEditComponent } from './Exercises/1/screen-one-edit/screen-one-edit.component';
+import { GarageComponent } from './Exercises/1/garage/garage.component';
+import { CarComponent } from './Exercises/1/car/car.component';
+import { CarEditComponent } from './Exercises/1/car-edit/car-edit.component';
+import { GarageListComponent } from './Exercises/1/garage-list/garage-list.component';
+import { GarageStartComponent } from './Exercises/1/garage-start/garage-start.component';
+import { GarageEditComponent } from './Exercises/1/garage-edit/garage-edit.component';
 
 @NgModule({
   declarations: [
@@ -260,9 +263,12 @@ import { ScreenOneEditComponent } from './Exercises/1/screen-one-edit/screen-one
     Test8Component,
     Parent7Component,
     Child7Component,
-    ScreenOneComponent,
-    ScreenTwoComponent,
-    ScreenOneEditComponent
+    GarageComponent,
+    CarComponent,
+    CarEditComponent,
+    GarageListComponent,
+    GarageStartComponent,
+    GarageEditComponent
 
     // Ng4AuthComponent
   ],
