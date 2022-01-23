@@ -7,10 +7,10 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-reddit-clone';
-  name = 'Jacek Sysiak';
+  name = 'Jacek';
   oddNumbers: number[] = [];
   evenNumbers: number[] = [];
-  // loadedFeature = 'recipe';
+  loadedFeature = 'recipe';
 
   onIntervalFired(fireNumber: number) {
     console.log(fireNumber);
@@ -21,7 +21,7 @@ export class AppComponent {
     }
   }
 
-  // onNavigate(feature: string) {
-  //   this.loadedFeature = feature;
-  // }
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }

@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Ng4Recipe} from '../ng4-recipe.model';
-import {Ng4RecipeService} from '../ng4-recipe.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {RecipeService} from '../recipe.service';
 
 @Component({
   selector: 'app-ng4-recipe-detail',
@@ -9,35 +8,15 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./ng4-recipe-detail.component.css']
 })
 export class Ng4RecipeDetailComponent implements OnInit {
-  recipe: Ng4Recipe;
-  id: number;
+  @Input() recipe: Ng4Recipe;
 
-  constructor(private recipeService: Ng4RecipeService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-    // const id = this.route.snapshot.params['id'];
-    this.route.params
-      .subscribe(
-        (params) => {
-          this.id = +params['id'];
-          this.recipe = this.recipeService.getRecipe(this.id);
-        }
-      );
   }
 
   onAddToShoppingList() {
+    console.warn('1: ' + this.recipe.ingredients);
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
-  }
-
-  onEditRecipe() {
-    // this.router.navigate(['edit'], {relativeTo: this.route});
-    this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
-  }
-
-  onDeleteRecipe() {
-    this.recipeService.deleteRecipe(this.id);
-    this.router.navigate(['/recipes']);
   }
 }

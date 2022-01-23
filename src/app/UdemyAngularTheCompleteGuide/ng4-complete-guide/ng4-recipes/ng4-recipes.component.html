@@ -7,13 +7,12 @@
   </div>
 
   <div class="col-md-7>">
-<!--    <app-ng4-recipe-detail-->
-<!--      *ngIf="selectedRecipe; else infoText"-->
-<!--    [recipe]="selectedRecipe"></app-ng4-recipe-detail>-->
-<!--    <ng-template #infoText>-->
-<!--      <p>Please select a Recipe!</p>-->
-<!--    </ng-template>-->
-    <router-outlet></router-outlet>
+    <app-ng4-recipe-detail
+      *ngIf="selectedRecipe; else infoText"
+    [recipe]="selectedRecipe"></app-ng4-recipe-detail>
+    <ng-template #infoText>
+      <p>Please select a Recipe!</p>
+    </ng-template>
   </div>
 
 </div>
