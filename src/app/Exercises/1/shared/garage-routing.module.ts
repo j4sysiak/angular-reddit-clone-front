@@ -11,7 +11,7 @@ const garageRoutes: Routes = [
     component: GarageComponent,
     children: [
       { path: '', component: GarageStartComponent },
-      { path: 'garage', component: GarageEditComponent }
+      { path: 'new', component: GarageEditComponent }
       ,
       // {
       //   path: ':id',

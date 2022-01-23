@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import {Garage} from '../shared/garage.model';
 import {ActivatedRoute, Router} from '@angular/router';
 import {GarageService} from '../shared/garage.service';
+import {Ng4Recipe} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.model';
+import {Subscription} from 'rxjs';
+import {Ng4RecipeService} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.service';
 
 @Component({
   selector: 'app-garage-list',
@@ -10,16 +13,24 @@ import {GarageService} from '../shared/garage.service';
   styleUrls: ['./garage-list.component.css']
 })
 export class GarageListComponent implements OnInit {
-  garage: Garage[] = [];
+  garages: Garage[] = [];
+  subscription: Subscription;
 
   constructor(private garageService: GarageService,
               private router: Router,
               private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.subscription = this.garageService.garageChanged
+      .subscribe(
+        // @ts-ignore
+        (garages: Garage[]) => {
+          this.garages = garages;
+        });
+    this.garages = this.garageService.getGarages();
   }
 
   onNewGarage() {
-    this.router.navigate(['new-garage'], {relativeTo: this.route});
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 }

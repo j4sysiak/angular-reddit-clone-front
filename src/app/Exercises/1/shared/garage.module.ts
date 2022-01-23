@@ -7,18 +7,25 @@ import {GarageRoutingModule} from './garage-routing.module';
 import {GarageListComponent} from '../garage-list/garage-list.component';
 import {GarageStartComponent} from '../garage-start/garage-start.component';
 import {GarageEditComponent} from '../garage-edit/garage-edit.component';
+import {GarageComponent} from '../garage/garage.component';
+import {GarageItemComponent} from '../garage-item/garage-item.component';
 
 @NgModule({
   declarations: [
+    GarageComponent,
     GarageListComponent,
     GarageStartComponent,
-    GarageEditComponent
+    GarageEditComponent,
+    GarageItemComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
     GarageRoutingModule
+  ],
+  exports: [
+    CommonModule
   ]
 })
 export class GarageModule { }

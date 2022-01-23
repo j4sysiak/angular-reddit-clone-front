@@ -11,6 +11,7 @@ export class Ng4RecipeService {
   // recipeSelected = new EventEmitter<Ng4Recipe>();
   // recipeSelected = new Subject<Ng4Recipe>();
   recipesChanged = new Subject<Ng4Recipe>();
+  private recipes: Ng4Recipe[] = [];
 
   // private recipes: Ng4Recipe[] = [
   //   new Ng4Recipe(
@@ -29,7 +30,6 @@ export class Ng4RecipeService {
   //       new Ingredient('Meat', 1)
   //     ])
   // ];
-  private recipes: Ng4Recipe[] = [];
 
   constructor(private shoppingListService: Ng4ShoppingListService) {
   }
