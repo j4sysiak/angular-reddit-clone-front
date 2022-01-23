@@ -125,8 +125,25 @@ import { Ng4LoggingService } from './UdemyAngularTheCompleteGuide/ng4-complete-g
 import { Ng4HeaderComponent } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-header/ng4-header.component';
 import { Ng4SharedModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ng4-shared.module';
 import { Ng4CoreModule } from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-core.module';
-import { ParentComponent } from './1_PassDataParentToChild/parent/parent.component';
-import { ChildComponent } from './1_PassDataParentToChild/child/child.component';
+import { ParentComponent } from './AngularTutorials/1_PassDataParentToChild/parent/parent.component';
+import { ChildComponent } from './AngularTutorials/1_PassDataParentToChild/child/child.component';
+import { TestComponent } from './AngularTutorials/2_EventBinding/test/test.component';
+import { TemplateReferenceVariablesComponent } from './AngularTutorials/3_TemplateReferenceVariables/template-reference-variables/template-reference-variables.component';
+import { TwoWayBindingComponent } from './AngularTutorials/4_TwoWayBinding/two-way-binding/two-way-binding.component';
+import { StructuralDerectivesComponent } from './AngularTutorials/5_StructuralDirectives/structural-derectives/structural-derectives.component';
+import { Child2Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ParentToChild/child2/child2.component';
+import { Parent2Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ParentToChild/parent2/parent2.component';
+import { Child3Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ChildToParent/child3/child3.component';
+import { Parent3Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/ChildToParent/parent3/parent3.component';
+import { Child4Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/child4/child4.component';
+import { Child5Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/child5/child5.component';
+import { Parent4Component } from './AngularTutorials/6_PassingDataFromOneComponentToAnother/AnyToAny_UsungServices/parent4/parent4.component';
+import { Child6Component } from './AngularTutorials/7_PassCheckboxValueOntoComponents/child6/child6.component';
+import { Parent6Component } from './AngularTutorials/7_PassCheckboxValueOntoComponents/parent6/parent6.component';
+import { Test1Component } from './AngularTutorials/7_PassCheckboxValueOntoComponents/test1/test1.component';
+import { Test8Component } from './AngularTutorials/8_HandleCheckBox/test8/test8.component';
+import { Parent7Component } from './AngularTutorials/AngularTutorialForBeginers_Codevolution/Part15_ComponentInteraction/parent7/parent7.component';
+import { Child7Component } from './AngularTutorials/AngularTutorialForBeginers_Codevolution/Part15_ComponentInteraction/child7/child7.component';
 
 @NgModule({
   declarations: [
@@ -222,8 +239,25 @@ import { ChildComponent } from './1_PassDataParentToChild/child/child.component'
     Ng4HeaderComponent,
 
     ParentComponent,
-
     ChildComponent,
+    TestComponent,
+    TemplateReferenceVariablesComponent,
+    TwoWayBindingComponent,
+    StructuralDerectivesComponent,
+    Child2Component,
+    Parent2Component,
+    Child3Component,
+    Parent3Component,
+    Child4Component,
+    Child5Component,
+    Parent4Component,
+    Child6Component,
+    Parent6Component,
+    Test1Component,
+    Test8Component,
+    Parent7Component,
+    Child7Component
+
     // Ng4AuthComponent
   ],
   imports: [
