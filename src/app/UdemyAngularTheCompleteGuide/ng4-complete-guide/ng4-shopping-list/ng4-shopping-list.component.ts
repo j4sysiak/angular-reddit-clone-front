@@ -1,7 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from 'rxjs';
+
 import {Ingredient} from '../shared/ingredient.model';
 import {Ng4ShoppingListService} from './ng4-shopping-list.service';
-import {Subscription} from 'rxjs';
 import {Ng4LoggingService} from '../ng4-logging.service';
 
 @Component({
