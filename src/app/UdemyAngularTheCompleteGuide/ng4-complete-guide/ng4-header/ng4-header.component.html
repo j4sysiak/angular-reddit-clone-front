@@ -1,4 +1,5 @@
 <p>Ng4HeaderComponent works</p>
+<hr>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -8,8 +9,10 @@
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li routerLinkActive="active" *ngIf="isAuthenticated"><a routerLink="/recipes">Recipes</a></li>
-        <li routerLinkActive="active" *ngIf="!isAuthenticated"><a routerLink="/ng4-auth">Authenticate</a></li>
+<!--        <li routerLinkActive="active" *ngIf="isAuthenticated"><a routerLink="/recipes">Recipes</a></li>-->
+<!--        <li routerLinkActive="active" *ngIf="!isAuthenticated"><a routerLink="/ng4-auth">Authenticate</a></li>-->
+        <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="/ng4-auth">Authenticate</a></li>
         <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
       </ul>
 

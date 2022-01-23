@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {Garage} from '../shared/garage.model';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {GarageService} from '../shared/garage.service';
 
 @Component({
@@ -13,12 +13,13 @@ export class GarageListComponent implements OnInit {
   garage: Garage[] = [];
 
   constructor(private garageService: GarageService,
-              private router: Router) {}
+              private router: Router,
+              private route: ActivatedRoute) {}
 
   ngOnInit(): void {
   }
 
   onNewGarage() {
-    this.router.navigate(['new'], {relativeTo: this.route});
+    this.router.navigate(['new-garage'], {relativeTo: this.route});
   }
 }
