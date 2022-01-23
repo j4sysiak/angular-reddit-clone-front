@@ -8,7 +8,7 @@ import {Subject} from 'rxjs';
 })
 export class CarsService {
   carsChanged1 = new EventEmitter<Car[]>();
-  carsChanged2 = new Subject<Ingredient[]>();
+  carsChanged2 = new Subject<Car[]>();
   startedEditing = new Subject<number>();
 
   private cars: Car[] =  [
