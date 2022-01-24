@@ -11,7 +11,7 @@ import {CarsService} from '../shared/cars.service';
   styleUrls: ['./car-edit.component.css']
 })
 export class CarEditComponent implements OnInit, OnDestroy {
-  @ViewChild('f', {static: false}) screenOneForm: NgForm;
+  @ViewChild('f', {static: false}) carEditForm: NgForm;
   subscription: Subscription;
   editMode = false;
   editedItemIndex: number;
@@ -26,7 +26,7 @@ export class CarEditComponent implements OnInit, OnDestroy {
         this.editMode = true;
         this.editedItem = this.carsService.getCar(i);
 
-        this.screenOneForm.setValue({
+        this.carEditForm.setValue({
           make: this.editedItem.make,
           type: this.editedItem.type,
           year: this.editedItem.year
@@ -53,7 +53,7 @@ export class CarEditComponent implements OnInit, OnDestroy {
   }
 
   onClear() {
-    this.screenOneForm.reset();
+    this.carEditForm.reset();
     this.editMode = false;
   }
 

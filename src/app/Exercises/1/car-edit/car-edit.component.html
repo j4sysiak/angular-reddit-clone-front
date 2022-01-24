@@ -4,8 +4,8 @@
 <div class="row">
   <div class="col-xs-12">
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-
       <div class="row">
+
         <div class="col-sm-5 form-group">
           <label for="make">Marka</label>
           <input
@@ -47,6 +47,22 @@
         </div>
 
       </div>
+
+
+<!--      <div class="row">-->
+<!--        <div class="col-xs-12">-->
+<!--          <button-->
+<!--            class="btn btn-success"-->
+<!--            type="submit"-->
+<!--            [disabled]="!f.valid">{{ editMode ? 'Update' : 'Add' }}</button>-->
+<!--          <button-->
+<!--            class="btn btn-danger"-->
+<!--            type="submit" (click)="onDelete()"-->
+<!--            *ngIf="editMode">Delete</button>-->
+<!--          <button class="btn btn-primary" type="submit" (click)="onClear()">Clear</button>-->
+<!--        </div>-->
+<!--      </div>-->
+
       <div class="row">
         <div class="col-xs-12">
           <button
@@ -60,6 +76,8 @@
           <button class="btn btn-primary" type="submit" (click)="onClear()">Clear</button>
         </div>
       </div>
+
+
     </form>
   </div>
 </div>

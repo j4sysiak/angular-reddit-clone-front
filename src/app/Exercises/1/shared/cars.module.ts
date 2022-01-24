@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 
 import {CarComponent} from '../car/car.component';
 import {CarEditComponent} from '../car-edit/car-edit.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,8 +14,9 @@ import {CarEditComponent} from '../car-edit/car-edit.component';
   imports: [
     FormsModule,
     RouterModule.forChild([
-      { path: '', component: CarComponent }
+      {path: '', component: CarComponent}
     ]),
+    CommonModule,
   ],
 })
 export class CarsModule {}
