@@ -12,12 +12,13 @@ const garageRoutes: Routes = [
     children: [
       { path: '', component: GarageStartComponent },
       { path: 'new', component: GarageEditComponent }
-      ,
+      // ,
       // {
       //   path: ':id',
       //   component: Ng4RecipeDetailComponent,
       //   resolve: [Ng4RecipesResolverService]
-      // },
+      // }
+      //,
       // {
       //   path: ':id/edit',
       //   component: Ng4RecipeEditComponent,

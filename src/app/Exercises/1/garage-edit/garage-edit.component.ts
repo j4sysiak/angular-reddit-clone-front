@@ -63,9 +63,22 @@ export class GarageEditComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.garageForm);
+    // const newGarage = new Garage(
+    //   this.garageForm.value['name'],
+    //   this.garageForm.value['description'],
+    //   this.garageForm.value['cars']);
+
+    if (this.editMode) {
+      this.garageService.updateGarage(this.id, this.garageForm.value);
+    } else {
+      this.garageService.addGarage(this.garageForm.value);
+    }
+    this.onCancel();
   }
 
   onCancel() {
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 
   onDeleteCar(i: number) {
