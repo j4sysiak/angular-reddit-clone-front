@@ -4,6 +4,8 @@ import {NgModule} from '@angular/core';
 import {GarageComponent} from '../garage/garage.component';
 import {GarageStartComponent} from '../garage-start/garage-start.component';
 import {GarageEditComponent} from '../garage-edit/garage-edit.component';
+import {GarageDetailComponent} from '../garage-detail/garage-detail.component';
+import {GarageResolverService} from './garage-resolver.service';
 
 const garageRoutes: Routes = [
   {
@@ -12,17 +14,17 @@ const garageRoutes: Routes = [
     children: [
       { path: '', component: GarageStartComponent },
       { path: 'new', component: GarageEditComponent }
-      // ,
-      // {
-      //   path: ':id',
-      //   component: Ng4RecipeDetailComponent,
-      //   resolve: [Ng4RecipesResolverService]
-      // }
-      //,
+      ,
+      {
+        path: ':id',
+        component: GarageDetailComponent,
+        resolve: [GarageResolverService]
+      }
+      ,
       // {
       //   path: ':id/edit',
-      //   component: Ng4RecipeEditComponent,
-      //   resolve: [Ng4RecipesResolverService]
+      //   component: GarageEditComponent,
+      //   resolve: [GarageResolverService]
       // }
     ]
   }

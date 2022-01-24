@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs';
 
 import {Garage} from './garage.model';
-import {Ng4Recipe} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.model';
+import {Car} from './car.model';
+import {CarsService} from './cars.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class GarageService {
   garageChanged = new Subject<Garage>();
   private garages: Garage[] = [];
 
-  constructor() { }
+  constructor(private carService: CarsService) { }
 
   getGarages() {
     return this.garages.slice();
@@ -32,6 +33,22 @@ export class GarageService {
     this.garages[i] = newGarage;
     // @ts-ignore
     this.garageChanged.next(this.garages.slice());
+  }
+
+  setGarages(garages: Garage[]) {
+    this.garages = garages;
+    // @ts-ignore
+    this.garageChanged.next(this.garages.slice());
+  }
+
+  deleteGarage(i: number) {
+    this.garages.splice(i, 1);
+    // @ts-ignore
+    this.garageChanged.next(this.garages.slice());
+  }
+
+  addCarsToCarList(cars: Car[]) {
+    this.carService.addCars(cars);
   }
 
 }
