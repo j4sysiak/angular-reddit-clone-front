@@ -79,18 +79,6 @@ export class Ng4RecipeEditComponent implements OnInit {
     this.onCancel();
   }
 
-  get controls() {
-    return (<FormArray> this.recipeForm.get('ingredients')).controls;
-  }
-
-  onAddIngredient() {
-    (<FormArray> this.recipeForm.get('ingredients')).push(
-      new FormGroup({
-        'name': new FormControl(null, Validators.required),
-        'amount': new FormControl(null, [Validators.required, Validators.pattern('^[1-9]+[0-9]*$')])
-      })
-    );
-  }
 
   onCancel() {
     this.router.navigate(['../'], {relativeTo: this.route});
@@ -101,8 +89,23 @@ export class Ng4RecipeEditComponent implements OnInit {
     // (<FormArray>this.recipeForm.get('ingredients')).clear();
   }
 
+
+
+  onAddIngredient() {
+    (<FormArray> this.recipeForm.get('ingredients')).push(
+      new FormGroup({
+        'name': new FormControl(null, Validators.required),
+        'amount': new FormControl(null, [Validators.required, Validators.pattern('^[1-9]+[0-9]*$')])
+      })
+    );
+  }
+
   get ingredientCtrl() {
     return (this.recipeForm.get('ingredients') as FormArray).controls;
+  }
+
+  get controls() {
+    return (<FormArray> this.recipeForm.get('ingredients')).controls;
   }
 }
 

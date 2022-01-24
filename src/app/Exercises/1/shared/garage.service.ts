@@ -15,4 +15,10 @@ export class GarageService {
   getGarages() {
     return this.garages.slice();
   }
+
+  getGarage(i: number) {
+    // return this.garages.slice()[i];
+    return this.garages[i];
+  }
+
 }

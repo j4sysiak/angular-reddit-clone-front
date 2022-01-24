@@ -10,13 +10,14 @@ export class CarsService {
   carsChanged2 = new Subject<Car[]>();
   startedEditing = new Subject<number>();
 
-  private cars: Car[] =  [
+  private cars: Car[] = [
     new Car('Toyota', 'Yaris', '2003'),
     new Car('Toyota', 'RAV4', '2006'),
     new Car('Audi', 'B4', '1992')
   ];
 
-  constructor() { }
+  constructor() {
+  }
 
   getCars() {
     return this.cars.slice();
