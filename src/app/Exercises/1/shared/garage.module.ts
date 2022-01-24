@@ -9,6 +9,7 @@ import {GarageStartComponent} from '../garage-start/garage-start.component';
 import {GarageEditComponent} from '../garage-edit/garage-edit.component';
 import {GarageComponent} from '../garage/garage.component';
 import {GarageItemComponent} from '../garage-item/garage-item.component';
+import {GarageDetailComponent} from '../garage-detail/garage-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {GarageItemComponent} from '../garage-item/garage-item.component';
     GarageListComponent,
     GarageStartComponent,
     GarageEditComponent,
-    GarageItemComponent
+    GarageItemComponent,
+    GarageDetailComponent
   ],
   imports: [
     CommonModule,

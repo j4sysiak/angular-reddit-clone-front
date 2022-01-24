@@ -1,6 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Subscription} from 'rxjs';
+
 import {Car} from '../shared/car.model';
 import {CarsService} from '../shared/cars.service';
 
@@ -9,7 +10,7 @@ import {CarsService} from '../shared/cars.service';
   templateUrl: './car-edit.component.html',
   styleUrls: ['./car-edit.component.css']
 })
-export class CarEditComponent implements OnInit {
+export class CarEditComponent implements OnInit, OnDestroy {
   @ViewChild('f', {static: false}) screenOneForm: NgForm;
   subscription: Subscription;
   editMode = false;

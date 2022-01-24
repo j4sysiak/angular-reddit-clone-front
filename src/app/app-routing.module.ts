@@ -131,6 +131,10 @@ const appRoutes: Routes = [
          loadChildren: () => import('./Exercises/1/shared/garage.module')
            .then(m => m.GarageModule)
      },
+     { path: 'car',
+         loadChildren: () => import('./Exercises/1/shared/cars.module')
+      .then(m => m.CarsModule)
+  },
 
 
   // aplikacja: ng4-complete-guide
