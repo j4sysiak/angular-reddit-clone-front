@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
-import {CarsService} from '../shared/cars.service';
 import {GarageService} from '../shared/garage.service';
 
 @Component({

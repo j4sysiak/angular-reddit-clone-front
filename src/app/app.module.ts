@@ -155,6 +155,8 @@ import { GarageEditComponent } from './Exercises/1/garage-edit/garage-edit.compo
 import { GarageModule } from './Exercises/1/shared/garage.module';
 import { GarageItemComponent } from './Exercises/1/garage-item/garage-item.component';
 import { GarageDetailComponent } from './Exercises/1/garage-detail/garage-detail.component';
+import { InputDataComponent } from './AngularTutorials/input-data/input-data.component';
+import { InputDataWe2Component } from './AngularTutorials/input-data-we2/input-data-we2.component';
 
 @NgModule({
   declarations: [
@@ -279,7 +281,11 @@ import { GarageDetailComponent } from './Exercises/1/garage-detail/garage-detail
     // GarageHeaderComponent,
     // GarageItemComponent,
     // GarageDetailComponent,
-    GarageHeaderComponent
+    GarageHeaderComponent,
+
+    InputDataComponent,
+
+    InputDataWe2Component
 
     // Ng4AuthComponent
   ],
