@@ -9,6 +9,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class InputDataWe2Component {
   public nameForm: FormGroup;
   myusername = '';
+
   constructor( private formBuilder: FormBuilder) {
     this.nameForm = this.formBuilder.group({
       name: ''
