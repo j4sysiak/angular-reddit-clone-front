@@ -43,8 +43,11 @@ import {Ng4AuthComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guid
 import {Ng4ShoppingListModule} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-shopping-list/ng4-shopping-list.module';
 // import {Ng4RecipesResolverService} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipes-resolver.service';
 // import {Ng4AuthGuard} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-auth/ng4-auth-guard';
+// tslint:disable-next-line:max-line-length
 // import {Ng4RecipeStartComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-start/ng4-recipe-start.component';
+// tslint:disable-next-line:max-line-length
 // import {Ng4RecipeDetailComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-detail/ng4-recipe-detail.component';
+// tslint:disable-next-line:max-line-length
 // import {Ng4RecipeEditComponent} from './UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe-edit/ng4-recipe-edit.component';
 // import {AssignmentObservablesComponent} from './UdemyAngularTheCompleteGuide/assignment-observables/assignment-observables.component';
 // import {PageNotFoundComponent} from './UdemyAngularTheCompleteGuide/assignment-routing/page-not-found/page-not-found.component';
