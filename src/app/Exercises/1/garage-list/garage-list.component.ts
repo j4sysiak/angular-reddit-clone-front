@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import {Garage} from '../shared/garage.model';
 import {ActivatedRoute, Router} from '@angular/router';
 import {GarageService} from '../shared/garage.service';
-import {Ng4Recipe} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.model';
+import {Ng4Recipe} from '../../../AngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.model';
 import {Subscription} from 'rxjs';
-import {Ng4RecipeService} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.service';
+import {Ng4RecipeService} from '../../../AngularTheCompleteGuide/ng4-complete-guide/ng4-recipes/ng4-recipe.service';
 
 @Component({
   selector: 'app-garage-list',

@@ -1,7 +1,7 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {Car} from './car.model';
 import {Subject} from 'rxjs';
-import {Ingredient} from '../../../UdemyAngularTheCompleteGuide/ng4-complete-guide/shared/ingredient.model';
+import {Ingredient} from '../../../AngularTheCompleteGuide/ng4-complete-guide/shared/ingredient.model';
 
 @Injectable({
   providedIn: 'root'
